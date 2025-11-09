@@ -1,0 +1,89 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+.top-reason{
+  padding-top: rem(49);
+  padding-bottom: rem(39);
+  text-align: center;
+  @include pc {
+    padding-top: rem(64);
+    padding-bottom: rem(90);
+  }
+}
+.top-reason__wrapper{
+  margin-top: rem(36);
+  gap: rem(39);
+  @include pc{
+    margin-top: rem(28);
+    gap: rem(50);
+  }
+}
+.top-reason__wrapper .p-card:first-of-type .p-card__body {
+  @include pc {
+    margin-top: rem(7);
+  }
+}
+
+/*****************
+card
+*****************/
+// .top-reason .p-card{
+//   @include pc {
+//     column-gap: rem(50);
+//   }
+// }
+// .top-reason .p-card__img{
+//   aspect-ratio: 335 / 200;
+//   @include pc {
+//     width: 39.772%;
+//     aspect-ratio: 350 / 247;
+//   }
+// }
+// .top-reason .p-card__img::before{
+//   content: none;
+// }
+// .top-reason .p-card__body{
+//   margin-top: rem(30);
+//   text-align: left;
+//   @include pc {
+//     flex: 1;
+//     margin-top: rem(-3);
+//     // margin-top: 0;
+//   }
+// }
+
+// .top-reason .p-card__title{
+//   position: relative;
+//   padding-bottom: rem(10);
+//   font-size: rem(20);
+//   line-height: calc(30 / 20);
+//   @include pc {
+//     padding-bottom: rem(12);
+//     font-size: rem(22);
+//     line-height: calc(33 / 22);
+//   }
+// }
+// .top-reason .p-card__title::after{
+//   position: absolute;
+//   content: '';
+//   width:  100%;
+//   height:  rem(2);
+//   left: 0;
+//   bottom: 0;
+//   background-color: #CB0000;
+//   @include pc {
+//     width:  calc(100% + rem(50));
+//     left: rem(-50);
+//   }
+// }
+// .top-reason .p-card__text{
+//   margin-top: rem(17);
+//   font-size: rem(16);
+//   line-height: calc(30 / 16);
+//   letter-spacing: -0.004em;//微調整
+//   @include pc {
+//     margin-top: rem(37);
+//     font-size: rem(18);
+//     line-height: calc(33 / 18);
+//   }
+// }
