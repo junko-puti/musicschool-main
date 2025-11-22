@@ -6,7 +6,8 @@
 .card-lists {
   display: flex;
   flex-direction: column;
-  justify-content: center;//11.6
+  // justify-content: center;//11.6
+  justify-content: flex-start;//11.20
 }
 .card-lists--horizontal {
   @include pc {

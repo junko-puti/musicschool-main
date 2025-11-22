@@ -12,12 +12,10 @@
     padding-bottom: rem(60);
   }
 }
-.top-support__title{
-  padding-bottom: rem(14);
-  @include pc {
-    padding-bottom: rem(30);
-  }
-}
 .top-support__text{
+  margin-top: rem(14);
   font-weight: 500;
+  @include pc {
+    margin-top: rem(30);
+  }
 }

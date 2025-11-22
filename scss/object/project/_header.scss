@@ -8,18 +8,10 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  // transition: background-color 0.5s, padding 0.5s;
   @include pc {
     height: rem(80);
   }
 }
-// .header.is-colored {
-//   height: rem(80);
-//   background-color: #4D9600;
-//   @include sp {
-//     height: rem(50);
-//   }
-// }
 .header__inner {
   display: flex;
   flex-direction: row;
@@ -48,14 +40,16 @@
   padding-bottom: rem(8.82);
   transition: opacity 0.3s ease;
   @include pc {
-    padding-top: rem(14.74);
-    padding-bottom: rem(14);
+    padding-top: rem(14.37);
+    padding-bottom: rem(14.37);
   }
 }
 .header__logo a:hover{
   opacity: 0.7;
 }
-
+.header__logo span{
+  display: none;
+}
 /*--sp用メニュー--*/
 .header__drawer {
   position: fixed;
@@ -95,28 +89,27 @@
 }
 /*--PC用メニュー--*/
 .header__nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: rem(33);
   height: 100%;
 }
 .header__nav .header__menu{
   display: flex;
   align-items: center;
   height: 100%;
-  gap: rem(33);
+  column-gap: rem(33);
 }
 .header__menu li{
   width: auto;
   height: 100%;
 }
-.header__menu li:last-child{//お問い合わせ
-  width: auto;
-  height: auto;
-}
 .header__menu a{
   display: flex;
   align-items: center;
   height: 100%;
-  // padding-top: rem(5);//微調整
-  // padding-bottom: 1px;
+  padding-top: rem(2.5);//微調整
   font-size: rem(17);
   line-height: calc(33 / 17);
   transition: opacity 0.3s ease;
@@ -126,27 +119,20 @@
   // color: inherit;
 }
 
-.header__menu .c-btn--h-contact{//お問い合わせ
-  font-size: rem(15);
-  line-height: calc(33 / 15);
-  transition: background-color 0.5s ease,
-}
 /*- 下線 -*/
 .header__menu a::after {
   content: '';
   position: absolute;
-  // bottom: 20.5px;
   bottom: rem(20.5);
   left: 0;
   width: 0;
-  // height: 1px;
   height: rem(1);
   background-color: currentColor; /* 文字色と一致 */
-  transition: width 0.4s ease;
+  transition: width 0.3s ease;
 }
-.header__menu .c-btn--h-contact::after {
-  content: none;
-}
+// .header__menu .c-btn--h-contact::after {
+//   content: none;
+// }
 // /* PC〜タブレットサイズのみ有効（SPは除外） */
 @media screen and (min-width: 768px) {
   .header__menu a:hover::after {

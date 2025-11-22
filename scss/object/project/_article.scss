@@ -1,21 +1,11 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-
-
-
 //メイン記事
 .article__core .p-card__img::before{
-  // content: '';
-  // width: rem(80);
-  // height:  rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
-  // @include pc{
-  // width: rem(80);
-  // height:  rem(30);
-  // }
 }
 
 /*前後ページリンク*/
@@ -33,14 +23,6 @@
     text-align: left;
   }
 }
-// .article__related .card-lists{
-//   margin-top: rem(19);//微調整
-//   row-gap: rem(21);
-//   @include pc{
-//     margin-top: rem(30);//微調整
-//     row-gap: rem(30);
-//   }
-// }
 .article__related .card-lists a{
   transition: opacity 0.3s ease;
 }
@@ -51,38 +33,6 @@
   flex-direction: row;//spで横並び
   column-gap: rem(20);
   @include pc{
-    column-gap: rem(30);
+    column-gap: rem(31);
   }
 }
-// .article__related .p-card__img{
-//   aspect-ratio: 160 / 110;
-//   flex: 0 0 rem(160); // 幅
-//   // width: rem(160);
-//   overflow: hidden;
-//   @include pc{
-//     flex: 0 0 rem(200); // 幅
-//     aspect-ratio: 200 / 140;
-//     // width: rem(200);
-//   }
-// }
-// .article__related .p-card__img img {
-//   display: block;
-//   width: 100%;
-//   // height: auto;
-//   height: 100%;
-//   // overflow: hidden;
-//   object-fit: cover;
-// }
-
-// .article__related .p-card__img::before{
-//   content: 'ギター';
-//   width: rem(80);
-//   height:  rem(30);
-//   padding-top: rem(2);
-//   font-size: rem(15);
-//   line-height: calc(25 / 15);
-//   @include pc{
-//   width: rem(80);
-//   height:  rem(30);
-//   }
-// }

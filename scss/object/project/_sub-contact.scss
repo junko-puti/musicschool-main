@@ -73,6 +73,7 @@ contact-form
   font-weight: 500;
   @include pc{
     width: rem(169);
+    padding-top: rem(3);
     font-size: rem(20);
     line-height: calc(33 / 20);
   }
@@ -94,10 +95,11 @@ contact-form
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: rem(4.5) rem(20) rem(1.5);
-  // padding: rem(3) rem(20);
+  height: rem(40);
+  padding: rem(4.7) rem(20) rem(2.3);
   font-size: rem(15);
   line-height: calc(33 / 15);
+  // line-height: 1.5;//長文入力が想定されるので1.5に設定
   border: rem(0.5) solid #000000;
 }
 .form__text::placeholder,
@@ -116,12 +118,13 @@ contact-form
 .form__textarea {
   height: rem(190);     /* 初期の高さ */
   min-height: rem(190); /* 最低の高さを190pxに固定 */
+  padding-top: rem(12);
   resize: vertical;     /* 垂直方向のみリサイズ可能 */
   overflow-y: auto;     /* 縦スクロールを表示 */
   @include pc{
     height: rem(300);     /* 初期の高さ */
     min-height: rem(300); /* 最低の高さを190pxに固定 */
-    padding-top: rem(12);
+    padding-top: rem(13);
   }
 }
 .form__textarea-container .form__label{
@@ -139,15 +142,12 @@ contact-form
   grid-template-columns: repeat(1, 1fr); /* 1列*/
   row-gap: rem(10);
   width: 100%;
-  @include pc {
-    row-gap: rem(9);
-  }
 }
 .form__checkbox-container{
   margin-top: rem(13);
   @include pc{
     align-items: flex-start;
-    margin-top: rem(26);
+    margin-top: rem(23);
   }
 }
 .form__checkbox-container .form__label{
@@ -210,49 +210,18 @@ contact-form
 //
 input:focus,
 textarea:focus{
-  outline: 2px solid #000000; /* 枠線 */
-  outline-offset: 2px; /* 枠線を少し外側にずらす */
-}
-input[type="checkbox"]:focus,
-input[type="submit"] {
+  // outline: 1px solid #000000; /* 枠線 */
+  // outline-offset: 0; /* 枠線を少し外側にずらす */
   outline: none; /* フォーカス時の枠線を削除 */
 }
+// input[type="checkbox"]:focus,
+// input[type="submit"] {
+//   outline: none; /* フォーカス時の枠線を削除 */
+// }
+
+// a:focus {
+//   outline: 2px solid #ff6600; /* オレンジ色の枠 */
+//   outline-offset: 2px;        /* 枠と要素の間隔 */
+// }
 
 
-
-// .form__input-select {
-//   position: relative;
-//   appearance: none;
-// }
-// .form__select {
-//   appearance: none;
-//   background: #fff;
-//   cursor: pointer;
-// }
-// .form__input-select::after {
-//   content: '';
-//   position: absolute;
-//   right: rem(19);
-//   top: 55%;
-//   transform: translateY(-50%);
-//   width: rem(18);
-//   height: rem(12);
-//   background-image: url("../images/select-down.png");
-//   background-size: contain;
-//   background-repeat: no-repeat;
-//   pointer-events: none;
-// }
-// .form__radio-custom input:checked + span::after {
-//   content: '';
-//   position: absolute;
-//   top: 50%;
-//   left: rem(-10);
-//   transform: translate(-50%, -50%);
-//   width: rem(6);
-//   height: rem(6);
-//   background: #000;
-//   border-radius: 50%;
-//   @include sp {
-//     left: rem(-23);
-//   }
-// }

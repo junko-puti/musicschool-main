@@ -17,8 +17,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: rem(31);//微調整
-  // column-gap: rem(30);
+  column-gap: rem(30);
+  @include pc{
+    column-gap: rem(32);//微調整
+  }
 }
 .footer__menu a{
   font-size: rem(17);
@@ -31,8 +33,11 @@
 }
 .footer__logo-img{
   width: rem(32);
+  margin-top: rem(19);
   aspect-ratio: 32.03/49.35;
-  margin-top: rem(18.74);
+  @include pc{
+    margin-top: rem(23);
+  }
 }
 .footer__logo-img a{
   transition: opacity 0.3s;
@@ -41,10 +46,11 @@
   opacity: 0.7;
 }
 .footer__copyright{
-  margin-top: rem(28.91);
+  margin-top: rem(29);
+  // margin-top: rem(28.91);
   font-size: rem(15);
   line-height: calc(20 / 15);
-  letter-spacing: -0.03em;//微調整
+  // letter-spacing: -0.03em;//微調整
   text-align: center;
   font-weight: 500;
   @include pc{
@@ -58,7 +64,8 @@
   margin-top: rem(16);
   text-align: center;
   @include pc {
-    margin-top: rem(8);
+    margin-top: rem(5);
+    // margin-top: rem(8);
   }
 }
 .footer__sns-menu{

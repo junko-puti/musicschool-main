@@ -10,10 +10,10 @@
   top: 0;
   left: 0;
   z-index: 1; /* ヘッダーより低く */
-  margin-top: rem(50);
-  @include pc {
-    margin-top: rem(80);
-  }
+  // margin-top: rem(50);
+  // @include pc {
+  //   margin-top: rem(80);
+  // }
 }
 .fv img{
   width: 100%;
@@ -37,9 +37,15 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(80, 80, 80, 0.4836);
+  background-color: rgba(80, 80, 80, 0.4836); 
   pointer-events: none;
+  mix-blend-mode: multiply;/*乗算モード*/
 }
+.top-page .fv::after {
+  background-color: rgba(80, 80, 80, 0.52); /* TOPページ専用 */
+}
+
+
 
 .fv__catch {
   position: relative;
@@ -55,7 +61,6 @@
   text-align: center;
   color: #ffffff;
   transform: translate(-50%, -50%);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   @include pc {
     top: 52%;
     left: 50%;

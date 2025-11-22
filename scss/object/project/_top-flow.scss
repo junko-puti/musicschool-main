@@ -20,7 +20,7 @@
   @include pc {
     grid-template-columns: minmax(rem(154), auto) 1fr;
     margin-top: rem(53);//微調整
-    padding-left: rem(121);
+    padding-left: rem(60);
     column-gap: rem(38);
     row-gap: rem(58);
   }
@@ -41,6 +41,7 @@
   color: #CB0000;
   @include pc {
     // width: 25.296%;
+    padding-left: rem(60);
     margin-top: 0;
     // margin-bottom: 0;
   }
@@ -68,24 +69,23 @@
   background-color: #CB0000;
   @include pc {
     height: 100%;
-    top: 1em;
-    left: rem(60);
+    top: rem(15);
+    left: rem(58.5);
   }
 }
 .top-flow__list::after{
   content: '';
   position: absolute;
   display: block;
-  width: rem(25);
-  height: rem(25);
-  bottom: rem(14);
-  left: rem(6);
-  border-left: rem(3) #CB0000 solid;
-  border-bottom: rem(3) #CB0000 solid;
-  transform: rotate(-45deg); //方向を調整
+  width: rem(36);
+  height: rem(23);
+  bottom: rem(5);
+  left: rem(0.5);
+  background: url('../images/arrow-down.svg') no-repeat;
+  background-size: contain;
   @include pc {
-    bottom: -0.8em;
-    left: rem(48.5);
+    bottom: rem(-22);
+    left: rem(42);
   }
 }
 .top-flow__step-title::before{
@@ -100,6 +100,6 @@
   border-radius: 50%;
   @include pc {
     top: 0.75em;
-    left: rem(-60);
+    left: 0;
   }
 }

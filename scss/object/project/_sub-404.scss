@@ -7,7 +7,7 @@
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    padding-top: rem(68);
+    padding-top: rem(67);//カンプは68px→contact-send.htmlと統一
     padding-bottom: rem(90);
     // height: 100Vh;
   }
@@ -15,7 +15,8 @@
 .sub-404 .c-btn--primary{
   max-width: rem(880);
   margin: 0 auto;
-  margin-top: rem(9);
+  margin-top: rem(39);
+  // margin-top: rem(9);
   @include media(375px){
     width: 100%;
   }

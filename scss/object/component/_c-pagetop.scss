@@ -19,9 +19,11 @@
 .c-pagetop::before{
   content: "";
   display: block;
-  width: rem(23.15); 
-  height: rem(15.7);
-  background-image: url("../images/arrow-top.png"); // 矢印画像のパス
+  width: rem(29); 
+  height: rem(23);
+  // width: rem(23.15); 
+  // height: rem(15.7);
+  background-image: url("../images/arrow-top.svg"); // 矢印画像のパス
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

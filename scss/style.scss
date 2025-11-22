@@ -18,6 +18,8 @@
 @use "object/component/c-heading-deco";
 @use "object/component/c-search-form";
 @use "object/component/c-table";
+@use "object/component/c-label";
+@use "object/component/c-title";
 
 @use "object/project/p-card";
 
@@ -49,3 +51,4 @@
 
 @use "object/utility/u-pc";
 @use "object/utility/u-sp";
+@use "object/utility/u-pt5";

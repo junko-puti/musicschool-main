@@ -15,7 +15,8 @@ $(function () {
           perMove: 1,//SPでも1枚ずつ移動
         },
       },
-      autoplay: true,//自動再生（デフォルトはfalse）
+      autoplay: false,//自動再生（デフォルトはfalse）
+      // autoplay: true,//自動再生（デフォルトはfalse）
       interval: 4000,//自動再生の間隔
       speed: 400,//スライドの移動速度
       reducedMotion: {
@@ -64,22 +65,13 @@ $(function(){
 
 
 
-//アコーディオン　//AI参照
-// $('.faq-accordion__question').click(function() {
-//   $(this).next().slideToggle();
-//   $(this).toggleClass('active');
-// });
-$('.top-faq-accordion__question, .top-faq-accordion__answer').click(function() {
-  const $question = $(this).hasClass('top-faq-accordion__question')//質問の取得
-    ? $(this)
-    : $(this).prev('.top-faq-accordion__question');//答えがクリックされたときに兄弟要素の質問を取得
+$('.top-faq-accordion__wrapper').click(function() {
+  const $question = $(this).find('.top-faq-accordion__question');
+  const $answer   = $question.next('.top-faq-accordion__answer');
 
-  const $answer = $question.next('.top-faq-accordion__answer');//直後の答えを取得
-
-  $answer.slideToggle();//答えの開閉
+  $answer.slideToggle();
   $question.toggleClass('active');
 });
-
 
 
 
@@ -143,3 +135,31 @@ $(function(){
 
 
 
+
+
+//contactフォーム
+//Enterで送信されないで次の要素にフォーカス
+//送信ボタンをクリックしたときだけ送信
+//AI参照
+$(function() {
+  // 入力欄（input, textarea, select）でEnterキーを押したら次へ移動
+  $('.form input, .form textarea, .form select').on('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Enterで送信されないようにする
+
+      // 現在の要素のインデックスを取得
+      var inputs = $('.form input, .form textarea, .form select');
+      var idx = inputs.index(this);
+
+      // 次の要素にフォーカス
+      if (idx + 1 < inputs.length) {
+        inputs.eq(idx + 1).focus();
+      }
+    }
+  });
+
+  // 送信ボタンをクリックしたときだけ送信
+  $('.c-btn--primary').on('click', function() {
+    $('.form').submit();
+  });
+});

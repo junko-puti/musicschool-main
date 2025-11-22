@@ -7,25 +7,14 @@
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    padding-top: rem(67);
+    // padding-top: rem(67);
+    padding-top: rem(65);
     padding-bottom: rem(223);
   }
 }
 /**************
 plan__pricing
 **************/
-.sub-plan h2{
-  margin-top: rem(38);
-  font-size: rem(25);
-  line-height: calc(40 / 25);
-  text-align: center;
-  @include pc{
-    margin-top: rem(57);
-  }
-}
-.sub-plan__pricing h2{
-  margin-top: 0;
-}
 .sub-plan__pricing ul{
   display: flex;
   flex-direction: column;
@@ -64,15 +53,22 @@ plan__pricing
   line-height: calc(30 / 16);
   font-weight: 500;
   @include pc {
+    margin-top: rem(48);
     font-size: rem(18);
     line-height: calc(30 / 18);
-    letter-spacing: -0.01em;
+    // letter-spacing: -0.01em;
   }
 }
 
 /***********
 plan__detail
 ***********/
+.sub-plan__detail{
+  margin-top: rem(38);
+  @include pc{
+    margin-top: rem(56);
+  }
+}
 .sub-plan__detail h3{
   margin-top: rem(38);
   @include pc{
@@ -82,8 +78,8 @@ plan__detail
 .sub-plan__table-wrapper{
   display: block;
   max-width: 100%;//11.3
-  padding-bottom: rem(18.5);/*テーブルとスクロールバーとの余白*/
-  margin-top: rem(36);
+  padding-bottom: rem(16.5);/*テーブルとスクロールバーとの余白*/
+  margin-top: rem(6);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   @include pc {
@@ -109,8 +105,10 @@ plan__detail
 }
 
 .sub-plan__table{
-  // min-width: rem(670); // SP幅11.5
-  width: rem(670); // SP幅
+  // width: rem(670); // SP幅
+  // width: rem(676); // SP幅
+  min-width: rem(676); // SP幅11.5
+  width: 100%;
   margin: 0 auto;//11.5
   table-layout: fixed;
   // width: 100%;
@@ -128,35 +126,26 @@ plan__detail
     box-sizing: border-box;//11.5
   }
 }
-.sub-plan__table th{
-  font-weight: 500;
-}
 .sub-plan__table th,
 .sub-plan__table td{
   white-space: nowrap;
   width: calc(100% / 2);
-  height: rem(85);
   vertical-align: middle;
   @include pc {
     width: calc(100% / 4);
-    // text-align: center;
   }
+}
+.sub-plan__table td{
+  height: rem(85);
 }
 
 /*table thead*/
-.sub-plan__table .sub-plan__name th{
-  height: rem(66);
-  color: #FFFFFF;
-  font-weight: 700;
-  @include pc{
-    height: rem(80);
-  }
-}
-.sub-plan__cell{
+.sub-plan__name{
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: rem(20);
+  font-weight: 700;
   line-height: calc(25 / 20);
   text-align: center;
   color: #FFFFFF;
@@ -164,46 +153,52 @@ plan__detail
     line-height: calc(33 / 20);
   }
 }
-.sub-plan__cell span{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: rem(17);
-  line-height: calc(25 / 17);
-  color: #FFFFFF;
-  @include pc{
-    line-height: calc(33 / 17);
-  }
-}
-.sub-plan__cell--nul{
+.sub-plan__name--nul{
+  padding-top: rem(1);
   background-color: #FFFFFF;
 }
-.sub-plan__cell--standard{
+.sub-plan__name--red{
   display: flex;
   flex-direction: column;
-  height: rem(66);
-  // line-height: calc(25 / 20);
-  line-height: calc(20 / 20);//微調整
   background-color: #CB0000;
   @include pc{
-    height: rem(80);
   }
 }
-.sub-plan__cell--basic,
-.sub-plan__cell--premium{
+.sub-plan__head--line1 .sub-plan__name--red{
+  justify-content: flex-end;
+  height: rem(30);
+  font-size: rem(17);
+  line-height: 1;
+  @include pc{
+  }
+}
+.sub-plan__head--line2 .sub-plan__name--red{
   height: rem(66);
-  margin-top: 0;
+  @include pc{
+    height: rem(50);
+  }
+}
+.sub-plan__name--black{
+  background-color: #000000;
+  @include pc{
+  }
+}
+.sub-plan__head--line1 .sub-plan__name--black{
+  height: rem(30);
+  @include pc{
+  }
+}
+.sub-plan__head--line2 .sub-plan__name--black{
+  height: rem(66);
   background-color: #000000;
   @include pc{
     height: rem(50);
-    margin-top: rem(30);
   }
 }
 
 /*table tbody*/
 .sub-plan__class{/*上下横罫線*/
   border-bottom: rem(1) solid rgba(0, 0, 0, 0.2);
-  // border-bottom: rem(0.5) solid #000000;
 }
 .sub-plan__price th{
   border-top: rem(1) solid rgba(0, 0, 0, 0.2);
@@ -223,7 +218,6 @@ plan__detail
 .sub-plan__class th,
 .sub-plan__class td{/*アイテム間に縦罫線*/
   border-right: rem(1) solid rgba(0, 0, 0, 0.2);
-  // border-right: rem(0.5) solid #000000;
   box-sizing: border-box;//11.5
 }
 .sub-plan__class tr td:last-child{/*右罫線消す*/
@@ -266,15 +260,14 @@ plan__detail
   margin-top: rem(8);
 }
 .sub-plan__note{
-  margin-top: rem(18);
+  margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
   font-weight: 500;
   @include pc{
-    margin-top: rem(28.5);
+    margin-top: rem(28);
     font-size: rem(17);
     line-height: calc(25 / 17);
-    letter-spacing: -0.01em;
   }
 }
 

@@ -20,6 +20,7 @@
   flex-direction: column;
   @include pc {
     flex-direction: row;
+    align-items: flex-start; //画像がテキストに引っ張られない
   }
 }
 /********
@@ -36,24 +37,6 @@ card 共通
   height: 100%;
   object-fit: cover;
 }
-.p-card__img::before{
-  position: absolute;
-  content: ''; //(仮)プロジェクト側で調整
-  left: 0;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  background-color: #CB0000;
-}
-.p-card__img--nolabel::before{//!important使用
-  display: none !important;
-}
-
-// .p-card__body{
-// }
 .p-card__title{
   text-align: left;
 }
@@ -70,105 +53,80 @@ hover
 ---------------*/
 .p-card{
   transition: opacity 0.3s ease;
-  // transition: color 0.3s opacity 0.3s;
 }
 .p-card:hover{
   opacity: 0.7;
-  // color: #CB0000;
 }
 
 /*--------------
 label 
 ---------------*/
 /*共通*/
-// .p-card--label .p-card__img::before{
-//   height:  rem(30);
-//   padding-top: rem(2);
-//   font-size: rem(15);
-//   line-height: calc(25 / 15);
-//   @include pc{
-//   height:  rem(30);
-//   }
-// }
-.p-card--label-responsive-s .p-card__img::before{
+.p-card__label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #CB0000;
+  color: #fff;
+}
+.p-card--label-responsive-s{
   width: rem(90);
-  height:  rem(30);
+  height: rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
   @include pc{
   width: rem(80);
-  height:  rem(30);
+  height: rem(30);
   }
 }
-.p-card--label-responsive-m .p-card__img::before{
+.p-card--label-responsive-m{
   width: rem(80);
-  height:  rem(30);
+  height: rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
   @include pc{
   width: rem(100);
-  height:  rem(30);
+  height: rem(30);
   }
 }
-.p-card--label-responsive-l .p-card__img::before{
+.p-card--label-responsive-l{
   width: rem(90);
-  height:  rem(30);
+  height: rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
   @include pc{
   width: rem(100);
-  height:  rem(30);
+  height: rem(30);
   }
 }
-.p-card--label-s .p-card__img::before{
+.p-card--label-s{
   width: rem(80);
-  height:  rem(30);
+  height: rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
 }
-.p-card--label-l .p-card__img::before{
+.p-card--label-l{
   width: rem(100);
-  height:  rem(30);
+  height: rem(30);
   padding-top: rem(2);
   font-size: rem(15);
   line-height: calc(25 / 15);
 }
-[data-label="sns"] .p-card__img::before {
-  content: 'SNS';
-}
-[data-label="shukyaku"] .p-card__img::before {
-  content: '集客方法';
-}
-[data-label="guitar"] .p-card__img::before {
-  content: 'ギター';
-}
-[data-label="pops"] .p-card__img::before {
-  content: 'ポップス';
-}
-[data-label="rock"] .p-card__img::before {
-  content: 'ロック';
-}
-[data-label="jazz"] .p-card__img::before {
-  content: 'ジャズ';
-}
-[data-label="latin"] .p-card__img::before {
-  content: 'ラテン';
-}
-[data-label="classic"] .p-card__img::before {
-  content: 'クラシック';
+
+.p-card--nolabel{//!important使用
+  display: none !important;
 }
 
 
 
-
-
-
-
-//////////////////////////////////////////////////////////////////////
 /***************
 card 選ばれる理由
 ***************/
@@ -229,19 +187,13 @@ card 選ばれる理由
   margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
-  letter-spacing: -0.004em;//微調整
+  // letter-spacing: -0.004em;//微調整
   @include pc {
     margin-top: rem(37);
     font-size: rem(18);
     line-height: calc(33 / 18);
   }
 }
-// .p-card--reason .p-card__text span{
-//   display: inline-block;
-//   @include pc {
-//     display: inline;
-//   }
-// }
 
 /*******************
 card TOPページ-ブログ
@@ -347,13 +299,10 @@ card ブログ一覧/検索ページ
   margin-top: rem(8);
   font-size: rem(16);
   line-height: calc(30 / 16);
-  letter-spacing: -0.01em;
   @include pc{
     margin-top: rem(11);
     font-size: rem(18);
     line-height: calc(29 / 18);//微調整
-    // line-height: calc(30 / 18);
-    letter-spacing: -0.02em;
   }
 }
 
@@ -389,7 +338,7 @@ card ブログ-details
   margin-top: rem(30);
   @include pc{
     margin-top: rem(46);
-    letter-spacing: 0.02em;//微調整
+    // letter-spacing: 0.02em;//微調整
   }
 }
 .p-card--blog-details .p-card__date{
@@ -404,7 +353,7 @@ card ブログ-details
 
 .p-card--blog-details .p-card__text--first{
   margin-top: rem(27);
-  letter-spacing: -0.01em;
+  // letter-spacing: -0.01em;
   @include pc{
     margin-top: rem(48);
   }
@@ -419,7 +368,7 @@ card ブログ-details
 }
 .p-card--blog-details .p-card__text--second{
   margin-top: rem(17);
-  letter-spacing: -0.01em;
+  // letter-spacing: -0.01em;
   @include pc{
     margin-top: rem(15);
   }
@@ -466,7 +415,7 @@ card ブログ-details
   @include pc{
     padding: rem(14) rem(30) rem(14) rem(67);
     margin-top: rem(17);
-    letter-spacing: -0.01em;//微調整
+    // letter-spacing: -0.01em;//微調整
   }
 }
 .p-card--blog-details .p-card__text--third::before{
@@ -477,7 +426,7 @@ card ブログ-details
   height: rem(23.28);
   top: rem(22);
   left: rem(25);
-  background-image: url("../images/quotation-sp.png");
+  background-image: url("../images/quotation.svg");
   background-size: contain;
   background-repeat: no-repeat;
   @include pc{
@@ -546,6 +495,7 @@ card 関連記事 サイドバーあり(ブログ）
   line-height: calc(30 / 17);
   font-weight: 500;
   @include pc{
+    padding-left: rem(4);
     margin-top: rem(13);
   }
 }
@@ -589,41 +539,6 @@ card 卒業実績一覧
     margin-top: rem(10);
   }
 }
-// .p-card--result-list {
-//   @include pc {
-//     column-gap: rem(50);
-//   }
-// }
-// .p-card--result-list .p-card__img{
-//   aspect-ratio: 335 / 200;
-//   @include pc{
-//     aspect-ratio: 387 / 273;
-//     overflow: hidden;
-//   }
-// }
-// .p-card--result-list .p-card__body{
-//   margin-top: rem(30);
-//   @include pc{
-//     // flex: 1;
-//     margin-top: rem(20);
-//   }
-// }
-// .p-card--result-list .p-card__title{
-//   font-size: rem(20);
-//   line-height: calc(30 / 20);
-//   @include pc{
-//     line-height: calc(25 / 20);
-//   }
-// }
-// .p-card--result-list .p-card__date{
-//   margin-top: rem(6);
-//   text-align: right;
-//   font-size: rem(17);
-//   line-height: calc(30 / 17);
-//   @include pc{
-//     margin-top: rem(10);
-//   }
-// }
 
 /*******************
 card 卒業実績-details
@@ -648,11 +563,11 @@ card 卒業実績-details
     margin-top: rem(50);
     font-size: rem(25);
     line-height: calc(40 / 25);
-    letter-spacing: -0.02em;//微調整
+    // letter-spacing: -0.02em;//微調整
   }
 }
 .p-card--result-details .p-card__date{
-  margin-top: rem(12);
+  margin-top: rem(6);
   font-size: rem(17);
   line-height: calc(30 / 17);
   font-weight: 500;
@@ -661,8 +576,9 @@ card 卒業実績-details
   }
 }
 .p-card--result-details .c-table{
-  margin-top: rem(13);
+  margin-top: rem(21);
   @include pc{
+    margin-top: rem(13);
     width: rem(400);
     margin-top: 0;
   }
@@ -777,19 +693,21 @@ card 前後ページへ
   margin-top: rem(16);
   @include pc{
     margin-top: rem(16);
-    column-gap: rem(15);
+    column-gap: rem(15.5);
   }
 }
 .p-card--page-nav .p-card__img{
   aspect-ratio: auto;
+  display: none;
   @include pc{
     width: 100%;
     aspect-ratio: 98 / 68;
     overflow: hidden;
+    display: block;
   }
 }
 .p-card--page-nav .p-card__img img{
-  display: none;
+  // display: none;
   @include pc{
     display: block;
     width: 100%;
@@ -802,6 +720,7 @@ card 前後ページへ
   font-weight: 700;
   @include pc{
     line-height: calc(22.67 / 16);//微調整
+    width: rem(147);
   }
 }
 

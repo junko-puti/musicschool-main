@@ -24,19 +24,7 @@
 //メイン記事
 .sub-blog-details .sns-btn{
   margin-top: rem(22);//  微調整
-  // margin-top: rem(25);
 }
-// .sub-blog-details .sns-btn a{
-//   transition: opacity 0.3s ease;
-// }
-// .sub-blog-details .sns-btn a:hover{
-//   opacity: 0.7; 
-// }
-// .sub-blog-details .sns-btn__img img{
-//   width: auto;
-//   height: rem(40);
-//   display: block;
-// }
 .sub-blog-details .article-core__list{
   position: relative;
   padding-bottom: rem(38.5);
@@ -67,12 +55,13 @@
 .sub-blog-details .sub-blog-details__link{
   margin-top: rem(25);//部調整
   @include pc{
-    margin-top: rem(27);
+    margin-top: rem(24);
     text-align: left;
   }
 }
 .sub-blog-details .sub-blog-details__link a{
   font-size: rem(20);
+  font-weight: 700;
   line-height: calc(33 / 20);
   color: #CB0000;
 }
@@ -110,6 +99,9 @@
   width: 100%;
   height: auto;
   padding: rem(20);
+  @include pc{
+    padding: rem(15);
+  }
 }
 .sidebar-newsletter__container a{
   transition: opacity 0.3s ease;
@@ -160,17 +152,16 @@
   line-height: calc(28 / 17);
   font-weight: 500;
 }
-.sidebar-category__list{
-  margin-top: rem(12);
-}
+// .sidebar-category__list{
+//   margin-top: rem(12);
+// }
 .sidebar-category__list li{
   position: relative;
-  padding-bottom: rem(7);
-  margin-top: rem(12);//微調整
+  height: 100%;
 }
-.sidebar-category__list li:first-child{
-  margin-top: 0;
-}
+// .sidebar-category__list li:first-child{
+//   margin-top: 0;
+// }
 .sidebar-category__list li::after{
   position: absolute;
   content: '';
@@ -181,6 +172,10 @@
   background-color: #000000;
 }
 .sidebar-category__list li a{
+  display: block;
+  height: 100%;
+  padding-top: rem(12);
+  padding-bottom: rem(7);
   transition: opacity 0.3s ease;
 }
 .sidebar-category__list li a:hover{

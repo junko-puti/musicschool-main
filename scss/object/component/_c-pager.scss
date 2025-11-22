@@ -40,18 +40,6 @@
   font-size: rem(18);
   line-height: calc(30 / 18);
 }
-/*--- 44×44 ---*/
-// .c-pager--s .c-pager__list{
-//   column-gap: rem(5);
-// }
-// .c-pager--s .c-pager__item{
-//   width: rem(44);
-//   height: rem(44);
-//     @include pc{
-//     width: rem(50);
-//     height: rem(50);
-//   }
-// }
 .c-pager__item.is-current {
   border: rem(1) #000000 solid;
   color: #FFFFFF;
