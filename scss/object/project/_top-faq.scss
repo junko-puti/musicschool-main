@@ -56,7 +56,7 @@
   border-radius: 50%;
   color: #fff;
   font-size: rem(20);
-  // font-weight: bold;
+  font-weight: bold;
   @include pc {
     left: rem(20);
   }
@@ -90,24 +90,32 @@
 // .top-faq-accordion__answer {
 // }
 .top-faq-accordion__answer {
-  position: relative;
+  // position: relative;
   display: none;
-  padding: rem(13) rem(47) rem(13) rem(55);
+  // padding: rem(13) rem(47) rem(13) rem(55);
   text-align: left;
-  font-size: rem(16);
-  font-weight: 500;//カンプはBold(700)だが質問と統一させるためMedium(500)に変更
-  line-height: calc(30 / 16);
   background-color: rgba(203, 0, 0, 0.1);
   color: #CB0000 ;
   border-top: rem(0.5) solid rgba(203, 0, 0, 0.1);
   // cursor: pointer;
+  @include pc {
+    // padding: rem(17) rem(65);
+  }
+}
+.top-faq-accordion__answer p{
+  position: relative;
+  padding: rem(13) rem(47) rem(13) rem(55);
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: calc(30 / 16);
   @include pc {
     padding: rem(17) rem(65);
     font-size: rem(17);
     line-height: calc(30 / 17);
   }
 }
-.top-faq-accordion__answer::before {
+.top-faq-accordion__answer p::before {
+// .top-faq-accordion__answer::before {
   position: absolute;
   content: 'A';
   width: rem(35);

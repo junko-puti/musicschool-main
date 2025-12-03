@@ -36,16 +36,15 @@
   <body>
     <header class="l-header header js-header">
       <div class="l-inner header__inner">
+        <!-- logo -->
         <div class="header__logo">
-          <!-- <div> -->
-            <a href="./index.html">
-              <picture>
-                <source srcset="./images/logo.png" media="(min-width: 768px)">
-                <img src="./images/logo-sp.png" alt="きたむらミューシックスクール">
-              </picture>
-              <span>きたむらミューシックスクール</span>
-            </a>
-          <!-- </div> -->
+          <a href="./index.html">
+            <picture>
+              <source srcset="./images/logo.svg" media="(min-width: 768px)">
+              <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
+            </picture>
+            <span>きたむらミューシックスクール</span>
+          </a>
         </div>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -94,152 +93,174 @@
       </nav>
       <!-- プラン・料金 -->
       <div class="sub-plan">
-        <div class="l-inner">
+        <!-- <div class="l-inner"> -->
           <section class="sub-plan__pricing">
-            <h2 class="c-title">料金体系</h2>
-            <ul>
-              <li>入会金 39,000円</li>
-              <li class="sub-plan__plus"><img src="./images/plus.png" alt="プラスマーク"></li>
-              <li>月額料金</li>
-            </ul>
-            <p>きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
+            <div class="l-inner">
+              <h2 class="c-title">料金体系</h2>
+              <ul>
+                <li>入会金 39,000円</li>
+                <li class="sub-plan__plus"><img src="./images/plus.png" alt="プラスマーク"></li>
+                <li>月額料金</li>
+              </ul>
+              <p>きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。</p>
+            </div>
           </section>
           <section class="sub-plan__detail">
-            <h2 class="c-title">プラン内容・月額料金</h2>
-            <div class="sub-plan__table-wrapper">
-              <table class="sub-plan__table">
-                <thead class="sub-plan__head">
-                  <tr class="sub-plan__head--line1">
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--red">おすすめ</div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
-                  </tr>
-                  <tr class="sub-plan__head--line2">
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--black">ベーシック<br class="u-sp">プラン</div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--red">スタンダード<br class="u-sp">プラン</div></th>
-                    <th scope="col"><div class="sub-plan__name sub-plan__name--black">プレミアム<br class="u-sp">プラン</div></th>
-                  </tr>
-                </thead>
-                <tbody class="sub-plan__class">
-                  <tr class="sub-plan__price">
-                    <th scope="row">月額料金</th>
-                    <td>39,000円</td>
-                    <td class="sub-plan__price--standard">59,000円</td>
-                    <td>128,000円</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">マンツーマン授業</th>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">週１回</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">週２回</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">無制限</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">ビジネス基本講座</th>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">練習ROOM利用</th>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">月10時間</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">月20時間</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">無制限</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">ビジネスコンサル</th>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">月２回</span>
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group u-pt5">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <span class="sub-plan__schedule">月３回</span>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">コミュニティ<br class="u-sp">参加資格</th>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                    <td>
-                      <span class="sub-plan__marker-group">
-                        <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
-                        <!-- <span class="sub-plan__schedule"></span> -->
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="sub-plan__note">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+            <div class="l-inner">
+              <h2 class="c-title">プラン内容・月額料金</h2>
+              <div class="sub-plan__table-wrapper">
+                <table class="sub-plan__table">
+                  <thead class="sub-plan__head">
+                    <tr class="sub-plan__head--line1">
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col" rowspan="2">
+                        <div class="sub-plan__name sub-plan__name--red">
+                          <span class="sub-plan__label">おすすめ</span>
+                          <span class="sub-plan__title">スタンダード<br class="u-sp">プラン</span>
+                        </div>
+                      </th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                    </tr>
+                    <tr class="sub-plan__head--line2">
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--black">ベーシック<br class="u-sp">プラン</div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--black">プレミアム<br class="u-sp">プラン</div></th>
+                    </tr>
+                  </thead>
+                  <!-- <thead class="sub-plan__head">
+                    <tr class="sub-plan__head--line1">
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--red">おすすめ</div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                    </tr>
+                    <tr class="sub-plan__head--line2">
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--nul"></div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--black">ベーシック<br class="u-sp">プラン</div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--red">スタンダード<br class="u-sp">プラン</div></th>
+                      <th scope="col"><div class="sub-plan__name sub-plan__name--black">プレミアム<br class="u-sp">プラン</div></th>
+                    </tr>
+                  </thead> -->
+                  <tbody class="sub-plan__class">
+                    <tr class="sub-plan__price">
+                      <th scope="row">月額料金</th>
+                      <td>39,000円</td>
+                      <td class="sub-plan__price--standard">59,000円</td>
+                      <td>128,000円</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">マンツーマン授業</th>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">週１回</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">週２回</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">無制限</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ビジネス基本講座</th>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">練習ROOM利用</th>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">月10時間</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">月20時間</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">無制限</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">ビジネスコンサル</th>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker sub-plan__marker--standard" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">月２回</span>
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group u-pt5">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <span class="sub-plan__schedule">月３回</span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">コミュニティ<br class="u-sp">参加資格</th>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker--none" aria-label="該当なし" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                      <td>
+                        <span class="sub-plan__marker-group">
+                          <span class="sub-plan__marker" aria-label="該当あり" role="img"></span>
+                          <!-- <span class="sub-plan__schedule"></span> -->
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="sub-plan__note">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+            </div><!--inner-->
           </section>
-        </div>
+        <!-- </div> inner-->
       </div>
     </main>
     

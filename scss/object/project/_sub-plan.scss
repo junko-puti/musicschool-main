@@ -56,7 +56,6 @@ plan__pricing
     margin-top: rem(48);
     font-size: rem(18);
     line-height: calc(30 / 18);
-    // letter-spacing: -0.01em;
   }
 }
 
@@ -140,8 +139,12 @@ plan__detail
 }
 
 /*table thead*/
+.sub-plan__table thead th{
+  vertical-align: bottom;
+}
 .sub-plan__name{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: rem(20);
@@ -158,18 +161,28 @@ plan__detail
   background-color: #FFFFFF;
 }
 .sub-plan__name--red{
-  display: flex;
-  flex-direction: column;
+  height: rem(96);
   background-color: #CB0000;
   @include pc{
+    height: rem(80);
+    padding-top: rem(8);
   }
 }
-.sub-plan__head--line1 .sub-plan__name--red{
-  justify-content: flex-end;
-  height: rem(30);
+.sub-plan__name--red span{
+  margin: 0;
+}
+.sub-plan__name--red span:nth-child(1){
   font-size: rem(17);
-  line-height: 1;
+  line-height: calc(25 / 17);
   @include pc{
+    line-height: calc(33 / 17);
+  }
+}
+.sub-plan__name--red span:nth-child(2){
+  font-size: rem(20);
+  line-height: calc(25 / 20);
+  @include pc{
+    line-height: calc(33 / 20);
   }
 }
 .sub-plan__head--line2 .sub-plan__name--red{
@@ -193,6 +206,7 @@ plan__detail
   background-color: #000000;
   @include pc{
     height: rem(50);
+    padding-top: rem(8);
   }
 }
 

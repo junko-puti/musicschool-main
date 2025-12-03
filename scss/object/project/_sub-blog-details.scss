@@ -87,7 +87,7 @@
 
 /*サイドバー*/
 .sidebar__content{
-  margin-top: rem(29);//微調整
+  margin-top: rem(30);
 }
 .sidebar__content:first-child{
   margin-top: 0;
@@ -174,8 +174,8 @@
 .sidebar-category__list li a{
   display: block;
   height: 100%;
-  padding-top: rem(12);
-  padding-bottom: rem(7);
+  padding-top: rem(11);
+  padding-bottom: rem(8);
   transition: opacity 0.3s ease;
 }
 .sidebar-category__list li a:hover{

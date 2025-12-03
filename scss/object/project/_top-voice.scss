@@ -73,22 +73,34 @@
   height: auto;
 }
 .custom-arrow img {
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+
 }
 .custom-arrow:hover img {
-  transform: scale(1.1);
+  opacity: 1;
 }
 
 
 /*****************
 card
 *****************/
-.top-voice__list a{
-  transition: opacity 0.3s;
+.top-voice-list__img{
+  overflow: hidden;
 }
-.top-voice__list a:hover{
-  opacity: 0.9;
+.top-voice-list__img img{
+  transition: transform 0.3s ease;
 }
+.top-voice-list__img:hover img{
+  transform: scale(1.05);
+}
+// .top-voice-list__img{
+//   transition: transform 0.3s ease;
+// }
+// .top-voice-list__img:hover{
+//   opacity: 1;
+//   transform: scale(1.05);
+// }
 
 .top-voice-list__img{
   width: 100%;

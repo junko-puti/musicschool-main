@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *;
 
 .sub-contact{
-  padding-top: rem(47);
+  padding-top: rem(48);
   padding-bottom: rem(108);
   font-weight: 500;
   color: #000000;
@@ -99,8 +99,10 @@ contact-form
   padding: rem(4.7) rem(20) rem(2.3);
   font-size: rem(15);
   line-height: calc(33 / 15);
-  // line-height: 1.5;//長文入力が想定されるので1.5に設定
   border: rem(0.5) solid #000000;
+}
+.form__textarea {
+  line-height: 1.5;//長文入力が想定されるので1.5に設定
 }
 .form__text::placeholder,
 .form__textarea::placeholder {
@@ -109,27 +111,27 @@ contact-form
 
 //textarea-container
 .form__textarea-container{
-  margin-top: rem(8);
+  margin-top: rem(14);
   @include pc{
     align-items: flex-start;
-    margin-top: rem(27);
+    margin-top: rem(34);
   }
 }
 .form__textarea {
-  height: rem(190);     /* 初期の高さ */
+  // height: rem(190);     /* 初期の高さ */
   min-height: rem(190); /* 最低の高さを190pxに固定 */
   padding-top: rem(12);
   resize: vertical;     /* 垂直方向のみリサイズ可能 */
   overflow-y: auto;     /* 縦スクロールを表示 */
   @include pc{
-    height: rem(300);     /* 初期の高さ */
+    // height: rem(300);     /* 初期の高さ */
     min-height: rem(300); /* 最低の高さを190pxに固定 */
-    padding-top: rem(13);
+    padding-top: rem(19);
   }
 }
 .form__textarea-container .form__label{
   @include pc {
-    margin-top: rem(6);
+    margin-top: rem(3);
   }
 }
 .form__textarea-container .form__input{
@@ -140,8 +142,10 @@ contact-form
 .form__checkbox{
   display: grid;
   grid-template-columns: repeat(1, 1fr); /* 1列*/
-  row-gap: rem(10);
+  row-gap: rem(20);
+  // row-gap: rem(10);//7.12.1
   width: 100%;
+  margin-top: 3px;
 }
 .form__checkbox-container{
   margin-top: rem(13);
@@ -161,14 +165,16 @@ contact-form
 }
 .form__checkbox-custom {
   font-size: rem(16);
-  line-height: calc(30 / 16);
+  line-height: calc(20 / 16);
+  // line-height: calc(30 / 16);
   display: inline-flex;
   width: fit-content;
   align-items: center;
   cursor: pointer;
   @include pc {
     font-size: rem(18);
-    line-height: calc(30 / 18);
+    line-height: calc(20 / 18);
+    // line-height: calc(30 / 18);//7.12.1
   }
 }
 .form__checkbox-custom span{
