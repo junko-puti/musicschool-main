@@ -20,6 +20,15 @@
 //     flex-wrap: wrap;
 //   }
 // }
+// .card-lists {
+//   display: grid;
+//   grid-template-columns: 1fr; // デフォルトは1列
+//   justify-items: start;       // flex-startに相当
+//   @include pc {
+//     // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+// }
 .card-lists {
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
@@ -27,7 +36,8 @@
 }
 .card-lists--horizontal {
   @include pc {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .card-lists--2col {

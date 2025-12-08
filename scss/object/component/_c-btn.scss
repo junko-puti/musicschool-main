@@ -10,7 +10,7 @@
   color: #FFFFFF;
   background-color: #CB0000;
   border: 1px solid #CB0000;
-  // font-weight: 400;
+  // border: rem(1) solid #CB0000;//7.12.7
   transition: background-color 0.3s ease,
   color 0.5s ease;
 }
@@ -23,7 +23,6 @@
 .c-btn--h-contact{
   // max-width: rem(150);
   min-width: rem(100);
-  // width: 100%;
   height: rem(45);
   padding-top: rem(7);
   padding-bottom: rem(5);
@@ -38,14 +37,16 @@
 
 //フッター コンタクトボタン（固定）
 .c-btn--f-contact{
-  max-width: rem(335);
+  // max-width: 335px;
+  max-width: rem(335);//7.12.7
   width: 100%;
   height: rem(60);
   padding-top: rem(13.5);
   padding-bottom: rem(13.5);
   opacity: 0;/*デフォルトで非表示にする*/
   @include pc {
-    max-width: rem(300);
+    max-width: 300px;
+    // max-width: rem(300);//7.12.7
     width: 100%;
     height: rem(60);
     padding-top: rem(13.5);

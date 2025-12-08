@@ -18,7 +18,8 @@
   width: rem(44);
   height: rem(44);
   // padding: rem(10) rem(20);
-  border: rem(1) #000000 solid;
+  border: 1px #000000 solid;
+  // border: rem(1) #000000 solid;//7.12.7
   font-size: rem(16);
   line-height: calc(28 / 16);
   color: #000000;
@@ -41,7 +42,8 @@
   line-height: calc(30 / 18);
 }
 .c-pager__item.is-current {
-  border: rem(1) #000000 solid;
+  border: 1px #000000 solid;
+  // border: rem(1) #000000 solid;//7.12.7
   color: #FFFFFF;
   background-color: #000000;
 }

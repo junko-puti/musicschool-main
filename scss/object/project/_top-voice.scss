@@ -25,10 +25,10 @@
     margin-top: rem(34); //微調整
   }
 }
-#voice .splide__slide img {
-  width: 100%;
-  height: auto;
-}
+// #voice .splide__slide img {//7.12.8
+//   width: 100%;
+//   height: auto;
+// }
 /*CSSでデフォルト矢印の見た目を完全に*/
 .splide__arrow {
   padding: 0;
@@ -40,6 +40,9 @@
 .splide__arrow svg {
   display: none;
 }
+#voice .splide__arrow {
+  opacity: 1;
+}
 
 /* 左右矢印 */
 .splide__arrows {
@@ -47,7 +50,7 @@
   top: 51%;
   left: rem(6);
   right: rem(6);
-  max-width: rem(998);//((440+20.24+18.6)×2)+α
+  max-width: 998px;//((440+20.24+18.6)×2)+α
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -68,17 +71,20 @@
   cursor: pointer;
 }
 .custom-arrow img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   height: auto;
 }
-.custom-arrow img {
+.custom-arrow img{
   transition: opacity 0.3s ease;
-  opacity: 0.5;
-
 }
+// .custom-arrow img {
+//   transition: opacity 0.3s ease;
+//   opacity: 0.5;
+// }
 .custom-arrow:hover img {
-  opacity: 1;
+  opacity: 0.7;
+  // opacity: 1;
 }
 
 
@@ -88,19 +94,24 @@ card
 .top-voice-list__img{
   overflow: hidden;
 }
-.top-voice-list__img img{
-  transition: transform 0.3s ease;
-}
-.top-voice-list__img:hover img{
-  transform: scale(1.05);
-}
-// .top-voice-list__img{
+// .top-voice-list__img img{
 //   transition: transform 0.3s ease;
 // }
-// .top-voice-list__img:hover{
-//   opacity: 1;
+// .top-voice-list__img:hover img{
 //   transform: scale(1.05);
 // }
+.top-voice__list a .top-voice-list__img img{
+  transition: transform 0.3s ease;
+}
+.top-voice__list a:hover .top-voice-list__img img{
+  transform: scale(1.05);
+}
+.top-voice__list a .top-voice-list__text{
+  transition: opacity 0.3s ease;
+}
+.top-voice__list a:hover .top-voice-list__text{
+  opacity: 0.7;
+}
 
 .top-voice-list__img{
   width: 100%;
@@ -111,8 +122,8 @@ card
   }
 }
 .top-voice-list__img img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   height: 100%;
   object-fit: cover;
 }

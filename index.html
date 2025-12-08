@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="no">
     <title>きたむらミューシックスクール HOME</title>
     <link rel="icon" href="images/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <!-- Splide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
@@ -18,9 +20,10 @@
         <h1 class="header__logo">
           <!-- <h1> -->
             <a href="./index.html">
+              <span class="visually-hidden">きたむらミューシックスクール</span>
               <picture>
                 <source srcset="./images/logo.svg" media="(min-width: 768px)">
-                <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
+                <img src="./images/logo-sp.svg" alt="">
               </picture>
             </a>
           <!-- </h1> -->
@@ -66,6 +69,12 @@
           <div class="top-vision__message">
             <h2 class="top-vision__title">全人類、<br class="u-sp">ミュージシャン計画。</h2>
             <p class="top-vision__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
+            <div class="top-vision__semicircle">
+              <picture>
+                <source srcset="./images/semicircle.svg" media="(min-width: 768px)">
+                <img src="./images/semicircle-sp.svg" alt="">
+              </picture>
+            </div>
           </div>
           <div class="top-vision__step top-vision-step">
             <div class="top-vision-step__item">
@@ -207,10 +216,12 @@
           </div>
           <div class="splide__arrows">
             <button type="button" class="splide__arrow splide__arrow--prev custom-arrow prev">
-              <img src="./images/arrow-l100.svg" alt="前へ">
+              <!-- <img src="./images/arrow-l100.svg" alt="前へ"> -->
+              <img src="./images/arrow-l.svg" alt="前へ">
             </button>
             <button type="button" class="splide__arrow splide__arrow--next custom-arrow next">
-              <img src="./images/arrow-r100.svg" alt="次へ">
+              <!-- <img src="./images/arrow-r100.svg" alt="次へ"> -->
+              <img src="./images/arrow-r.svg" alt="次へ">
             </button>
           </div>
         </div>

@@ -32,8 +32,8 @@ card 共通
   overflow: hidden;
 }
 .p-card__img img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -171,7 +171,7 @@ card 選ばれる理由
   padding-bottom: rem(8);
   font-size: rem(20);
   line-height: calc(30 / 20);
-  border-bottom: 2px #cb0000 solid;
+  border-bottom: rem(2) #cb0000 solid;
   @include pc {
     padding-bottom: rem(10);
     padding-left: rem(50);
@@ -224,8 +224,8 @@ card TOPページ-ブログ
   }
 }
 .p-card--top-blog .p-card__img img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -478,8 +478,8 @@ card 関連記事 サイドバーあり(ブログ）
   }
 }
 .p-card--related-compact .p-card__img img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   // height: auto;
   height: 100%;
   // overflow: hidden;
@@ -629,8 +629,8 @@ card 関連記事 全幅(卒業実績）
   }
 }
 .p-card--related-full .p-card__img img {
-  display: block;
-  width: 100%;
+  // display: block;//7.12.8
+  // width: 100%;
   // height: auto;
   height: 100%;
   object-fit: cover;
@@ -724,8 +724,8 @@ card 前後ページへ
 .p-card--page-nav .p-card__img img{
   // display: none;
   @include pc{
-    display: block;
-    width: 100%;
+    // display: block;
+    // width: 100%;
     height: 100%;
     object-fit: cover;
   };

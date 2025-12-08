@@ -14,8 +14,8 @@
 }
 .sns-btn__img img{
   width: rem(65);
-  height: auto;
-  display: block;
+  // height: auto;//7.12.8
+  // display: block;
   @include pc{
     width: auto;
     height: rem(40);

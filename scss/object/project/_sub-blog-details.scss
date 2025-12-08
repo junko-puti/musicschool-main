@@ -95,7 +95,8 @@
 /*無料メールマガジン*/
 .sidebar-newsletter__container{
   position: relative;
-  border: rem(0.5) #000000 solid;
+  border: 0.5px #000000 solid;
+  // border: rem(0.5) #000000 solid;//7.12.7
   width: 100%;
   height: auto;
   padding: rem(20);
@@ -115,12 +116,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: rem(18);
+  font-weight: 500;
   line-height: calc(33 / 18);
 }
 
 /*ブログ内を検索*/
 .sidebar-search__container{
-  border: rem(0.5) #000000 solid;
+  border: 0.5px #000000 solid;
+  // border: rem(0.5) #000000 solid;//7.12.7
   width: 100%;
   height: auto;
   padding: rem(20);
@@ -158,23 +161,12 @@
 .sidebar-category__list li{
   position: relative;
   height: 100%;
-}
-// .sidebar-category__list li:first-child{
-//   margin-top: 0;
-// }
-.sidebar-category__list li::after{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: rem(0.5);
-  bottom: 0;
-  left: 0;
-  background-color: #000000;
+  border-bottom: #000000 solid 1px;
 }
 .sidebar-category__list li a{
   display: block;
   height: 100%;
-  padding-top: rem(11);
+  padding-top: rem(10);
   padding-bottom: rem(8);
   transition: opacity 0.3s ease;
 }
