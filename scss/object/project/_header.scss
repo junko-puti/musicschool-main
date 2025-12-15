@@ -130,9 +130,6 @@
   background-color: currentColor; /* 文字色と一致 */
   transition: width 0.3s ease;
 }
-// .header__menu .c-btn--h-contact::after {
-//   content: none;
-// }
 // /* PC〜タブレットサイズのみ有効（SPは除外） */
 @media screen and (min-width: 768px) {
   .header__menu a:hover::after {

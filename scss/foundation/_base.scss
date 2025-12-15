@@ -2,19 +2,6 @@
 @use 'mixin' as *;  // mixin.scss を使用
 @use './function' as *; // function.scss を使用
 
-//ソリッドコーディング
-// html {
-//     scroll-behavior: smooth;
-//     font-size: 62.5%;
-//     //768~920(inner)
-//     @media(min-width: 768px) and (max-width: 920px){
-//       font-size: calc(10 / 920 * 100vw);
-//     }
-//     @media(max-width:375px) {
-//       font-size: calc(10 /375 * 100vw);
-//     }
-// }
-
 
 //リキッドコーディング
 html {
@@ -32,22 +19,6 @@ html {
     font-size: calc(16 / 375 * 100vw);
   }
 }
-// * {
-//   outline: 1px solid rgb(210, 159, 238);
-// }
-// * {
-//   outline: 2px solid red;
-// }
-
-
-
-//ソリッドコーディング
-// html {
-//   scroll-behavior: smooth;
-//   font-size: 62.5%; /* 1rem = 10px に統一 */
-//   font-weight: 400;
-// }
-
 
 body {
   font-family: "Yu Gothic", YuGothic, "游ゴシック体", "Noto Sans JP", sans-serif;

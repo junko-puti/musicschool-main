@@ -3,32 +3,6 @@
 @use '../../foundation/mixin' as *;
 
 
-// .card-lists {
-//   display: flex;
-//   flex-direction: column;
-//   // justify-content: center;//11.6
-//   justify-content: flex-start;//11.20
-// }
-// .card-lists--horizontal {
-//   @include pc {
-//     flex-direction: row;
-//   }
-// }
-// .card-lists--2col {
-//   @include pc {
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//   }
-// }
-// .card-lists {
-//   display: grid;
-//   grid-template-columns: 1fr; // デフォルトは1列
-//   justify-items: start;       // flex-startに相当
-//   @include pc {
-//     // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
 .card-lists {
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
@@ -36,23 +10,11 @@
 }
 .card-lists--horizontal {
   @include pc {
-    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-columns: repeat(3, 1fr);
   }
 }
 .card-lists--2col {
   @include pc {
     grid-template-columns: repeat(2, 1fr); // PCでは2列固定
-    // gap: 1rem; // flex-wrapの代わりに隙間を設定
   }
 }
-// .card-lists li{
-//   @include pc{
-//     margin-top: rem(5);
-//   }
-// }
-// .card-lists li:first-of-type{
-//   @include pc{
-//     margin-top: 0;
-//   }
-// }

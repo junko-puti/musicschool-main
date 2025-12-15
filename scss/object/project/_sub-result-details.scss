@@ -4,7 +4,6 @@
 .sub-result-details{
   padding-top: rem(50);
   padding-bottom: rem(195);
-  // padding-bottom: rem(197);
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
@@ -38,7 +37,6 @@
 
 /*関連記事*/
 .sub-result-details .article__related{
-  // margin-top: rem(67);
   margin-top: rem(61);
   @include pc{
     margin-top: rem(100);

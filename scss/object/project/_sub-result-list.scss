@@ -4,7 +4,6 @@
 .sub-result-list{
   padding-top: rem(46);
   padding-bottom: rem(198);
-  // padding-bottom: rem(203);
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
@@ -28,22 +27,6 @@ result-list
     column-gap: rem(106);
   }
 }
-//7.12.1
-// .sub-result-list__wrapper{
-//   margin-top: rem(49);
-//   row-gap: rem(41);
-//   @include pc{
-//     margin-top: rem(38);
-//     row-gap: rem(61);
-//     column-gap: rem(106);
-//   }
-// }
-// .sub-result-list .card-lists li{
-//   @include pc{
-//     // width: rem(387);//7.12.1
-//     width: calc((100% - rem(106)) / 2);
-//   }
-// }
 
 .sub-result-list .c-pager{
   margin-top: rem(59);

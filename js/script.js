@@ -101,10 +101,6 @@ $(function(){
     }
     if (isOverlap) {
       
-      // let offset = 79; // SP用（モバイルファースト）
-      // if (window.matchMedia('(min-width: 768px)').matches) {
-      //     offset = 91; // PC用
-      // }
       pagetop.css({
         position: 'absolute',
         bottom: footHeight + offset + 'px'

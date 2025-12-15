@@ -19,7 +19,6 @@ blog-list
   row-gap: rem(39);
   @include pc{
     margin-top: rem(37);
-    // row-gap: rem(0);
     row-gap: rem(67);
   }
 }
@@ -27,7 +26,6 @@ blog-list
 .sub-blog-list .c-pager{
   margin-top: rem(59);
   @include pc{
-    // margin-top: 0;
     margin-top: rem(70);
   }
 }

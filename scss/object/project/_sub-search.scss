@@ -7,7 +7,6 @@
   color: #000000;
   background-color: #FFFFFF;
   @include pc {
-    // padding-top: rem(70);//微調整
     padding-top: rem(66);
     padding-bottom: rem(210);
   }
@@ -35,12 +34,10 @@ search
   font-weight: 500;
 }
 .sub-search__wrapper{
-  // margin-top: rem(45);//微調整
   margin-top: rem(42);
   row-gap: rem(39);
   @include pc{
     margin-top: rem(42);
-    // row-gap: rem(0);
     row-gap: rem(70);
   }
 }
@@ -48,7 +45,6 @@ search
 .sub-search .c-pager{
   margin-top: rem(59);
   @include pc{
-    // margin-top: 0;
     margin-top: rem(70);
   }
 }

@@ -9,7 +9,6 @@
   background-color:#CB0000;
   @include pc{
     padding-top: rem(46);//微調整
-    // padding-top: rem(44);
     padding-bottom: rem(80);
   }
 }
@@ -25,10 +24,6 @@
     margin-top: rem(34); //微調整
   }
 }
-// #voice .splide__slide img {//7.12.8
-//   width: 100%;
-//   height: auto;
-// }
 /*CSSでデフォルト矢印の見た目を完全に*/
 .splide__arrow {
   padding: 0;
@@ -50,7 +45,7 @@
   top: 51%;
   left: rem(6);
   right: rem(6);
-  max-width: 998px;//((440+20.24+18.6)×2)+α
+  max-width: 998px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -71,20 +66,13 @@
   cursor: pointer;
 }
 .custom-arrow img {
-  // display: block;//7.12.8
-  // width: 100%;
   height: auto;
 }
 .custom-arrow img{
   transition: opacity 0.3s ease;
 }
-// .custom-arrow img {
-//   transition: opacity 0.3s ease;
-//   opacity: 0.5;
-// }
 .custom-arrow:hover img {
   opacity: 0.7;
-  // opacity: 1;
 }
 
 
@@ -94,12 +82,6 @@ card
 .top-voice-list__img{
   overflow: hidden;
 }
-// .top-voice-list__img img{
-//   transition: transform 0.3s ease;
-// }
-// .top-voice-list__img:hover img{
-//   transform: scale(1.05);
-// }
 .top-voice__list a .top-voice-list__img img{
   transition: transform 0.3s ease;
 }
@@ -122,8 +104,6 @@ card
   }
 }
 .top-voice-list__img img {
-  // display: block;//7.12.8
-  // width: 100%;
   height: 100%;
   object-fit: cover;
 }

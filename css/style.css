@@ -582,12 +582,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   cursor: pointer;
   color: #FFFFFF;
   background-color: #CB0000;
   border: 1px solid #CB0000;
-  transition: background-color 0.3s ease, color 0.5s ease;
+  font-weight: 700;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .c-btn:hover {
@@ -596,32 +598,29 @@ p {
 }
 
 .c-btn--h-contact {
-  min-width: 6.25rem;
+  min-width: 9.375rem;
   height: 2.8125rem;
   padding-top: 0.4375rem;
   padding-bottom: 0.3125rem;
-  padding-left: 1.8125rem;
-  padding-right: 1.8125rem;
   font-size: 0.9375rem;
   line-height: 2.2;
-  transition: background-color 0.3s ease;
 }
 
 .c-btn--f-contact {
-  max-width: 20.9375rem;
-  width: 100%;
+  width: 20.9375rem;
   height: 3.75rem;
-  padding-top: 0.84375rem;
-  padding-bottom: 0.84375rem;
+  padding-top: 0.90625rem;
+  padding-bottom: 0.78125rem;
+  font-size: 1.25rem;
+  line-height: 1.65;
   opacity: 0; /*デフォルトで非表示にする*/
 }
 @media (min-width: 768px) {
   .c-btn--f-contact {
-    max-width: 300px;
-    width: 100%;
+    width: 18.75rem;
     height: 3.75rem;
     padding-top: 0.84375rem;
-    padding-bottom: 0.84375rem;
+    padding-bottom: 0.78125rem;
   }
 }
 
@@ -633,11 +632,10 @@ p {
 }
 
 .c-btn--primary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 20.9375rem;
   height: 3.125rem;
+  padding-top: 0.59375rem;
+  padding-bottom: 0.46875rem;
   font-size: 1.25rem;
   line-height: 1.3;
 }
@@ -997,66 +995,56 @@ p {
   left: 0;
   top: 0;
   z-index: 10;
+  padding-top: 0.125rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.6666666667;
   background-color: #CB0000;
   color: #fff;
 }
 
 .c-label--responsive-s {
-  width: 5.625rem;
+  min-width: 5.625rem;
   height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
 }
 @media (min-width: 768px) {
   .c-label--responsive-s {
-    width: 5rem;
+    min-width: 5rem;
     height: 1.875rem;
   }
 }
 
 .c-label--responsive-m {
-  width: 5rem;
+  min-width: 5rem;
   height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
 }
 @media (min-width: 768px) {
   .c-label--responsive-m {
-    width: 6.25rem;
+    min-width: 6.25rem;
     height: 1.875rem;
   }
 }
 
 .c-label--responsive-l {
-  width: 5.625rem;
+  min-width: 5.625rem;
   height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
 }
 @media (min-width: 768px) {
   .c-label--responsive-l {
-    width: 6.25rem;
+    min-width: 6.25rem;
     height: 1.875rem;
   }
 }
 
 .c-label--s {
-  width: 5rem;
+  min-width: 5rem;
   height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
 }
 
 .c-label--l {
-  width: 6.25rem;
+  min-width: 6.25rem;
   height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
 }
 
 .c-label--none {
@@ -1145,80 +1133,6 @@ hover
 label 
 ---------------*/
 /*共通*/
-.p-card__label {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  background-color: #CB0000;
-  color: #fff;
-}
-
-.p-card--label-responsive-s {
-  width: 5.625rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .p-card--label-responsive-s {
-    width: 5rem;
-    height: 1.875rem;
-  }
-}
-
-.p-card--label-responsive-m {
-  width: 5rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .p-card--label-responsive-m {
-    width: 6.25rem;
-    height: 1.875rem;
-  }
-}
-
-.p-card--label-responsive-l {
-  width: 5.625rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-@media (min-width: 768px) {
-  .p-card--label-responsive-l {
-    width: 6.25rem;
-    height: 1.875rem;
-  }
-}
-
-.p-card--label-s {
-  width: 5rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-
-.p-card--label-l {
-  width: 6.25rem;
-  height: 1.875rem;
-  padding-top: 0.125rem;
-  font-size: 0.9375rem;
-  line-height: 1.6666666667;
-}
-
-.p-card--nolabel {
-  display: none !important;
-}
-
 /***************
 card 選ばれる理由
 ***************/
@@ -2216,7 +2130,6 @@ card 前後ページへ
 .footer__logo-img {
   width: 2rem;
   margin-top: 1.1875rem;
-  aspect-ratio: 32.03/49.35;
 }
 @media (min-width: 768px) {
   .footer__logo-img {
@@ -2563,34 +2476,33 @@ card 前後ページへ
 .top-vision__step::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 2.125rem;
-  height: 12.1875rem;
+  height: 1.1875rem;
+  top: 0.1875rem;
+  left: 50%;
+  transform: translateX(-49%);
   background: url("../images/arrow-up.svg") no-repeat;
   background-size: contain;
 }
 @media (min-width: 768px) {
   .top-vision__step::before {
-    top: -3%;
+    top: -0.4375rem;
   }
 }
 
 .top-vision__step:after {
-  position: absolute;
   content: "";
+  position: absolute;
   width: 0.1875rem;
-  height: 90%;
-  top: 1%;
+  height: 11.8125rem;
+  top: 0.3125rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1.5625rem;
   background-color: #CB0000;
 }
 @media (min-width: 768px) {
   .top-vision__step:after {
-    top: -2%;
+    top: -0.1875rem;
   }
 }
 
@@ -3064,6 +2976,7 @@ card
   color: #CB0000;
   border-top: 0.03125rem solid rgba(203, 0, 0, 0.1);
 }
+
 .top-faq-accordion__answer p {
   position: relative;
   padding: 0.8125rem 2.9375rem 0.8125rem 3.4375rem;
@@ -3959,7 +3872,6 @@ contact-form
 
 .form__text,
 .form__textarea {
-  align-items: center;
   width: 100%;
   height: 2.5rem;
   padding: 0.29375rem 1.25rem 0.14375rem;

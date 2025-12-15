@@ -6,17 +6,11 @@
 .fv {
   position: relative;
   width: 100%;
-  // aspect-ratio: 16 / 9;
   top: 0;
   left: 0;
   z-index: 1; /* ヘッダーより低く */
-  // margin-top: rem(50);
-  // @include pc {
-  //   margin-top: rem(80);
-  // }
 }
 .fv img{
-  // width: 100%;//7.12.8
   height: rem(300); // 表示したい高さ
   object-fit: cover;
   object-position: center center;

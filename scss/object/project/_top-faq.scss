@@ -77,9 +77,7 @@
   }
 }
 .top-faq-accordion__icon img{
-    // width: 100%;
     height: 100%;
-    // display: block;
     transform: rotate(0deg); // ←ここで角度を調整
 }
 .top-faq-accordion__question.active .top-faq-accordion__icon {
@@ -87,20 +85,12 @@
 }
 
 /*-- answer --*/
-// .top-faq-accordion__answer {
-// }
 .top-faq-accordion__answer {
-  // position: relative;
   display: none;
-  // padding: rem(13) rem(47) rem(13) rem(55);
   text-align: left;
   background-color: rgba(203, 0, 0, 0.1);
   color: #CB0000 ;
   border-top: rem(0.5) solid rgba(203, 0, 0, 0.1);
-  // cursor: pointer;
-  @include pc {
-    // padding: rem(17) rem(65);
-  }
 }
 .top-faq-accordion__answer p{
   position: relative;
@@ -115,7 +105,6 @@
   }
 }
 .top-faq-accordion__answer p::before {
-// .top-faq-accordion__answer::before {
   position: absolute;
   content: 'A';
   width: rem(35);
@@ -130,7 +119,6 @@
   border-radius: 50%;
   color: #fff;
   font-size: rem(20);
-  // font-weight: bold;
   @include pc {
     left: rem(20);
   }

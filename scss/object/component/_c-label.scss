@@ -10,56 +10,45 @@
   left: 0;
   top: 0;
   z-index: 10;
-  // background-color: #3498db; //test
+  padding-top: rem(2);
+  padding-left: rem(10);
+  padding-right: rem(10);
+  font-size: rem(15);
+  line-height: calc(25 / 15);
   background-color: #CB0000;
   color: #fff;
 }
 .c-label--responsive-s{
-  width: rem(90);
+  min-width: rem(90);
   height: rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
   @include pc{
-  width: rem(80);
+  min-width: rem(80);
   height: rem(30);
   }
 }
 .c-label--responsive-m{
-  width: rem(80);
+  min-width: rem(80);
   height: rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
   @include pc{
-  width: rem(100);
+  min-width: rem(100);
   height: rem(30);
   }
 }
 .c-label--responsive-l{
-  width: rem(90);
+  min-width: rem(90);
   height: rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
   @include pc{
-  width: rem(100);
+  min-width: rem(100);
   height: rem(30);
   }
 }
 .c-label--s{
-  width: rem(80);
+  min-width: rem(80);
   height: rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
 }
 .c-label--l{
-  width: rem(100);
+  min-width: rem(100);
   height: rem(30);
-  padding-top: rem(2);
-  font-size: rem(15);
-  line-height: calc(25 / 15);
 }
 
 .c-label--none{//!important使用

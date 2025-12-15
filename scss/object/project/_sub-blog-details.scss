@@ -78,7 +78,6 @@
 
 /*関連記事*/
 .sub-blog-details .article__related{
-  // margin-top: rem(67);
   margin-top: rem(64);
   @include pc{
     margin-top: rem(100);
@@ -96,7 +95,6 @@
 .sidebar-newsletter__container{
   position: relative;
   border: 0.5px #000000 solid;
-  // border: rem(0.5) #000000 solid;//7.12.7
   width: 100%;
   height: auto;
   padding: rem(20);
@@ -123,7 +121,6 @@
 /*ブログ内を検索*/
 .sidebar-search__container{
   border: 0.5px #000000 solid;
-  // border: rem(0.5) #000000 solid;//7.12.7
   width: 100%;
   height: auto;
   padding: rem(20);
@@ -155,9 +152,6 @@
   line-height: calc(28 / 17);
   font-weight: 500;
 }
-// .sidebar-category__list{
-//   margin-top: rem(12);
-// }
 .sidebar-category__list li{
   position: relative;
   height: 100%;

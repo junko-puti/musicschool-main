@@ -1,7 +1,6 @@
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
-// }
 .sub-contact-send{
   padding-top: rem(47);
   padding-bottom: rem(50);
@@ -13,7 +12,6 @@
   }
 }
 .sub-contact-send .c-btn--primary{
-  // max-width: rem(880);
   margin: 0 auto;
   margin-top: rem(39);
   @include media(375px){

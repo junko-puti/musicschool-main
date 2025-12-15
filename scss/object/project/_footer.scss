@@ -34,7 +34,6 @@
 .footer__logo-img{
   width: rem(32);
   margin-top: rem(19);
-  aspect-ratio: 32.03/49.35;
   @include pc{
     margin-top: rem(23);
   }
@@ -45,18 +44,10 @@
 .footer__logo-img:hover{
   opacity: 0.7;
 }
-// .footer__logo-img a{
-//   transition: opacity 0.3s;
-// }
-// .footer__logo-img a:hover{
-//   opacity: 0.7;
-// }
 .footer__copyright{
   margin-top: rem(29);
-  // margin-top: rem(28.91);
   font-size: rem(15);
   line-height: calc(20 / 15);
-  // letter-spacing: -0.03em;//微調整
   text-align: center;
   font-weight: 500;
   @include pc{
@@ -70,7 +61,6 @@
   margin-top: rem(18);
   text-align: center;
   @include pc {
-    // margin-top: rem(5);
     margin-top: rem(8);
   }
 }
