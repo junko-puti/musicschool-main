@@ -1,0 +1,41 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+/*--sp用メニュー--*/
+.c-drawer {
+  position: fixed;
+  top: rem(50);
+  right: 0;
+  width: 80%;
+  z-index: 999;
+  max-width: 300px;
+  height: rem(174);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+  background-color: #CB0000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.c-drawer.is-open {
+  transform: translateX(0);
+}
+.c-drawer .header__menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.c-drawer .header__menu a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: rem(12.5) 0 rem(12.5) rem(20);;
+  font-size: rem(18);
+  line-height: calc(33 / 18);
+  transition: background-color 0.3s ease;
+}
+.c-drawer .header__menu a:hover{
+  background-color: #000000;
+}

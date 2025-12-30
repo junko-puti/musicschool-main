@@ -20,14 +20,22 @@ search
   justify-content: space-between;
   align-items: center;
 }
-.sub-search h1{
+.sub-search p{
   font-size: rem(18);
   line-height: calc(25 / 18);
   font-weight: 500;
 }
-.sub-search h1 span{
+.sub-search p span{
   font-weight: 700;
 }
+// .sub-search h1{
+//   font-size: rem(18);
+//   line-height: calc(25 / 18);
+//   font-weight: 500;
+// }
+// .sub-search h1 span{
+//   font-weight: 700;
+// }
 .sub-search .sub-search__counter{
   font-size: rem(18);
   line-height: calc(30 / 18);

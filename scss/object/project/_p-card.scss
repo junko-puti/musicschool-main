@@ -32,7 +32,8 @@ card 共通
   overflow: hidden;
 }
 .p-card__img img {
-  height: 100%;
+  // height: auto;
+  // height: 100%;12/30
   object-fit: cover;
 }
 .p-card__title{
@@ -142,12 +143,24 @@ card 選ばれる理由
   opacity: 1;
 }
 .p-card--reason .p-card__img{
+  @include pc {
+    width: rem(350);
+  }
+}
+.p-card--reason .p-card__img img{
+  // width: 100%;
   aspect-ratio: 335 / 200;
   @include pc {
-    width: 39.772%;
     aspect-ratio: 350 / 247;
   }
 }
+// .p-card--reason .p-card__img{
+//   aspect-ratio: 335 / 200;
+//   @include pc {
+//     width: 39.772%;
+//     aspect-ratio: 350 / 247;
+//   }
+// }
 .p-card--reason .p-card__img::before{
   content: none;
 }
@@ -194,19 +207,31 @@ card TOPページ-ブログ
 .p-card--top-blog .p-card:hover{
   opacity: 0.7;
 }
-.p-card--top-blog .p-card__img{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 335 / 200; //
-  overflow: hidden;
+// .p-card--top-blog .p-card__img{
+//   position: relative;
+//   width: 100%;
+//   overflow: hidden;
+// }
+.p-card--top-blog .p-card__img img {
+  // width: 100%;
+  aspect-ratio: 335 / 200;
   @include pc{
     aspect-ratio: 260 / 200;
   }
 }
-.p-card--top-blog .p-card__img img {
-  height: 100%;
-  object-fit: cover;
-}
+// .p-card--top-blog .p-card__img{//12.30
+//   position: relative;
+//   width: 100%;
+//   aspect-ratio: 335 / 200; //
+//   overflow: hidden;
+//   @include pc{
+//     aspect-ratio: 260 / 200;
+//   }
+// }
+// .p-card--top-blog .p-card__img img {
+//   height: 100%;
+//   object-fit: cover;
+// }
 .p-card--top-blog .p-card__body{
   margin-top: rem(30);
   @include pc{
@@ -251,14 +276,26 @@ card ブログ一覧/検索ページ
   }
 }
 .p-card--blog-list .p-card__img{
-  aspect-ratio: 335 / 200;
-  overflow: hidden;
+  // overflow: hidden;
   @include pc{
     flex: 0 0 rem(260); // 幅
-    aspect-ratio: 260 / 184;
-    max-height: calc(260 / 260 * 184px); // アスペクト比から導いた高さ
   }
 }
+.p-card--blog-list .p-card__img img{
+  aspect-ratio: 335 / 200;
+  @include pc{
+    aspect-ratio: 260 / 184;
+  }
+}
+// .p-card--blog-list .p-card__img{
+//   aspect-ratio: 335 / 200;
+//   overflow: hidden;
+//   @include pc{
+//     flex: 0 0 rem(260); // 幅
+//     aspect-ratio: 260 / 184;
+//     max-height: calc(260 / 260 * 184px); // アスペクト比から導いた高さ
+//   }
+// }
 .p-card--blog-list .p-card__body{
   margin-top: rem(30);
   @include pc{
@@ -359,13 +396,24 @@ card ブログ-details
 }
 .p-card--blog-details .p-card__img--second{
   margin-top: rem(39);
-  aspect-ratio: 335 / 200;
-  overflow: hidden;
+  // overflow: hidden;
   width: rem(335);
   @include pc{
     margin-top: rem(17);
   }
 }
+.p-card--blog-details .p-card__img--second img{
+  aspect-ratio: 335 / 200;
+}
+// .p-card--blog-details .p-card__img--second{
+//   margin-top: rem(39);
+//   aspect-ratio: 335 / 200;
+//   overflow: hidden;
+//   width: rem(335);
+//   @include pc{
+//     margin-top: rem(17);
+//   }
+// }
 .p-card--blog-details h3.p-card__title{
   position: relative;
   padding-left: rem(9.5);
@@ -380,7 +428,8 @@ card ブログ-details
   position: absolute;
   content: '';
   width: rem(3);
-  height: rem(50);
+  height: 100%;
+  // height: rem(50);
   top: 50%;
   left: 0;
   transform: translateY(-50%);
@@ -435,18 +484,30 @@ card 関連記事 サイドバーあり(ブログ）
   }
 }
 .p-card--related-compact .p-card__img{
-  aspect-ratio: 160 / 110;
   flex: 0 0 rem(160); // 幅
-  overflow: hidden;
   @include pc{
     flex: 0 0 rem(200); // 幅
-    aspect-ratio: 200 / 140;
   }
 }
 .p-card--related-compact .p-card__img img {
-  height: 100%;
-  object-fit: cover;
+  aspect-ratio: 160 / 110;
+  @include pc{
+    aspect-ratio: 200 / 140;
+  }
 }
+// .p-card--related-compact .p-card__img{
+//   aspect-ratio: 160 / 110;
+//   flex: 0 0 rem(160); // 幅
+//   overflow: hidden;
+//   @include pc{
+//     flex: 0 0 rem(200); // 幅
+//     aspect-ratio: 200 / 140;
+//   }
+// }
+// .p-card--related-compact .p-card__img img {
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 .p-card--related-compact .p-card__text{
   font-size: rem(17);
@@ -459,12 +520,12 @@ card 関連記事 サイドバーあり(ブログ）
     line-height: calc(25 / 20);
   }
 }
-.p-card--related-compact .p-card__text span{
-  display: inline-block;
-  @include pc{
-    display: inline;
-  }
-}
+// .p-card--related-compact .p-card__text span{
+//   display: inline-block;
+//   @include pc{
+//     display: inline;
+//   }
+// }
 .p-card--related-compact .p-card__date{
   margin-top: rem(3);//微調整
   font-size: rem(17);
@@ -485,13 +546,24 @@ card 卒業実績一覧
     column-gap: rem(50);
   }
 }
-.p-card--result-list .p-card__img{
+// .p-card--result-list .p-card__img{
+//   @include pc{
+//     overflow: hidden;
+//   }
+// }
+.p-card--result-list .p-card__img img{
   aspect-ratio: 335 / 236;
   @include pc{
     aspect-ratio: 387 / 273;
-    overflow: hidden;
   }
 }
+// .p-card--result-list .p-card__img{
+//   aspect-ratio: 335 / 236;
+//   @include pc{
+//     aspect-ratio: 387 / 273;
+//     overflow: hidden;
+//   }
+// }
 .p-card--result-list .p-card__body{
   margin-top: rem(20);
   @include pc{
@@ -525,11 +597,16 @@ card 卒業実績-details
   opacity: 1;
 }
 
-.p-card--result-details .p-card__img{
+.p-card--result-details .p-card__img img{
   @include pc{
     aspect-ratio: 22 / 10; //880/400
   }
 }
+// .p-card--result-details .p-card__img{
+//   @include pc{
+//     aspect-ratio: 22 / 10; //880/400
+//   }
+// }
 .p-card--result-details h1.p-card__title{
   margin-top: rem(30);
   font-size: rem(20);
@@ -580,18 +657,30 @@ card 関連記事 全幅(卒業実績）
   margin-top: 0;
 }
 .p-card--related-full .p-card__img{
-  aspect-ratio: 160 / 113;
   flex: 0 0 rem(160); // 幅
-  overflow: hidden;
   @include pc{
     flex: 0 0 rem(260); // 幅
-    aspect-ratio: 260 / 183;
   }
 }
 .p-card--related-full .p-card__img img {
-  height: 100%;
-  object-fit: cover;
+  aspect-ratio: 160 / 113;
+  @include pc{
+    aspect-ratio: 260 / 183;
+  }
 }
+// .p-card--related-full .p-card__img{
+//   aspect-ratio: 160 / 113;
+//   flex: 0 0 rem(160); // 幅
+//   overflow: hidden;
+//   @include pc{
+//     flex: 0 0 rem(260); // 幅
+//     aspect-ratio: 260 / 183;
+//   }
+// }
+// .p-card--related-full .p-card__img img {
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 .p-card--related-full .p-card__text{
   font-size: rem(17);
@@ -604,12 +693,12 @@ card 関連記事 全幅(卒業実績）
     line-height: calc(25 / 20);
   }
 }
-.p-card--related-full .p-card__text span{
-  display: inline-block;
-  @include pc{
-    display: inline;
-  }
-}
+// .p-card--related-full .p-card__text span{
+//   display: inline-block;
+//   @include pc{
+//     display: inline;
+//   }
+// }//12.30
 .p-card--related-full .p-card__date{
   margin-top: rem(3);//微調整
   font-size: rem(17);
@@ -644,14 +733,26 @@ card おすすめ記事
   }
 }
 .p-card--recommend .p-card__img{
-  aspect-ratio: 160 / 110;
   flex: 0 0 rem(160); // 幅
   @include pc{
     flex: 0 0 rem(95); // 幅
-    aspect-ratio: 95 / 75;
-    overflow: hidden;
   }
 }
+.p-card--recommend .p-card__img img{
+  aspect-ratio: 160 / 110;
+  @include pc{
+    aspect-ratio: 95 / 75;
+  }
+}
+// .p-card--recommend .p-card__img{
+//   aspect-ratio: 160 / 110;
+//   flex: 0 0 rem(160); // 幅
+//   @include pc{
+//     flex: 0 0 rem(95); // 幅
+//     aspect-ratio: 95 / 75;
+//     overflow: hidden;
+//   }
+// }
 
 .p-card--recommend .p-card__img::before{
   content: '';
@@ -668,21 +769,34 @@ card 前後ページへ
   }
 }
 .p-card--page-nav .p-card__img{
-  aspect-ratio: auto;
   display: none;
   @include pc{
     width: 100%;
-    aspect-ratio: 98 / 68;
-    overflow: hidden;
     display: block;
   }
 }
 .p-card--page-nav .p-card__img img{
+  aspect-ratio: auto;
   @include pc{
-    height: 100%;
-    object-fit: cover;
-  };
+    aspect-ratio: 98 / 68;
+  }
 }
+// .p-card--page-nav .p-card__img{
+//   aspect-ratio: auto;
+//   display: none;
+//   @include pc{
+//     width: 100%;
+//     aspect-ratio: 98 / 68;
+//     overflow: hidden;
+//     display: block;
+//   }
+// }
+// .p-card--page-nav .p-card__img img{
+//   @include pc{
+//     height: 100%;
+//     object-fit: cover;
+//   };
+// }
 .p-card--page-nav .p-card__title{
   font-size: rem(16);
   font-weight: 700;

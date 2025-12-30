@@ -68,7 +68,8 @@
       </div>
     </header>
     <!-- SP用ドロワーメニュー -->
-    <nav class="header__drawer u-sp" id="drawer">
+    <nav class="c-drawer u-sp" id="drawer">
+    <!-- <nav class="header__drawer u-sp" id="drawer"> -->
       <ul class="header__menu">
         <li><a href="./plan.html">料金</a></li>
         <li><a href="./blog-list.html">ブログ</a></li>
@@ -104,7 +105,11 @@
               <a href="./result-details.html" class="p-card p-card--result-list">
                 <div class="p-card__img">
                   <span class="c-label c-label--l">ポップス</span>
-                  <img src="./images/result01.jpg" alt="卒業実績１">
+                  <!-- <img src="./images/result01.jpg" alt="卒業実績１"> -->
+                  <picture>
+                    <source srcset="./images/result01.jpg" media="(min-width: 768px)">
+                    <img src="./images/result01-sp.jpg" alt="卒業実績１">
+                  </picture>
                 </div>
                 <div class="p-card__body">
                   <h3 class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>

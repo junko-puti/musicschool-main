@@ -97,16 +97,25 @@ card
 
 .top-voice-list__img{
   width: 100%;
-  aspect-ratio: 335 / 200; // 比率を統一
-  overflow: hidden;
+}
+.top-voice-list__img img {
+  aspect-ratio: 335 / 200;
   @include pc{
     aspect-ratio: 27 / 19;
   }
 }
-.top-voice-list__img img {
-  height: 100%;
-  object-fit: cover;
-}
+// .top-voice-list__img{
+//   width: 100%;
+//   aspect-ratio: 335 / 200; // 比率を統一
+//   overflow: hidden;
+//   @include pc{
+//     aspect-ratio: 27 / 19;
+//   }
+// }
+// .top-voice-list__img img {
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 .top-voice-list__text{
   margin-top: rem(27);
@@ -117,6 +126,7 @@ card
 .top-voice-list__name{
   font-size: rem(22);
   line-height: calc(33 / 22);
+  white-space: nowrap;//12.28
 }
 .top-voice-list__comment{
   margin-top: rem(10);
