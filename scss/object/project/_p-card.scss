@@ -436,7 +436,7 @@ card ブログ-details
   background-color: #000000;
   @include pc{
     top: 44%;
-    height: rem(20);
+    // height: rem(20);
   }
 }
 .p-card--blog-details .p-card__text--third{

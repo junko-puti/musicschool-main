@@ -10,7 +10,15 @@
   padding-right: 20px;
 }
 .l-inner__top-voice{
- @media (min-width: 768px) and (max-width: 1000px) {
-    padding-left: 55px;
-    padding-right: 55px;
-  }}
+  max-width: 1000px;
+//  @media (min-width: 768px) and (max-width: 1000px) {
+//     // padding-left: 55px;
+//     // padding-right: 55px;
+//     padding-left: 40px;
+//     padding-right: 40px;
+//   }
+ @include pc{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

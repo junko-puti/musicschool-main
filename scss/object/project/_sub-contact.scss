@@ -68,8 +68,8 @@ contact-form
 .form__textarea {
   width: 100%;
   height: rem(40);
-  padding: rem(13) rem(20);
-  // padding: rem(4.7) rem(20) rem(2.3);
+  // padding: rem(13) rem(20);
+  padding: rem(4.7) rem(20) rem(2.3);
   font-size: rem(15);
   line-height: calc(33 / 15);
   border: 0.5px solid #000000;
@@ -93,11 +93,13 @@ contact-form
 .form__textarea {
   min-height: rem(190); /* 最低の高さを190pxに固定 */
   padding-top: rem(12);
+  padding-bottom: rem(12);
   resize: vertical;     /* 垂直方向のみリサイズ可能 */
   overflow-y: auto;     /* 縦スクロールを表示 */
   @include pc{
     min-height: rem(300); /* 最低の高さを190pxに固定 */
-    padding-top: rem(19);
+    padding-top: rem(13);
+    padding-bottom: rem(13);
   }
 }
 .form__textarea-container .form__label{

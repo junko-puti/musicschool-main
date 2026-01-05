@@ -7,7 +7,8 @@ $(function () {
       perMove: 1,//1枚ずつ移動
       pagination: false,//ページネーションを非表示
       arrows: true,//ここでは消さない（デフォルト矢印を無効化）
-      gap: '35px',//スライド間の余白を指定
+      // gap: '35px',//スライド間の余白を指定
+      gap: '2.1875rem',//35px スライド間の余白を指定
       padding: { left: 0, right: 0 }, // ← 余白をゼロに明示
       breakpoints: {
         767: {
