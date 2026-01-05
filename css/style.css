@@ -432,10 +432,6 @@ p {
   line-height: 1.6666666667;
 }
 
-* {
-  outline: 1px solid rgb(229, 207, 218);
-}
-
 .l-header {
   position: fixed;
   top: 0;
