@@ -28,14 +28,6 @@ search
 .sub-search p span{
   font-weight: 700;
 }
-// .sub-search h1{
-//   font-size: rem(18);
-//   line-height: calc(25 / 18);
-//   font-weight: 500;
-// }
-// .sub-search h1 span{
-//   font-weight: 700;
-// }
 .sub-search .sub-search__counter{
   font-size: rem(18);
   line-height: calc(30 / 18);
@@ -46,14 +38,14 @@ search
   row-gap: rem(39);
   @include pc{
     margin-top: rem(42);
-    row-gap: rem(70);
+    row-gap: rem(65);
   }
 }
 
 .sub-search .c-pager{
   margin-top: rem(59);
   @include pc{
-    margin-top: rem(70);
+    margin-top: rem(65);
   }
 }
 

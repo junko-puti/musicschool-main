@@ -19,14 +19,16 @@ blog-list
   row-gap: rem(39);
   @include pc{
     margin-top: rem(37);
-    row-gap: rem(67);
+    row-gap: rem(65);
+    // row-gap: rem(67);
   }
 }
 
 .sub-blog-list .c-pager{
   margin-top: rem(59);
   @include pc{
-    margin-top: rem(70);
+    margin-top: rem(65);
+    // margin-top: rem(70);
   }
 }
 
