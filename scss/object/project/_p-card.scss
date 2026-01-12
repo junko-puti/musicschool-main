@@ -425,16 +425,20 @@ card ブログ-details
   }
 }
 .p-card--blog-details h3.p-card__title:before{
-  position: absolute;
   content: '';
-  width: rem(3);
-  height: 100%;
+  position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  width: rem(3);
+  // height: rem(50);
+  height: 83.3%;
+  // height: 100%;
   background-color: #000000;
   @include pc{
     top: 44%;
+    // height: rem(20);
+    height: 50%;
   }
 }
 .p-card--blog-details .p-card__text--third{

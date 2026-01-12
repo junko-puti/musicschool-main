@@ -1445,18 +1445,19 @@ card ブログ-details
 }
 
 .p-card--blog-details h3.p-card__title:before {
-  position: absolute;
   content: "";
-  width: 0.1875rem;
-  height: 100%;
+  position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  width: 0.1875rem;
+  height: 83.3%;
   background-color: #000000;
 }
 @media (min-width: 768px) {
   .p-card--blog-details h3.p-card__title:before {
     top: 44%;
+    height: 50%;
   }
 }
 
@@ -1881,10 +1882,6 @@ card 前後ページへ
 
 .header__logo a:hover {
   opacity: 0.7;
-}
-
-.header__logo span {
-  display: none;
 }
 
 /*--sp用メニュー--*/
@@ -3913,6 +3910,7 @@ contact-form
   padding: 0.29375rem 1.25rem 0.14375rem;
   font-size: 0.9375rem;
   line-height: 2.2;
+  letter-spacing: 0;
   border: 0.5px solid #000000;
 }
 
@@ -4111,4 +4109,16 @@ textarea:focus {
 
 .u-pt5 {
   padding-top: 0.3125rem;
+}
+
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }/*# sourceMappingURL=style.css.map */
