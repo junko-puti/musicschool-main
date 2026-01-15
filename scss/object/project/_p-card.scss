@@ -415,6 +415,8 @@ card ブログ-details
 //   }
 // }
 .p-card--blog-details h3.p-card__title{
+  // display: flex;
+  // align-items: center;
   position: relative;
   padding-left: rem(9.5);
   margin-top: rem(50);
@@ -431,14 +433,11 @@ card ブログ-details
   left: 0;
   transform: translateY(-50%);
   width: rem(3);
-  // height: rem(50);
-  height: 83.3%;
-  // height: 100%;
+  height:calc(100% - rem(10));
   background-color: #000000;
   @include pc{
-    top: 44%;
-    // height: rem(20);
-    height: 50%;
+    top: 50%;
+    height:calc(100% - rem(20));
   }
 }
 .p-card--blog-details .p-card__text--third{

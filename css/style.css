@@ -1451,13 +1451,13 @@ card ブログ-details
   left: 0;
   transform: translateY(-50%);
   width: 0.1875rem;
-  height: 83.3%;
+  height: calc(100% - 0.625rem);
   background-color: #000000;
 }
 @media (min-width: 768px) {
   .p-card--blog-details h3.p-card__title:before {
-    top: 44%;
-    height: 50%;
+    top: 50%;
+    height: calc(100% - 1.25rem);
   }
 }
 
