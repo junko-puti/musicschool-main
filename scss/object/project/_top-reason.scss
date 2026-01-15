@@ -10,7 +10,7 @@
     padding-bottom: rem(90);
   }
 }
-.top-reason__lists{
+.top-reason__items{
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
   justify-items: start;       // flex-startに相当
@@ -32,7 +32,7 @@
 // }
 ///////////////////////////////////////////////////
 
-.top-reason__list {
+.top-reason__item {
   position: relative;
   display: flex;
   flex-direction: column;

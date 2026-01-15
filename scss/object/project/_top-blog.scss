@@ -45,7 +45,7 @@
     padding-bottom: rem(205);
   }
 }
-.top-blog__lists{
+.top-blog__items{
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
   justify-items: start;       // flex-startに相当
@@ -58,7 +58,7 @@
   }
 }
 
-.top-blog__list {
+.top-blog__item {
   flex: 0 0 rem(260);
 }
 // .top-blog__lists li {//11.20 カード幅を固定
@@ -79,10 +79,10 @@
 /*******************
 card TOPページ-ブログ
 *******************/
-.top-blog__list a{
+.top-blog__item a{
   transition: opacity 0.3s ease;
 }
-.top-blog__list a:hover{
+.top-blog__item a:hover{
   opacity: 0.7;
 }
 // .p-card--top-blog .p-card__img{
