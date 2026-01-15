@@ -24,14 +24,14 @@
     row-gap: rem(58);
   }
 }
-.top-flow__step-title:first-child{
+.top-flow__title:first-child{
   margin-top: 0;
 }
-.top-flow__step-title,
-.top-flow__step-discriptiom{
+.top-flow__title,
+.top-flow__discriptiom{
   text-align: left;
 }
-.top-flow__step-title{
+.top-flow__title{
   position: relative;
   margin-top: rem(36);
   font-size: rem(22);
@@ -42,7 +42,7 @@
     margin-top: 0;
   }
 }
-.top-flow__step-discriptiom{
+.top-flow__discriptiom{
   margin-left: 0;
   margin-top: rem(9);
   font-size: rem(16);
@@ -83,7 +83,7 @@
     left: rem(42);
   }
 }
-.top-flow__step-title::before{
+.top-flow__title::before{
   content: '';
   position: absolute;
   width: rem(20);
