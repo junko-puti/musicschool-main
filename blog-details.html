@@ -54,12 +54,17 @@
       <div class="l-inner header__inner">
         <!-- logo -->
         <div class="header__logo">
-          <a href="./index.html">
-            <picture>
-              <source srcset="./images/logo.svg" media="(min-width: 768px)">
-              <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
-            </picture>
-          </a>
+            <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
+              <picture>
+                <source srcset="./images/logo.svg" media="(min-width: 768px)">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
+              </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
+            </a>
         </div>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -87,9 +92,9 @@
       </nav>
     </header>
 
-    <main>
+    <main class="blog-post">
       <!-- fv(スペースの確保)-->
-      <div class="fv"></div>
+      <div class="blog-post__fv fv"></div>
       <!-- パンくずリスト -->
       <nav class="c-breadcrumb c-breadcrumb--2lines" aria-label="パンくずリスト">
         <div class="l-inner">
@@ -102,285 +107,273 @@
         </div>
       </nav> 
       <!-- ブログ個別記事ページ -->
-      <div class="sub-blog-details">
+      <div class="blog-post__details blog-details">
         <div class="l-inner">
           <div class="l-two-column">
             <!-- ---------- -->
             <!--   メイン   -->
             <!-- ---------- -->
-            <section class="l-two-column__main article">
-  
-                <!-- メイン記事 -->
-                <div class="article__core article-core p-card p-card--blog-details">
-                  <div class="p-card__img">
-                    <span class="c-label c-label--responsive-s">ギター</span>
-                    <picture>
-                      <source srcset="./images/blog-detail.jpg" media="(min-width: 768px)">
-                      <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                    </picture>
-                  </div>
-                  <div class="p-card__body">
-                    <h1 class="p-card__title">アルペジオが劇的に向上する3つの習慣</h1>
-                    <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                    <!-- snsボタン -->
-                    <ul class="sns-btn">
-                      <li class>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F">
-                          <div class="sns-btn__img">
-                            <picture>
-                              <source srcset="./images/btn-facebook.svg" media="(min-width: 768px)">
-                              <img src="./images/btn-facebook-sp.svg" alt="facebookのアイコン">
-                            </picture>
-                          </div>
-                        </a>
-                      </li>
-                      <li class>
-                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2F&text=%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%B8%E3%81%A9%E3%81%86%E3%81%9E">
-                          <div class="sns-btn__img">
-                            <picture>
-                              <source srcset="./images/btn-twitter.svg" media="(min-width: 768px)">
-                              <img src="./images/btn-twitter-sp.svg" alt="twitterのアイコン">
-                            </picture>
-                          </div>
-                        </a>
-                      </li>
-                      <li class>
-                        <a href="https://b.hatena.ne.jp/entry/https%3A%2F%2Fexample.com%2F">
-                          <div class="sns-btn__img">
-                            <picture>
-                              <source srcset="./images/btn-hatena.svg" media="(min-width: 768px)">
-                              <img src="./images/btn-hatena-sp.svg" alt="はてなブックマークのアイコン">
-                            </picture>
-                          </div>
-                        </a>
-                      </li>
-                      <li class>
-                        <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fexample.com%2F">
-                          <div class="sns-btn__img">
-                            <picture>
-                              <source srcset="./images/btn-line.svg" media="(min-width: 768px)">
-                              <img src="./images/btn-line-sp.svg" alt="LINEのアイコン">
-                            </picture>
-                          </div>
-                        </a>
-                      </li>
-                      <li class>
-                        <a href="https://getpocket.com/edit?url=https%3A%2F%2Fexample.com%2F">
-                          <div class="sns-btn__img">
-                            <picture>
-                              <source srcset="./images/btn-pocket.svg" media="(min-width: 768px)">
-                              <img src="./images/btn-pocket-sp.svg" alt="Pocketのアイコン">
-                            </picture>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                    <!-- --- -->
-                    <p class="p-card__text p-card__text--first">
-                      本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span class="u-sp">本文が入ります。</span>
-                    </p>
-                    <h2 class="p-card__title">H2見出しが入ります。H2見出しが入ります。</h2>
-                    <p class="p-card__text p-card__text--second">
-                      本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span class="u-sp">本文が入ります。本文が入ります。</span>
-                    </p>
-
-                    <div class="p-card__img p-card__img--second p-card__img--nolabel">
-                        <img src="./images/blog-details-sp.jpg" alt="ブログ詳細ページ 写真２">
-                    </div>
-                    <ul class="article-core__list">
-                      <li>・リストが入ります</li>
-                      <li>・リストが入ります</li>
-                      <li>・リストが入ります</li>
-                    </ul>
-                    <h3 class="p-card__title">H3見出しが入ります。H3見出しが入ります。</h3>
-                    <p class="p-card__text p-card__text--third">
-                      本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    </p>
-                  </div>
-                  <div class="sub-blog-details__link">
-                    <a href="#" class="c-link">テキストリンク</a>
-                  </div>
+            <div class="l-two-column__main blog-details__main">
+              <!-- メイン記事 -->
+              <article class="blog-details__article blog-article">
+                <div class="blog-article__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">ギター</span>
+                  <picture>
+                    <source srcset="./images/blog-detail.jpg" media="(min-width: 768px)">
+                    <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                  </picture>
                 </div>
-  
-                <!-- 前後ページリンク -->
-                <div class="article__nav article-nav">
-                  <ul class="page-nav">
-                    <li>
-                      <a href="#">
-                        <p class="page-nav__prev">◀︎ 前の記事</p>
-                        <div class="p-card p-card--horizontal p-card--page-nav">
-                          <div class="p-card__img p-card__img--nolabel">
-                            <img src="./images/blog-related.jpg" alt="前の記事">
-                          </div>
-                          <div class="p-card__body">
-                            <h3 class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
-                          </div>
+                <div class="blog-article__body">
+                  <h1 class="blog-article__title blog-article__title--first">アルペジオが劇的に向上する3つの習慣</h1>
+                  <time class="blog-article__date" datetime="2025-11-30">0000.00.00</time>
+                  <!-- snsボタン -->
+                  <ul class="sns-btn">
+                    <li class>
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F">
+                        <div class="sns-btn__img">
+                          <picture>
+                            <source srcset="./images/btn-facebook.svg" media="(min-width: 768px)">
+                            <img src="./images/btn-facebook-sp.svg" alt="facebookのアイコン">
+                          </picture>
                         </div>
                       </a>
                     </li>
-                    <li>
-                      <a href="#">
-                        <p class="page-nav__next">次の記事 ▶︎</p>
-                        <div class="p-card p-card--horizontal p-card--page-nav">
-                          <div class="p-card__img p-card__img--nolabel">
-                            <img src="./images/blog-related.jpg" alt="次の記事">
-                          </div>
-                          <div class="p-card__body">
-                            <h3 class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
-                          </div>
+                    <li class>
+                      <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2F&text=%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%B8%E3%81%A9%E3%81%86%E3%81%9E">
+                        <div class="sns-btn__img">
+                          <picture>
+                            <source srcset="./images/btn-twitter.svg" media="(min-width: 768px)">
+                            <img src="./images/btn-twitter-sp.svg" alt="twitterのアイコン">
+                          </picture>
+                        </div>
+                      </a>
+                    </li>
+                    <li class>
+                      <a href="https://b.hatena.ne.jp/entry/https%3A%2F%2Fexample.com%2F">
+                        <div class="sns-btn__img">
+                          <picture>
+                            <source srcset="./images/btn-hatena.svg" media="(min-width: 768px)">
+                            <img src="./images/btn-hatena-sp.svg" alt="はてなブックマークのアイコン">
+                          </picture>
+                        </div>
+                      </a>
+                    </li>
+                    <li class>
+                      <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fexample.com%2F">
+                        <div class="sns-btn__img">
+                          <picture>
+                            <source srcset="./images/btn-line.svg" media="(min-width: 768px)">
+                            <img src="./images/btn-line-sp.svg" alt="LINEのアイコン">
+                          </picture>
+                        </div>
+                      </a>
+                    </li>
+                    <li class>
+                      <a href="https://getpocket.com/edit?url=https%3A%2F%2Fexample.com%2F">
+                        <div class="sns-btn__img">
+                          <picture>
+                            <source srcset="./images/btn-pocket.svg" media="(min-width: 768px)">
+                            <img src="./images/btn-pocket-sp.svg" alt="Pocketのアイコン">
+                          </picture>
                         </div>
                       </a>
                     </li>
                   </ul>
-                </div>
-  
-                <!-- 関連記事 -->
-                <div class="article__related article-related">
-                  <h2 class="c-heading-deco">関連記事</h2>
-                  <ul class="card-lists">
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--related-compact">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--s">ギター</span>
-                          <picture>
-                            <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
-                            <img src="./images/blog-related-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--related-compact">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--s">ギター</span>
-                          <picture>
-                            <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
-                            <img src="./images/blog-related-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--related-compact">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--s">ギター</span>
-                          <picture>
-                            <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
-                            <img src="./images/blog-related-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
+                  <!-- --- -->
+                  <p class="blog-article__text blog-article__text--first">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span class="u-sp">本文が入ります。</span>
+                  </p>
+                  <h2 class="blog-article__title blog-article__title--second">H2見出しが入ります。H2見出しが入ります。</h2>
+                  <p class="blog-article__text blog-article__text--second">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span class="u-sp">本文が入ります。本文が入ります。</span>
+                  </p>
+                  <div class="blog-article__img blog-article__img--second">
+                      <img src="./images/blog-details-sp.jpg" alt="ブログ詳細ページ 写真２">
+                  </div>
+                  <ul class="blog-article__list">
+                    <li>・リストが入ります</li>
+                    <li>・リストが入ります</li>
+                    <li>・リストが入ります</li>
                   </ul>
+                  <h3 class="blog-article__title blog-article__title--third">H3見出しが入ります。H3見出しが入ります。</h3>
+                  <p class="blog-article__text blog-article__text--third">
+                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                  </p>
                 </div>
-              <!-- </div> -->
-            </section>
-  
-  
+                <div class="blog-article__link">
+                  <a href="#" class="c-link">テキストリンク</a>
+                </div>
+              </article>
+              <!-- 前後ページリンク -->
+              <nav class="blog-details__pager pager">
+                <ul class="pager__items">
+                  <li>
+                    <a href="#">
+                      <p class="pager__prev">◀︎ 前の記事</p>
+                      <div class="pager__item">
+                        <div class="pager__img pager__img--nolabel">
+                          <img src="./images/blog-related.jpg" alt="前の記事">
+                        </div>
+                        <div class="pager__body">
+                          <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <p class="pager__next">次の記事 ▶︎</p>
+                      <div class="pager__item">
+                        <div class="pager__img pager__img--nolabel">
+                          <img src="./images/blog-related.jpg" alt="次の記事">
+                        </div>
+                        <div class="pager__body">
+                          <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- 関連記事 -->
+              <section class="blog-details__related blog-related">
+                <h2 class="c-heading-deco">関連記事</h2>
+                <ul class="blog-related__items">
+                  <li class="blog-related__item">
+                    <a href="./blog-details.html">
+                      <div class="blog-related__img">
+                        <span class="c-label c-label--sp-s c-label--pc-s">ギター</span>
+                        <picture>
+                          <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog-related-sp.jpg" alt="関連記事">
+                        </picture>
+                      </div>
+                      <div class="blog-related__body">
+                        <h3 class="blog-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                        <time class="blog-related__date" datetime="2025-11-30">0000.00.00</time>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="blog-related__item">
+                    <a href="./blog-details.html">
+                      <div class="blog-related__img">
+                        <span class="c-label c-label--sp-s c-label--pc-s">ギター</span>
+                        <picture>
+                          <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog-related-sp.jpg" alt="関連記事">
+                        </picture>
+                      </div>
+                      <div class="blog-related__body">
+                        <h3 class="blog-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                        <time class="blog-related__date" datetime="2025-11-30">0000.00.00</time>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="blog-related__item">
+                    <a href="./blog-details.html">
+                      <div class="blog-related__img">
+                        <span class="c-label c-label--sp-s c-label--pc-s">ギター</span>
+                        <picture>
+                          <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog-related-sp.jpg" alt="関連記事">
+                        </picture>
+                      </div>
+                      <div class="blog-related__body">
+                        <h3 class="blog-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                        <time class="blog-related__date" datetime="2025-11-30">0000.00.00</time>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </div>
             <!-- --------- -->
             <!-- サイドバー -->
             <!-- --------- -->
-            <aside class="l-two-column__sidebar sub-blog-details__sidebar sidebar">
-  
-                <!-- 無料メールマガジン -->
-                <div class="sidebar__newsletter sidebar-newsletter sidebar__content">
-                  <p class="c-heading-deco">無料メールマガジン</p>
-                  <div class="sidebar-newsletter__container">
-                    <a href="#">
-                      <picture>
-                        <source srcset="./images/220-170.png" media="(min-width: 768px)">
-                        <img src="./images/295-228.png" alt="バナーダミー画像">
-                      </picture>
-                      <p>バナー広告</p>
+            <aside class="l-two-column__sidebar blog-details__sidebar sidebar">
+              <!-- 無料メールマガジン -->
+              <div class="sidebar__newsletter sidebar-newsletter sidebar__content">
+                <p class="c-heading-deco">無料メールマガジン</p>
+                <div class="sidebar-newsletter__container">
+                  <a href="#">
+                    <picture>
+                      <source srcset="./images/220-170.png" media="(min-width: 768px)">
+                      <img src="./images/295-228.png" alt="バナーダミー画像">
+                    </picture>
+                    <p>バナー広告</p>
+                  </a>
+                </div>
+              </div>
+              <!-- ブログ内を検索 -->
+              <div class="sidebar__search sidebar-search sidebar__content">
+                <p class="c-heading-deco">ブログ内を検索</p>
+                <div class="sidebar-search__container">
+                  <form action="./search.html" method="get" class="c-search-form">
+                    <label for="search-input" class="c-search-form__label">
+                      <input type="text" id="search-input" name="q" class="c-search-form__input" placeholder="">
+                    </label>
+                    <button type="submit" class="c-search-form__button" aria-label="検索">
+                      <img src="./images/icon-search.svg" alt="検索" class="c-search-form__icon">
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <!-- おすすめの記事 -->
+              <div class="sidebar__recommend sidebar-recommend sidebar__content">
+                <p class="c-heading-deco">おすすめの記事</p>
+                <ul class="sidebar-recommend__items">
+                  <li class="sidebar-recommend__item">
+                    <a href="./blog-details.html">
+                      <div class="sidebar-recommend__img">
+                        <picture>
+                          <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog03-sp.jpg" alt="おすすめの記事ダミー画像">
+                        </picture>
+                      </div>
+                      <div class="sidebar-recommend__body">
+                        <p class="sidebar-recommend__title">タイトルが入ります。タイトル</p>
+                      </div>
                     </a>
-                  </div>
-                </div>
-                
-                <!-- ブログ内を検索 -->
-                <div class="sidebar__search sidebar-search sidebar__content">
-                  <p class="c-heading-deco">ブログ内を検索</p>
-                  <div class="sidebar-search__container">
-                    <form action="./search.html" method="get" class="c-search-form">
-                      <label for="search-input" class="c-search-form__label">
-                        <input type="text" id="search-input" name="q" class="c-search-form__input" placeholder="">
-                      </label>
-                      <button type="submit" class="c-search-form__button" aria-label="検索">
-                        <img src="./images/icon-search.svg" alt="検索" class="c-search-form__icon">
-                      </button>
-                    </form>
-                  </div>
-                </div>
-  
-                <!-- おすすめの記事 -->
-                <div class="sidebar__recommend sidebar-recommend sidebar__content">
-                  <p class="c-heading-deco">おすすめの記事</p>
-                  <ul class="sidebar-recommend__list card-lists">
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--recommend"><!-- spでも横並び -->
-                        <div class="p-card__img">
-                          <picture>
-                            <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
-                            <img src="./images/blog03-sp.jpg" alt="おすすめの記事ダミー画像">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <p class="p-card__text">タイトルが入ります。タイトル</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--recommend"><!-- spでも横並び -->
-                        <div class="p-card__img">
-                          <picture>
-                            <source srcset="./images/dummy160-110.png" media="(min-width: 768px)">
-                            <img src="./images/dummy95-75.png" alt="おすすめの記事ダミー画像">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <p class="p-card__text">タイトルが入ります。タイトル</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./blog-details.html" class="p-card p-card--recommend"><!-- spでも横並び -->
-                        <div class="p-card__img">
-                          <picture>
-                            <source srcset="./images/dummy160-110.png" media="(min-width: 768px)">
-                            <img src="./images/dummy95-75.png" alt="おすすめの記事ダミー画像">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <p class="p-card__text">タイトルが入ります。タイトル</p>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-  
-                <!-- カテゴリー -->
-                <div class="sidebar__category sidebar-category sidebar__content">
-                  <p class="c-heading-deco">カテゴリー</p>
-                  <ul class="sidebar-category__list">
-                    <li><a href="#">カテゴリー</a></li>
-                    <li><a href="#">カテゴリー</a></li>
-                    <li><a href="#">カテゴリー</a></li>
-                    <li><a href="#">カテゴリー</a></li>
-                    <li><a href="#">カテゴリー</a></li>
-                  </ul>
-                </div>
-              <!-- </div> -->
+                  </li>
+                  <li class="sidebar-recommend__item">
+                    <a href="./blog-details.html">
+                      <div class="sidebar-recommend__img">
+                        <picture>
+                          <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog03-sp.jpg" alt="おすすめの記事ダミー画像">
+                        </picture>
+                      </div>
+                      <div class="sidebar-recommend__body">
+                        <p class="sidebar-recommend__title">タイトルが入ります。タイトル</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sidebar-recommend__item">
+                    <a href="./blog-details.html">
+                      <div class="sidebar-recommend__img">
+                        <picture>
+                          <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
+                          <img src="./images/blog03-sp.jpg" alt="おすすめの記事ダミー画像">
+                        </picture>
+                      </div>
+                      <div class="sidebar-recommend__body">
+                        <p class="sidebar-recommend__title">タイトルが入ります。タイトル</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- カテゴリー -->
+              <div class="sidebar__category sidebar-category sidebar__content">
+                <p class="c-heading-deco">カテゴリー</p>
+                <ul class="sidebar-category__list">
+                  <li><a href="#">カテゴリー</a></li>
+                  <li><a href="#">カテゴリー</a></li>
+                  <li><a href="#">カテゴリー</a></li>
+                  <li><a href="#">カテゴリー</a></li>
+                  <li><a href="#">カテゴリー</a></li>
+                </ul>
+              </div>
             </aside>
           </div>
         </div>

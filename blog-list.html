@@ -42,12 +42,17 @@
       <div class="l-inner header__inner">
         <!-- logo -->
         <div class="header__logo">
-          <a href="./index.html">
-            <picture>
-              <source srcset="./images/logo.svg" media="(min-width: 768px)">
-              <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
-            </picture>
-          </a>
+            <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
+              <picture>
+                <source srcset="./images/logo.svg" media="(min-width: 768px)">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
+              </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
+            </a>
         </div>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -94,90 +99,80 @@
       </nav> 
       <!-- ブログ一覧 -->
       <section class="blog__list blog-list">
-      <!-- <section class="sub-blog-list"> -->
         <div class="l-inner">
           <h2 class="c-title">ブログ一覧</h2>
-          <ul class="blog-list__items list__items">
-          <!-- <ul class="sub-blog-list__wrapper card-lists"> -->
+          <ul class="blog-list__items">
             <!--blog1-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">ギター</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">ギター</span>
                   <picture>
                     <source srcset="./images/blog001.jpg" media="(min-width: 768px)">
                     <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">アルペジオが劇的に向上する3つの習慣</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">アルペジオが劇的に向上する3つの習慣</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog2-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">集客方法</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">集客方法</span>
                   <picture>
                     <source srcset="./images/blog002.jpg" media="(min-width: 768px)">
                     <img src="./images/blog02-sp.jpg" alt="集客してる間は売れないという法則">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">集客してる間は売れないという法則</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">集客してる間は売れないという法則</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog3-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">SNS</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">SNS</span>
                   <picture>
                     <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
                     <img src="./images/blog03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">フォロワーではなくファンを増やせとは？</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">フォロワーではなくファンを増やせとは？</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog4-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">ギター</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">ギター</span>
                   <picture>
                     <source srcset="./images/blog001.jpg" media="(min-width: 768px)">
                     <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">アルペジオが劇的に向上する3つの習慣</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">アルペジオが劇的に向上する3つの習慣</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
 
@@ -185,63 +180,57 @@
               </a>
             </li>
             <!--blog5-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">集客方法</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">集客方法</span>
                   <picture>
                     <source srcset="./images/blog002.jpg" media="(min-width: 768px)">
                     <img src="./images/blog02-sp.jpg" alt="集客してる間は売れないという法則">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">集客してる間は売れないという法則</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">集客してる間は売れないという法則</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog6-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">SNS</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                 <span class="c-label c-label--sp-m c-label--pc-s">SNS</span>
                   <picture>
                     <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
                     <img src="./images/blog03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">フォロワーではなくファンを増やせとは？</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">フォロワーではなくファンを増やせとは？</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog7-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">ギター</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">ギター</span>
                   <picture>
                     <source srcset="./images/blog001.jpg" media="(min-width: 768px)">
                     <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">アルペジオが劇的に向上する3つの習慣</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">アルペジオが劇的に向上する3つの習慣</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
 
@@ -249,63 +238,57 @@
               </a>
             </li>
             <!--blog8-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">集客方法</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">集客方法</span>
                   <picture>
                     <source srcset="./images/blog002.jpg" media="(min-width: 768px)">
                     <img src="./images/blog02-sp.jpg" alt="集客してる間は売れないという法則">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">集客してる間は売れないという法則</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">集客してる間は売れないという法則</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog9-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">SNS</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">SNS</span>
                   <picture>
                     <source srcset="./images/blog003.jpg" media="(min-width: 768px)">
                     <img src="./images/blog03-sp.jpg" alt="フォロワーではなくファンを増やせとは？">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">フォロワーではなくファンを増やせとは？</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">フォロワーではなくファンを増やせとは？</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>
               </a>
             </li>
             <!--blog10-->
-            <li>
-              <a href="./blog-details.html" class="list__item list-item">
-              <!-- <a href="./blog-details.html" class="p-card p-card--horizontal p-card--blog-list "> -->
-                <div class="list-item__img">
-                <!-- <div class="p-card__img"> -->
-                  <span class="c-label c-label--responsive-s">ギター</span>
+            <li class="blog-list__item blog-item">
+              <a href="./blog-details.html">
+                <div class="blog-item__img">
+                  <span class="c-label c-label--sp-m c-label--pc-s">ギター</span>
                   <picture>
                     <source srcset="./images/blog001.jpg" media="(min-width: 768px)">
                     <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
                   </picture>
                 </div>
-                <div class="list-item__body">
-                  <h3 class="list-item__title">アルペジオが劇的に向上する3つの習慣</h3>
-                  <time class="list-item__date" datetime="2025-11-30">0000.00.00</time>
-                  <p class="list-item__text">
+                <div class="blog-item__body">
+                  <h3 class="blog-item__title">アルペジオが劇的に向上する3つの習慣</h3>
+                  <time class="blog-item__date" datetime="2025-11-30">0000.00.00</time>
+                  <p class="blog-item__text">
                     本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                   </p>
                 </div>

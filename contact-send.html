@@ -37,17 +37,23 @@
       }
     </script>
   </head>
-  <body class="contact-send-page">
+  <body>
+  <!-- <body class="contact-send-page"> -->
     <div class="l-wrapper">
       <header class="l-header header js-header">
         <div class="l-inner header__inner">
           <!-- logo -->
           <div class="header__logo">
             <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
               <picture>
                 <source srcset="./images/logo.svg" media="(min-width: 768px)">
-                <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
               </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
             </a>
           </div>
           <!-- PC用メニュー -->
@@ -75,9 +81,9 @@
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="thanks">
         <!-- fv -->
-        <section class="fv">
+        <section class="thanks__fv fv">
           <picture>
             <source srcset="./images/contact.jpg" media="(min-width: 768px)">
             <img src="./images/contact-sp.jpg" alt="送信完了ページのファーストビュー">
@@ -94,7 +100,7 @@
           </div>
         </nav> 
         <!-- お問い合わせ -->
-        <div class="sub-contact-send">
+        <div class="contact-send">
           <div class="l-inner">
             <p class="c-status-message">お問い合わせいただきありがとうございました。<br>内容確認後、担当者よりメールにてご連絡いたします。</p>
             <a href="./index.html" class="c-btn c-btn--primary">ホームへ戻る</a>

@@ -54,12 +54,17 @@
       <div class="l-inner header__inner">
         <!-- logo -->
         <div class="header__logo">
-          <a href="./index.html">
-            <picture>
-              <source srcset="./images/logo.svg" media="(min-width: 768px)">
-              <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
-            </picture>
-          </a>
+            <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
+              <picture>
+                <source srcset="./images/logo.svg" media="(min-width: 768px)">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
+              </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
+            </a>
         </div>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -86,7 +91,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="result-post">
       <!-- fv(スペースの確保)-->
       <div class="fv"></div>
       <!-- パンくずリスト -->
@@ -100,151 +105,135 @@
           </ol>
         </div>
       </nav> 
-      <!-- ブログ個別記事ページ -->
-      <div class="sub-result-details">
+      <!-- 卒業実績個別記事ページ -->
+      <div class="result-post__details result-details">
         <div class="l-inner">
-            <!-- ---------- -->
-            <!--   メイン   -->
-            <!-- ---------- -->
-            <section class="article">
-  
-                <!-- メイン記事 -->
-                <div class="article__core article-core p-card p-card--result-details">
-                  <div class="p-card__img p-card__img">
-                    <span class="c-label c-label--l">ポップス</span>
-                    <picture>
-                      <source srcset="./images/result01.jpg" media="(min-width: 768px)">
-                      <img src="./images/result01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-                    </picture>
-                  </div>
-                  <div class="p-card__body p-card-body">
-                    <h1 class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
-                    <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                    <div class="p-card-body__wrap">
-                      <table class="c-table">
-                        <tbody>
-                          <tr>
-                            <th>名前</th>
-                            <td>丸山</td>
-                          </tr>
-                          <tr>
-                            <th>職業</th>
-                            <td>証券会社勤務</td>
-                          </tr>
-                          <tr>
-                            <th>ジャンル</th>
-                            <td>入力欄</td>
-                          </tr>
-                          <tr>
-                            <th>実績</th>
-                            <td>入力欄</td>
-                          </tr>
-                          <tr>
-                            <th>SNS</th>
-                            <td>入力欄</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p class="p-card__text">
-                        昔やっていた音楽活動で、副収入が得られるように<span class="u-sp">なったので、</span>毎日充実するようになりました。
-                      </p>
+          <!-- メイン記事 -->
+          <article class="result-details__article result-article">
+            <div class="result-article__img">
+              <span class="c-label c-label--sp-l c-label--pc-l">ポップス</span>
+              <picture>
+                <source srcset="./images/result01.jpg" media="(min-width: 768px)">
+                <img src="./images/result01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+              </picture>
+            </div>
+            <div class="result-article__body">
+              <h1 class="result-article__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
+              <time class="result-article__date" datetime="2025-11-30">0000.00.00</time>
+              <div class="result-article__table-area">
+                <table class="c-table">
+                  <tbody>
+                    <tr>
+                      <th>名前</th>
+                      <td>丸山</td>
+                    </tr>
+                    <tr>
+                      <th>職業</th>
+                      <td>証券会社勤務</td>
+                    </tr>
+                    <tr>
+                      <th>ジャンル</th>
+                      <td>入力欄</td>
+                    </tr>
+                    <tr>
+                      <th>実績</th>
+                      <td>入力欄</td>
+                    </tr>
+                    <tr>
+                      <th>SNS</th>
+                      <td>入力欄</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="result-article__text">
+                  昔やっていた音楽活動で、副収入が得られるように<span class="u-sp">なったので、</span>毎日充実するようになりました。
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- 前後ページリンク -->
+          <nav class="result-details__pager pager">
+            <ul class="pager__items">
+              <li>
+                <a href="#">
+                  <p class="pager__prev">◀︎ 前の記事</p>
+                  <div class="pager__item">
+                    <div class="pager__img pager__img--nolabel">
+                      <img src="./images/blog-related.jpg" alt="前の記事">
+                    </div>
+                    <div class="pager__body">
+                      <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
                     </div>
                   </div>
-                </div>
-                <!-- 前後ページリンク -->
-                <div class="article__nav article-nav">
-                  <ul class="page-nav">
-                    <li>
-                      <a href="#">
-                        <p class="page-nav__prev">◀︎ 前の記事</p>
-                        <div class="p-card p-card--horizontal p-card--page-nav">
-                          <div class="p-card__img">
-                            <span class="c-label c-label--nonel"></span>
-                            <picture>
-                              <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
-                              <img src="./images/blog-related-sp.jpg" alt="前の記事">
-                            </picture>
-                          </div>
-                          <div class="p-card__body">
-                            <p class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p class="page-nav__next">次の記事 ▶︎</p>
-                        <div class="p-card p-card--horizontal p-card--page-nav">
-                          <div class="p-card__img">
-                            <span class="c-label c-label--nonel"></span>
-                            <picture>
-                              <source srcset="./images/blog-related.jpg" media="(min-width: 768px)">
-                              <img src="./images/blog-related-sp.jpg" alt="次の記事">
-                            </picture>
-                          </div>
-                          <div class="p-card__body">
-                            <p class="p-card__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-  
-                <!-- 関連記事 -->
-                <div class="article__related article-related">
-                  <h2 class="c-heading-deco">関連記事</h2>
-                  <ul class="card-lists">
-                    <li>
-                      <a href="./result-details.html" class="p-card p-card--related-full">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--responsive-m">ロック</span>
-                          <picture>
-                            <source srcset="./images/result02.jpg" media="(min-width: 768px)">
-                            <img src="./images/result02-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./result-details.html" class="p-card p-card--related-full">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--responsive-m">ジャズ</span>
-                          <picture>
-                            <source srcset="./images/result03.jpg" media="(min-width: 768px)">
-                            <img src="./images/result03-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./result-details.html" class="p-card p-card--related-full">
-                        <div class="p-card__img">
-                          <span class="c-label c-label--responsive-m">ラテン</span>
-                          <picture>
-                            <source srcset="./images/result04.jpg" media="(min-width: 768px)">
-                            <img src="./images/result04-sp.jpg" alt="関連記事">
-                          </picture>
-                        </div>
-                        <div class="p-card__body">
-                          <h3 class="p-card__text">タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></h3>
-                          <time class="p-card__date" datetime="2025-11-30">0000.00.00</time>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              <!-- </div> -->
-            </section> 
-          <!-- </div> -->
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="pager__next">次の記事 ▶︎</p>
+                  <div class="pager__item">
+                    <div class="pager__img pager__img--nolabel">
+                      <img src="./images/blog-related.jpg" alt="次の記事">
+                    </div>
+                    <div class="pager__body">
+                      <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+          <!-- 関連記事 -->
+          <section class="result-details__related result-related">
+            <h2 class="c-heading-deco">関連記事</h2>
+            <ul class="result-related__items">
+              <li class="result-related__item">
+                <a href="./result-details.html">
+                  <div class="result-related__img">
+                    <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
+                    <picture>
+                      <source srcset="./images/result02.jpg" media="(min-width: 768px)">
+                      <img src="./images/result02-sp.jpg" alt="関連記事">
+                    </picture>
+                  </div>
+                  <div class="result-related__body">
+                    <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                    <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+              <li class="result-related__item">
+                <a href="./result-details.html">
+                  <div class="result-related__img">
+                    <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
+                    <picture>
+                      <source srcset="./images/result03.jpg" media="(min-width: 768px)">
+                      <img src="./images/result03-sp.jpg" alt="関連記事">
+                    </picture>
+                  </div>
+                  <div class="result-related__body">
+                    <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                    <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+              <li class="result-related__item">
+                <a href="./result-details.html">
+                  <div class="result-related__img">
+                    <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
+                    <picture>
+                      <source srcset="./images/result04.jpg" media="(min-width: 768px)">
+                      <img src="./images/result04-sp.jpg" alt="関連記事">
+                    </picture>
+                  </div>
+                  <div class="result-related__body">
+                    <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
+                    <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </main>

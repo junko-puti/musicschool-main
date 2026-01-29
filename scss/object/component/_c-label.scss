@@ -10,7 +10,7 @@
   left: 0;
   top: 0;
   z-index: 10;
-  padding-top: rem(2);
+  height: rem(30);
   padding-left: rem(10);
   padding-right: rem(10);
   font-size: rem(15);
@@ -18,38 +18,42 @@
   background-color: #CB0000;
   color: #fff;
 }
-.c-label--responsive-s{
+.c-label--sp-s{
+  min-width: rem(80);
+}
+.c-label--sp-m{
   min-width: rem(90);
-  height: rem(30);
-  @include pc{
-  min-width: rem(80);
-  height: rem(30);
+}
+.c-label--sp-l{
+  min-width: rem(100);
+}
+
+@include pc{
+  .c-label--pc-s{
+      min-width: rem(80);
+  }
+  .c-label--pc-m{
+    min-width: rem(90);
+  }
+  .c-label--pc-l{
+    min-width: rem(100);
   }
 }
-.c-label--responsive-m{
-  min-width: rem(80);
-  height: rem(30);
-  @include pc{
-  min-width: rem(100);
-  height: rem(30);
-  }
-}
-.c-label--responsive-l{
-  min-width: rem(90);
-  height: rem(30);
-  @include pc{
-  min-width: rem(100);
-  height: rem(30);
-  }
-}
-.c-label--s{
-  min-width: rem(80);
-  height: rem(30);
-}
-.c-label--l{
-  min-width: rem(100);
-  height: rem(30);
-}
+// .c-label--pc-s{
+//   @include pc{
+//     min-width: rem(80);
+//   }
+// }
+// .c-label--pc-m{
+//   @include pc{
+//   min-width: rem(90);
+//   }
+// }
+// .c-label--pc-l{
+//   @include pc{
+//   min-width: rem(100);
+//   }
+// }
 
 .c-label--none{//!important使用
   display: none !important;

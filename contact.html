@@ -42,12 +42,17 @@
       <div class="l-inner header__inner">
         <!-- logo -->
         <div class="header__logo">
-          <a href="./index.html">
-            <picture>
-              <source srcset="./images/logo.svg" media="(min-width: 768px)">
-              <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
-            </picture>
-          </a>
+            <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
+              <picture>
+                <source srcset="./images/logo.svg" media="(min-width: 768px)">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
+              </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
+            </a>
         </div>
         <!-- PC用メニュー -->
         <nav class="header__nav u-pc">
@@ -74,9 +79,9 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="contact">
       <!-- fv -->
-      <section class="fv">
+      <section class="contact__fv fv">
         <picture>
           <source srcset="./images/contact.jpg" media="(min-width: 768px)">
           <img src="./images/contact-sp.jpg" alt="お問い合わせページのファーストビュー">
@@ -93,68 +98,68 @@
         </div>
       </nav> 
       <!-- お問い合わせ -->
-      <div class="sub-contact">
+      <div class="contact__page contact-page">
         <div class="l-inner">
           <p class="c-status-message">当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。</p>
           <p class="c-status-message">通常３営業日以内にメールにてご連絡させていただきます。</p>
             
           <!-- お問い合わせフォーム -->
-          <form class="form" action="./contact-send.html" method="post">
+          <form class="contact-page__form contact-form" action="./contact-send.html" method="post">
             <!-- 会社名 -->
-            <dl class="form__item">
-              <dt class="form__label">
+            <dl class="contact-form__item">
+              <dt class="contact-form__label">
                 <label for="companyname">会社名</label>
               </dt>
-              <dd class="form__input">
-                <input type="text" id="companyname" name="companyname" class="form__text" placeholder="きたむらミュージックスクール" autocomplete="organization">
+              <dd class="contact-form__input">
+                <input type="text" id="companyname" name="companyname" class="contact-form__text" placeholder="きたむらミュージックスクール" autocomplete="organization">
               </dd>
             </dl>
             <!-- お名前 -->
-            <dl class="form__item">
-              <dt class="form__label">
+            <dl class="contact-form__item">
+              <dt class="contact-form__label">
                 <label for="name">お名前</label>
               </dt>
-              <dd class="form__input">
-                <input type="text" id="name" name="name" class="form__text" placeholder="北村　翔平" autocomplete="name">
+              <dd class="contact-form__input">
+                <input type="text" id="name" name="name" class="contact-form__text" placeholder="北村　翔平" autocomplete="name">
               </dd>
             </dl>
             <!-- メールアドレス -->
-            <dl class="form__item">
-              <dt class="form__label">
+            <dl class="contact-form__item">
+              <dt class="contact-form__label">
                 <label for="email">メールアドレス</label>
               </dt>
-              <dd class="form__input">
-                <input type="email" id="email" name="email" class="form__text" placeholder="info@kitamura.musicschool.jp" autocomplete="email">
+              <dd class="contact-form__input">
+                <input type="email" id="email" name="email" class="contact-form__text" placeholder="info@kitamura.musicschool.jp" autocomplete="email">
               </dd>
             </dl>
             <!-- 電話番号 -->
-            <dl class="form__item">
-              <dt class="form__label">
+            <dl class="contact-form__item">
+              <dt class="contact-form__label">
                 <label for="tel">電話番号</label>
               </dt>
-              <dd class="form__input">
-                <input type="tel" id="tel" name="tel" class="form__text" placeholder="090-1234-5678" autocomplete="tel" pattern="[\d\-]*">
+              <dd class="contact-form__input">
+                <input type="tel" id="tel" name="tel" class="contact-form__text" placeholder="090-1234-5678" autocomplete="tel" pattern="[\d\-]*">
               </dd>
             </dl>
             <!-- 目的 -->
-           <dl class="form__checkbox-container form__item">
-              <dt class="form__label">
+           <dl class="contact-form__checkbox-container contact-form__item">
+              <dt class="contact-form__label">
                 目　的　<br class="u-pc">(複数選択可)
               </dt>
-              <dd class="form__input form__checkbox">
-                <label class="form__checkbox-custom"><input type="checkbox" name="purpose[]" value="plan" id="plan"><span>プランについてのお問い合わせ</span></label>
-                <label class="form__checkbox-custom"><input type="checkbox" name="purpose[]" value="hearing" id="hearing"><span>ヒアリングのご予約</span></label>
-                <label class="form__checkbox-custom"><input type="checkbox" name="purpose[]" value="document" id="document"><span>資料請求</span></label>
-                <label class="form__checkbox-custom"><input type="checkbox" name="purpose[]" value="other" id="other"><span>その他</span></label>
+              <dd class="contact-form__input contact-form__checkbox">
+                <label class="contact-form__checkbox-custom"><input type="checkbox" name="purpose[]" value="plan" id="plan"><span>プランについてのお問い合わせ</span></label>
+                <label class="contact-form__checkbox-custom"><input type="checkbox" name="purpose[]" value="hearing" id="hearing"><span>ヒアリングのご予約</span></label>
+                <label class="contact-form__checkbox-custom"><input type="checkbox" name="purpose[]" value="document" id="document"><span>資料請求</span></label>
+                <label class="contact-form__checkbox-custom"><input type="checkbox" name="purpose[]" value="other" id="other"><span>その他</span></label>
               </dd>
             </dl>
             <!-- お問い合わせ内容 -->
-            <dl class="form__textarea-container form__item ">
-              <dt class="form__label">
+            <dl class="contact-form__textarea-container contact-form__item ">
+              <dt class="contact-form__label">
                 <label for="inquiry">内　容</label>
               </dt>
-              <dd class="form__input">
-                <textarea name="inquiry" id="inquiry" class="form__textarea" placeholder="内容に関する詳細や備考等をご入力ください。" autocomplete="off"></textarea>
+              <dd class="contact-form__input">
+                <textarea name="inquiry" id="inquiry" class="contact-form__textarea" placeholder="内容に関する詳細や備考等をご入力ください。" autocomplete="off"></textarea>
               </dd>
             </dl>
  

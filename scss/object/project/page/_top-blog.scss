@@ -1,38 +1,6 @@
-@use '../../foundation/function' as *;
-@use '../../foundation/mixin' as *;
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
 
-// .top-blog{
-//   padding-top: rem(50);
-//   padding-bottom: rem(191);
-
-//   text-align: center;
-//   color: #000000;
-//   background-color: #FFFFFF;
-//   @include pc {
-//     padding-top: rem(70);
-//     padding-bottom: rem(205);
-//   }
-// }
-// .top-blog__wrapper{
-//   margin-top: rem(39);
-//   row-gap: rem(41);
-//   @include pc{
-//     margin-top: rem(35);
-//     column-gap: rem(50);
-//   }
-// }
-// .top-blog__wrapper li {//11.20 カード幅を固定
-//   flex: 0 0 rem(260);
-// }
-// .top-blog__link{
-//   margin-top: rem(37);
-//   @include pc{
-//     text-align: right;
-//   }
-// }
-// .top-blog__link a{
-//   color: #000000;
-// }
 .top-blog{
   padding-top: rem(50);
   padding-bottom: rem(191);
@@ -61,9 +29,6 @@
 .top-blog__item {
   flex: 0 0 rem(260);
 }
-// .top-blog__lists li {//11.20 カード幅を固定
-//   flex: 0 0 rem(260);
-// }
 .top-blog__link{
   margin-top: rem(37);
   @include pc{
@@ -74,22 +39,12 @@
   color: #000000;
 }
 
-
-//////////////////////////////////////////////////////////
-/*******************
-card TOPページ-ブログ
-*******************/
 .top-blog__item a{
   transition: opacity 0.3s ease;
 }
 .top-blog__item a:hover{
   opacity: 0.7;
 }
-// .p-card--top-blog .p-card__img{
-//   position: relative;
-//   width: 100%;
-//   overflow: hidden;
-// }
 .top-blog__img {
   position: relative;
 }
@@ -100,19 +55,6 @@ card TOPページ-ブログ
     aspect-ratio: 260 / 200;
   }
 }
-// .p-card--top-blog .p-card__img{//12.30
-//   position: relative;
-//   width: 100%;
-//   aspect-ratio: 335 / 200; //
-//   overflow: hidden;
-//   @include pc{
-//     aspect-ratio: 260 / 200;
-//   }
-// }
-// .p-card--top-blog .p-card__img img {
-//   height: 100%;
-//   object-fit: cover;
-// }
 .top-blog__body{
   margin-top: rem(30);
   @include pc{

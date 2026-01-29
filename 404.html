@@ -25,10 +25,15 @@
           <!-- logo -->
           <div class="header__logo">
             <a href="./index.html">
+              <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
               <picture>
                 <source srcset="./images/logo.svg" media="(min-width: 768px)">
-                <img src="./images/logo-sp.svg" alt="きたむらミューシックスクール">
+                <img src="./images/logo-sp.svg" alt="きたむらミュージックスクール">
               </picture>
+              <span class="logo__text">
+                <span class="logo__line1">きたむら</span>
+                <span class="logo__line2">ミュージックスクール</span>
+              </span>
             </a>
           </div>
           <!-- PC用メニュー -->
@@ -56,10 +61,9 @@
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="error-page">
         <!-- fv -->
-        <section class="fv">
-          <!-- <section class="fv"> -->
+        <section class="error-page__fv fv">
           <picture>
             <source srcset="./images/404.jpg" media="(min-width: 768px)">
             <img src="./images/404-sp.jpg" alt="404ページのファーストビュー">
@@ -67,7 +71,7 @@
           <h1 class="fv__catch">404 not fonud</h1>
         </section>
         <!-- 404 -->
-        <div class="sub-404">
+        <div class="error-404">
           <div class="l-inner">
             <p class="c-status-message">申し訳ございませんが、お探しのページが見つかりませんでした。<br>お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
             <a href="./index.html" class="c-btn c-btn--primary">ホームへ戻る</a>

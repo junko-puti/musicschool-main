@@ -1,7 +1,7 @@
-@use '../../foundation/function' as *;
-@use '../../foundation/mixin' as *;
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
 
-.sub-plan{
+.plan-list{
   padding-top: rem(46);
   padding-bottom: rem(186);
   color: #000000;
@@ -14,7 +14,7 @@
 /**************
 plan__pricing
 **************/
-.sub-plan__pricing ul{
+.plan-list__pricing ul{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@ plan__pricing
     column-gap: rem(30);
   }
 }
-.sub-plan__pricing li{
+.plan-list__pricing li{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,12 +38,12 @@ plan__pricing
   color: #FFFFFF;
   background-color: #CB0000;
 }
-.sub-plan__pricing .sub-plan__plus{
+.plan-list__pricing .plan-list__plus{
   width: rem(18.5);
   height: rem(18.5);
   background-color: #FFFFFF;
 }
-.sub-plan__pricing p{
+.plan-list__pricing p{
   margin-top: rem(47);
   font-size: rem(16);
   line-height: calc(30 / 16);
@@ -58,19 +58,19 @@ plan__pricing
 /***********
 plan__detail
 ***********/
-.sub-plan__detail{
+.plan-list__detail{
   margin-top: rem(38);
   @include pc{
     margin-top: rem(56);
   }
 }
-.sub-plan__detail h3{
+.plan-list__detail h3{
   margin-top: rem(38);
   @include pc{
     margin-top: rem(57);
   }
 }
-.sub-plan__table-wrapper{
+.plan-list__table-wrapper{
   display: block;
   max-width: 100%;//11.3
   padding-bottom: rem(16.5);/*テーブルとスクロールバーとの余白*/
@@ -86,18 +86,18 @@ plan__detail
 }
 
 /*スクロールバー*/
-.sub-plan__table-wrapper::-webkit-scrollbar {
+.plan-list__table-wrapper::-webkit-scrollbar {
   margin-top: rem(20);
   height: rem(25); // 横スクロールバーの高さ
 }
-.sub-plan__table-wrapper::-webkit-scrollbar-track {
+.plan-list__table-wrapper::-webkit-scrollbar-track {
   background: rgba(80, 80, 80, 0.15); // トラック背景
 }
- .sub-plan__table-wrapper::-webkit-scrollbar-thumb {
+ .plan-list__table-wrapper::-webkit-scrollbar-thumb {
   background: rgba(80, 80, 80, 0.25); // スクロールつまみ
 }
 
-.sub-plan__table{
+.plan-list__table{
   min-width: rem(676); // SP幅11.5
   width: 100%;
   margin: 0 auto;//11.5
@@ -113,8 +113,8 @@ plan__detail
     box-sizing: border-box;//11.5
   }
 }
-.sub-plan__table th,
-.sub-plan__table td{
+.plan-list__table th,
+.plan-list__table td{
   white-space: nowrap;
   width: calc(100% / 2);
   vertical-align: middle;
@@ -122,15 +122,15 @@ plan__detail
     width: calc(100% / 4);
   }
 }
-.sub-plan__table td{
+.plan-list__table td{
   height: rem(85);
 }
 
 /*table thead*/
-.sub-plan__table thead th{
+.plan-list__table thead th{
   vertical-align: bottom;
 }
-.sub-plan__name{
+.plan-list__name{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,11 +144,11 @@ plan__detail
     line-height: calc(33 / 20);
   }
 }
-.sub-plan__name--nul{
+.plan-list__name--nul{
   padding-top: rem(1);
   background-color: #FFFFFF;
 }
-.sub-plan__name--red{
+.plan-list__name--red{
   height: rem(96);
   background-color: #CB0000;
   @include pc{
@@ -156,40 +156,40 @@ plan__detail
     padding-top: rem(8);
   }
 }
-.sub-plan__name--red span{
+.plan-list__name--red span{
   margin: 0;
 }
-.sub-plan__name--red span:nth-child(1){
+.plan-list__name--red span:nth-child(1){
   font-size: rem(17);
   line-height: calc(25 / 17);
   @include pc{
     line-height: calc(33 / 17);
   }
 }
-.sub-plan__name--red span:nth-child(2){
+.plan-list__name--red span:nth-child(2){
   font-size: rem(20);
   line-height: calc(25 / 20);
   @include pc{
     line-height: calc(33 / 20);
   }
 }
-.sub-plan__head--line2 .sub-plan__name--red{
+.plan-list__head--line2 .plan-list__name--red{
   height: rem(66);
   @include pc{
     height: rem(50);
   }
 }
-.sub-plan__name--black{
+.plan-list__name--black{
   background-color: #000000;
   @include pc{
   }
 }
-.sub-plan__head--line1 .sub-plan__name--black{
+.plan-list__head--line1 .plan-list__name--black{
   height: rem(30);
   @include pc{
   }
 }
-.sub-plan__head--line2 .sub-plan__name--black{
+.plan-list__head--line2 .plan-list__name--black{
   height: rem(66);
   background-color: #000000;
   @include pc{
@@ -199,73 +199,73 @@ plan__detail
 }
 
 /*table tbody*/
-.sub-plan__class{/*上下横罫線*/
+.plan-list__class{/*上下横罫線*/
   border-bottom: rem(1) solid rgba(0, 0, 0, 0.5);//7.12.6
 }
-.sub-plan__class th,
-.sub-plan__class td{
+.plan-list__class th,
+.plan-list__class td{
   font-weight: 500;
 }
-.sub-plan__price th{
+.plan-list__price th{
   border-top: rem(1) solid rgba(0, 0, 0, 0.5);//7.12.6
 }
-.sub-plan__class tr:nth-child(even){/*偶数業背景グレイ*/
+.plan-list__class tr:nth-child(even){/*偶数業背景グレイ*/
   background-color: rgba(80, 80, 80, 0.15);
 }
-.sub-plan__class th{
+.plan-list__class th{
   padding-left: rem(10);
   @include pc{
     padding-left: rem(20);
   }
 }
-.sub-plan__class td{/*アイテム間に縦罫線*/
+.plan-list__class td{/*アイテム間に縦罫線*/
   text-align: center;
 }
-.sub-plan__class th,
-.sub-plan__class td{/*アイテム間に縦罫線*/
+.plan-list__class th,
+.plan-list__class td{/*アイテム間に縦罫線*/
   border-right: rem(1) solid rgba(0, 0, 0, 0.5);//7.12.5
   box-sizing: border-box;//11.5
 }
-.sub-plan__class tr td:last-child{/*右罫線消す*/
+.plan-list__class tr td:last-child{/*右罫線消す*/
   border-right: none;
 }
-.sub-plan__price td{
+.plan-list__price td{
   font-size: rem(22);
   line-height: calc(33 / 22);
   font-weight: 700;
 }
-.sub-plan__price th{
+.plan-list__price th{
   font-weight: 700;
 }
-.sub-plan__price--standard{
+.plan-list__price--standard{
   color: #CB0000;
 }
-.sub-plan__marker {
+.plan-list__marker {
   display: block;
   width: rem(15);
   height: rem(15);
   border-radius: 50%;
   background-color: #000000;
 }
-.sub-plan__marker--standard{
+.plan-list__marker--standard{
   background-color: #CB0000;
 }
-.sub-plan__marker--none {
+.plan-list__marker--none {
   display: block;
   width: rem(30);
   height: rem(1);
   background-color: #707070;
 }
-.sub-plan__marker-group{
+.plan-list__marker-group{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.sub-plan__schedule{
+.plan-list__schedule{
   margin-top: rem(8);
 }
-.sub-plan__note{
+.plan-list__note{
   margin-top: rem(17);
   font-size: rem(16);
   line-height: calc(30 / 16);
