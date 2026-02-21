@@ -1,5 +1,11 @@
 //Splide
 $(function () {
+
+  //表示崩れを解消するために、ページ読み込み完了後にbody内の要素が表示する
+  //<body style="display:none;とセット
+ $('body').show();
+ //------------------------------------------------------------------
+
   if ($('body').hasClass('top-page')) {//top-pageの時のみ使用
     new Splide(".splide", {
       type: 'loop', //無限ループ
@@ -131,9 +137,6 @@ $(function(){
 
 
 
-
-
-
 //contactフォーム
 //Enterで送信されないで次の要素にフォーカス
 //送信ボタンをクリックしたときだけ送信
@@ -160,3 +163,7 @@ $(function() {
     $('.form').submit();
   });
 });
+
+
+
+

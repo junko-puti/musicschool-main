@@ -27,6 +27,7 @@
 }
 .result-article__img img {
   object-fit: cover;
+  object-position: center;
   @include pc{
     aspect-ratio: 22 / 10; //880/400
   }

@@ -1,80 +1,61 @@
+
 @use '../../foundation/function' as *;
 @use '../../foundation/mixin' as *;
 
+.c-breadcrumb {
+  font-weight: 500;
+  background: #E8E8E8;
+  width: 100%;
+}
 
-.c-breadcrumb{
+.c-breadcrumb .l-inner {
   display: flex;
   align-items: center;
-  height: auto;
-  font-size: rem(16);
-  line-height: rem(24);
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: unset;
-  background-color: #E8E8E8;
-
-  /* デフォルト：1行制限 */
-  max-height: rem(36);
-  padding-top: rem(7);
-  padding-bottom: rem(5);
-  
-  @include pc{/* PC用：1行固定 */
-      max-height: none;
-      height: rem(50);
-      padding: 0;
-      line-height: rem(50);
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    // }
+  padding-top: rem(4.8);
+  padding-bottom: rem(4.8); /* 上下4.8px。これで2行のときに合計59pxになる */
+  column-gap: rem(20);
+  flex-wrap: wrap; /* スマホで折り返しを許可 */
+  @include pc {
+    height: rem(50); /* PCは1行固定 */
+    padding-top: 0;
+    padding-bottom: 0; /* 上下4.8px。これで2行のときに合計59pxになる */
+    flex-wrap: nowrap;
   }
 }
 
-
-/* 2行制限 */
-.c-breadcrumb--2lines {
-  max-height: rem(59);
-  padding-top: rem(7);
-  padding-bottom: rem(5);
+/* 各項目の共通設定（aタグと現在のページ名） */
+.c-breadcrumb .l-inner > span {
+  // display: inline-block;
+  line-height: 1.55; /* line-heightリセット */
 }
-
-/* 3行制限 */
-.c-breadcrumb--3lines {
-  max-height: rem(77);
-  padding-top: rem(8.5);
-  padding-bottom: rem(8.5);
-  line-height: rem(20);
-}
-
-.c-breadcrumb ol {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  font-weight: 500;
-}
-  .c-breadcrumb ol {
-    height: 100%;
-  }
-  .c-breadcrumb li {
-    height: 100%;
-  }
-
-.c-breadcrumb li:not(:last-child)::after {
-  content: ">";
-  padding: 0 rem(20);
-  font-weight: 500;
-}
-.c-breadcrumb li a{
+.c-breadcrumb a,
+.c-breadcrumb .current-item,
+.c-breadcrumb span[typeof="ListItem"] > span {
   display: inline-block;
-  height: 100%;
-  transition: opacity 0.3s ease;
+  font-size: rem(16);
+  line-height: 1.55;      /* 1行を約24.8pxに。2行で49.6px */
+  color: #000;
+  text-decoration: none;
+  word-break: break-word;
+  @include pc {
+    line-height: rem(50);
+  }
 }
-.c-breadcrumb li a:hover{
-  opacity: 0.5;
+
+/* ホバー領域を広げたい場合の設定 */
+.c-breadcrumb a {
+  display: inline-block;
+  transition: opacity 0.3s;
 }
 
+.c-breadcrumb a:hover {
+  opacity: 0.7;
+}
 
-
-
-
+/* 区切り文字 (>) の調整 */
+.c-breadcrumbs__sign {
+  display: flex;
+  align-items: center;
+  font-size: rem(16);
+  height: 100%; /* 親の高さに合わせる */
+}

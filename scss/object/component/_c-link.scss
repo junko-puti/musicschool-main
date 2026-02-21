@@ -2,13 +2,16 @@
 @use '../../foundation/mixin' as *;
 
 
-.c-link {
+.c-link{
+position: relative;
   display: inline-block;
   font-size: rem(18);
   font-weight: 500;
-  line-height: calc(30 / 18);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+  // line-height: calc(30 / 18);
+  line-height: 1.4;//8.2.21
+  // text-decoration: underline;
+  text-decoration: none;
+  // text-underline-offset: 0.2em;
   transition: opacity 0.3s;
 }
 
@@ -19,8 +22,12 @@
   bottom: 0;
   width: 100%;
   height: rem(1);
-  opacity: 0; // ← アンダーラインのオパシティ
+  background-color: currentColor; // ← 下線の色を文字色と揃える
+  opacity: 1; // ← アンダーラインのオパシティ
   transition: opacity 0.3s;
+}
+.c-link--blog::after {
+  height: rem(0.5);
 }
 
 .c-link:hover {

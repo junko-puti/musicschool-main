@@ -22,13 +22,25 @@
     column-gap: rem(32);//微調整
   }
 }
-.footer__menu a{
+
+.l-footer__nav-ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(30);
+  @include pc{
+    column-gap: rem(32);//微調整
+  }
+}
+.footer__nav .menu-item{
+// .footer__menu a{
   font-size: rem(17);
   line-height: calc(33 / 17);
   // font-weight: 600;
   transition: opacity 0.3s;
 }
-.footer__menu a:hover{
+.footer__nav a:hover{
   opacity: 0.7;
 }
 .footer__logo-img{

@@ -65,12 +65,22 @@
   }
 }
 .pager__img img{
+  object-fit: cover;
   aspect-ratio: auto;
   @include pc{
     aspect-ratio: 98 / 68;
   }
 }
 .pager__title{
+  font-size: rem(16);
+  font-weight: 700;
+  @include pc{
+    line-height: calc(22.67 / 16);//微調整
+    // width: rem(147);
+  }
+}
+
+.pager__body p{
   font-size: rem(16);
   font-weight: 700;
   @include pc{

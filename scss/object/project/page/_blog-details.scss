@@ -26,7 +26,11 @@
   overflow: hidden;
 }
 .blog-article__img img {
+  aspect-ratio: 335/200;//8.2.21
   object-fit: cover;
+  @include pc{
+    aspect-ratio: 600/350;//2.7
+  }
 }
 .blog-article__body{
   margin-top: rem(30);
@@ -34,7 +38,10 @@
     margin-top: rem(46);
   }
 }
-.blog-article__title{
+.blog-article__body h1,
+.blog-article__body h2,
+.blog-article__body h3{
+// .blog-article__title{
   text-align: left;
   font-weight: 700;
 }
@@ -46,7 +53,8 @@
     line-height: calc(40 / 25);
   }
 }
-.blog-article__title--second{
+.blog-article__body h2{
+// .blog-article__title--second{
   margin-top: rem(39);
   font-size: rem(20);
   line-height: calc(30 / 20);
@@ -55,7 +63,8 @@
     line-height: calc(40 / 20);
   }
 }
-.blog-article__title--third{
+.blog-article__body h3{
+// .blog-article__title--third{
   position: relative;
   padding-left: rem(9.5);
   margin-top: rem(50);
@@ -68,7 +77,8 @@
     line-height: calc(40 / 20);
   }
 }
-.blog-article__title--third:before{
+.blog-article__body h3:before{
+// .blog-article__title--third:before{
   content: '';
   position: absolute;
   top: 50%;
@@ -93,7 +103,8 @@
     margin-top: rem(5);
   }
 }
-.blog-article__text{
+.blog-article__body p{
+// .blog-article__text{
   text-align: left;
   font-size: rem(16);
   font-weight: 500;
@@ -103,26 +114,31 @@
     line-height: calc(30 / 18);
   }
 }
-.blog-article__text--first{
+.blog-article__body p.is-first{
+// .blog-article__text--first{
   margin-top: rem(27);
   @include pc{
     margin-top: rem(48);
   }
 }
-.blog-article__text--second{
+.blog-article__body p.is-second{
+// .blog-article__text--second{
   margin-top: rem(15);
 }
-.blog-article__text--third{
-  position: relative;
-  padding: rem(14) rem(20) rem(14) rem(70);
+.blog-article p.is-third{
+// .blog-article__text--third{
+position: relative;
+  // padding: rem(14) rem(20) rem(14) rem(70);
+  padding: rem(14) rem(20) rem(14) rem(70);//8.2.21
   margin-top: rem(19.5);
   background-color: #E8E8E8;
   @include pc{
-    padding: rem(14) rem(30) rem(14) rem(67);
+    padding: rem(17) rem(30) rem(11) rem(67);
     margin-top: rem(17);
   }
 }
-.blog-article__text--third::before{
+.blog-article__body p.is-third::before{
+// .blog-article__text--third::before{
   position: absolute;
   content: '';
   display: inline-block;
@@ -138,51 +154,70 @@
     left: rem(30);
   }
 }
-.blog-article .sns-btn{
-  margin-top: rem(22);//  微調整
+.wp-block-quote { //8.2.18WP化に伴い
+  padding-left: 0;
+  margin: 0;
+  border-left: none; 
 }
-.blog-article__img--second{
+.blog-article__body .sns-btn{
+  margin-top: rem(22);//  微調整
+  padding-bottom: 0;//8.2.18
+}
+// .blog-article__body .sns-btn li{
+// }
+.blog-article__body figure.is-second-img{
+// .blog-article__img--second{
   margin-top: rem(39);
-  // overflow: hidden;
   width: rem(335);
   @include pc{
     margin-top: rem(17);
   }
 }
-.blog-article__img--second img{
+.blog-article__body figure.is-second-img img{
+// .blog-article__img--second img{
   aspect-ratio: 335 / 200;
 }
 
-.blog-article__list{
-  // position: relative;
+.blog-article__body ul{
+// .blog-article__list{
   padding-bottom: rem(38.5);
   margin-top: rem(27);
   font-size: rem(16);
   line-height: calc(30 / 16);
   font-weight: 500;
-  border-bottom: #000000 rem(0.5) solid;
+  // border-bottom: #000000 rem(0.5) solid;
   @include pc{
-    padding-bottom: rem(40.5);
+    padding-bottom: rem(38.5);//8.2.18
+    // padding-bottom: rem(40.5);
     margin-top: rem(28);
     font-size: rem(18);
     line-height: calc(30 / 18);
   }
 }
-.blog-article__list li{
+.wp-block-separator {//8.2.18 上書き
+    border-bottom: 0.5px solid;
+}
+.blog-article__body .wp-block-list li{/*.wp-block-list li 本文リストだけ対象*/  
+// .blog-article__body li{
+// .blog-article__list li{
   padding-left: 1em;     /* 全体を右にズラす */
   text-indent: -1em;     /* 1行目だけ左に戻す */
 }
-.blog-article__link{
-  margin-top: rem(25);//部調整
+.blog-article a{
+// .blog-article__link{
+  margin-top: rem(28);//8.2.21
   @include pc{
-    margin-top: rem(24);
+    // margin-top: rem(24);
+    margin-top: rem(26);//8.2.21
     text-align: left;
   }
 }
 .blog-article__link a{
+// .blog-article__body a{
   font-size: rem(20);
   font-weight: 700;
-  line-height: calc(33 / 20);
+  // line-height: calc(33 / 20);
+  line-height: 1.4;//8.2.21
   color: #CB0000;
 }
 
@@ -191,14 +226,16 @@
 .blog-details__pager{
   margin-top: rem(45);
   @include pc{
-    margin-top: rem(55);
+    // margin-top: rem(55);
+    margin-top: rem(58);//8.2.21
   }
 }
 
 
 /*関連記事*/
 .blog-details__related{
-  margin-top: rem(64);
+  // margin-top: rem(64);
+  margin-top: rem(60);//8.2.21
   @include pc{
     margin-top: rem(100);
   }
@@ -252,6 +289,20 @@
     aspect-ratio: 200 / 140;
   }
 }
+/* result投稿タイプ用 上書き（画像比率のみ変更） */
+.result .blog-related__img{//8.2.19 blogとresultでスタイルを分けるためにクラス追加
+  flex: 0 0 rem(160); // 幅
+  @include pc{
+    flex: 0 0 rem(260); // 幅
+  }
+}
+.result .blog-related__img img {//8.2.19 blogとresultでスタイルを分けるためにクラス追加
+  aspect-ratio: 160 / 113;
+  @include pc{
+    aspect-ratio: 260 / 183;
+  }
+}
+
 .blog-related__title{
   margin-top: rem(8.5);
   max-height: rem(56);/*2行表示*/
@@ -265,7 +316,7 @@
     line-height: calc(25 / 20);
   }
 }
-.blog-related__date{
+.blog-related__body time{//8.2.18WP化に伴い
   display: block;
   margin-top: rem(3);//微調整
   font-size: rem(17);
@@ -274,62 +325,6 @@
   @include pc{
     padding-left: rem(4);
     margin-top: rem(13);
-  }
-}
-
-
-.p-card--blog-details{
-  transition: none;
-}
-.p-card--blog-details:hover{
-  opacity: 1;
-}
-
-.p-card--blog-details .p-card__text--first{
-  margin-top: rem(27);
-  @include pc{
-    margin-top: rem(48);
-  }
-}
-.p-card--blog-details h2.p-card__title{
-  margin-top: rem(39);
-  @include pc{
-    margin-top: rem(33);
-    font-size: rem(20);
-    line-height: calc(40 / 20);
-  }
-}
-.p-card--blog-details .p-card__text--second{
-  margin-top: rem(17);
-  @include pc{
-    margin-top: rem(15);
-  }
-}
-.p-card--related-compact{
-  align-items: center;
-  @include pc{
-    align-items: flex-start;
-  }
-}
-
-.p-card--related-compact .card-lists{
-  margin-top: rem(19);//微調整
-  row-gap: rem(21);
-  @include pc{
-    margin-top: rem(30);//微調整
-    row-gap: rem(30);
-  }
-}
-.p-card--related-compact .p-card__img{
-  flex: 0 0 rem(160); // 幅
-  @include pc{
-    flex: 0 0 rem(200); // 幅
-  }
-}
-.p-card--related-compact .p-card__img img {
-  aspect-ratio: 160 / 110;
-  @include pc{
-    aspect-ratio: 200 / 140;
   }
 }
 
