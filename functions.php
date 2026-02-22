@@ -167,22 +167,22 @@ function remove_menus()
 add_action('admin_menu', 'remove_menus');
 
 
-    // ------------------------------------------------------------
-    //管理画面「外観＞メニュー」 を表示　WordPressでメニューを有効化する
-    // ------------------------------------------------------------
-    function register_my_menus()
-    {
-      register_nav_menus(array(
-        'primary' => 'Primary Menu',
-        'footer'  => 'Footer Menu',
-        'drawer' => 'ドロワーメニュー',
-      ));
-    }
-    add_action('after_setup_theme', 'register_my_menus');
+// ------------------------------------------------------------
+//管理画面「外観＞メニュー」 を表示　WordPressでメニューを有効化する
+// ------------------------------------------------------------
+function register_my_menus()
+{
+  register_nav_menus(array(
+    'primary' => 'Primary Menu',
+    'footer'  => 'Footer Menu',
+    'drawer' => 'ドロワーメニュー',
+  ));
+}
+add_action('after_setup_theme', 'register_my_menus');
 
 
 
-    // -----------------------
-    //開発中は管理バーを消し
-    // -----------------------
-    add_filter('show_admin_bar', '__return_false');
+// -----------------------
+//開発中は管理バーを消し
+// -----------------------
+add_filter('show_admin_bar', '__return_false');

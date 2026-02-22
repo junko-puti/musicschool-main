@@ -722,7 +722,12 @@ p {
   .c-breadcrumb a,
   .c-breadcrumb .current-item,
   .c-breadcrumb span[typeof=ListItem] > span {
+    max-width: 34.375rem; /* 項目が長くなりすぎないよう最大幅を指定（数値は任意） */
     line-height: 3.125rem;
+    white-space: nowrap; /* 折り返し禁止 */
+    text-overflow: ellipsis; /* 三点リーダーを表示 */
+    vertical-align: bottom; /* 1行の時にズレるのを防ぐ（必要に応じて） */
+    overflow: hidden; /* はみ出しを隠す */
   }
 }
 

@@ -59,24 +59,6 @@
         <div class="c-pager">
           <?php wp_pagenavi(); ?>
         </div>
-        <!-- <div class="c-pager">
-            <ol class="c-pager__list">
-              <li class="c-pager__item is-current">1
-              </li>
-              <li class="c-pager__item">
-                <a href="#" class="c-pager__link">2</a>
-              </li>
-              <li class="c-pager__item">
-                <a href="#" class="c-pager__link">3</a>
-              </li>
-              <li class="c-pager__item c-pager__item--ellipsis">
-                <a href="#" class="c-pager__link">…</a>
-              </li>
-              <li class="c-pager__item">
-                <a href="#" class="c-pager__link">9</a>
-              </li>
-            </ol>
-          </div> -->
       </div>
     </section>
   </main>
