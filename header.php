@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール">
   <meta name="apple-mobile-web-app-capable" content="no">
-  <title>きたむらミュージックスクール HOME</title>
+  <title>きたむらミュージックスクール</title>
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,73 +27,57 @@
     <div class="l-inner header__inner">
       <?php if (is_front_page() || is_search()) : ?>
         <h1 class="header__logo logo">
-        <?php else : ?>
-          <div class="header__logo logo">
-          <?php endif; ?>
-          <!-- <h1> -->
-          <!-- <a href="<?php echo get_template_directory_uri(); ?>/index.html"> -->
-          <a href="<?php echo esc_url(home_url('/')); ?>">
-            <!-- <span class="u-visually-hidden">きたむらミュージックスクール</span> -->
-            <picture>
-              <source srcset="<?php echo get_template_directory_uri(); ?>/images/logo.svg" media="(min-width: 768px)">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/logo-sp.svg" alt="きたむらミュージックスクール">
-            </picture>
-            <span class="logo__text">
-              <span class="logo__line1">きたむら</span>
-              <span class="logo__line2">ミュージックスクール</span>
-            </span>
-          </a>
-          <!-- </h1> -->
-          <?php if (is_front_page() || is_search()) : ?>
+      <?php else : ?>
+        <div class="header__logo logo">
+      <?php endif; ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+          <picture>
+            <source srcset="<?php echo get_template_directory_uri(); ?>/images/logo.svg" media="(min-width: 768px)">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-sp.svg" alt="きたむらミュージックスクール">
+          </picture>
+          <span class="logo__text">
+            <span class="logo__line1">きたむら</span>
+            <span class="logo__line2">ミュージックスクール</span>
+          </span>
+        </a>
+      <?php if (is_front_page() || is_search()) : ?>
         </h1>
       <?php else : ?>
+        </div>
+      <?php endif; ?>
+      <!-- PC用メニュー -->
+      <nav class="header__nav u-pc">
+        <?php
+        wp_nav_menu(
+          array(
+            'menu_class'     => 'l-header__nav-ul',
+            'theme_location' => 'primary',
+            'container'      => false,
+          )
+        );
+        ?>
+        <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+          class="c-btn c-btn--h-contact">
+          お問い合わせ
+        </a>
+      </nav>
     </div>
-  <?php endif; ?>
-  <!-- PC用メニュー -->
-  <nav class="header__nav u-pc">
-    <?php
-    wp_nav_menu(
-      array(
-        'menu_class'     => 'l-header__nav-ul',
-        'theme_location' => 'primary',
-        'container'      => false,
-      )
-    );
-    ?>
-    <a href="<?php echo esc_url(home_url('/contact/')); ?>"
-      class="c-btn c-btn--h-contact">
-      お問い合わせ
-    </a>
-    <!-- <ul class="header__menu">
-          <li><a href="<?php echo get_template_directory_uri(); ?>/plan.html">料金</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/blog-list.html">ブログ</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/result-list.html">卒業実績</a></li>
-        </ul>
-        <a href="<?php echo get_template_directory_uri(); ?>/contact.html" class="c-btn c-btn--h-contact">お問い合わせ</a> -->
-  </nav>
-  </div>
-  <!-- ハンバーガーボタン（SP用） -->
-  <div class="c-humburger u-sp" id="humburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <!-- SP用ドロワーメニュー -->
-  <nav class="header__drawer u-sp" id="drawer">
-    <?php
-    wp_nav_menu(
-      array(
-        'menu_class'     => 'header__menu',
-        'theme_location' => 'drawer',
-        'container'      => false,
-      )
-    );
-    ?>
-    <!-- <ul class="header__menu">
-          <li><a href="<?php echo get_template_directory_uri(); ?>/plan.html">料金</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/blog-list.html">ブログ</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/result-list.html">卒業実績</a></li>
-        </ul> -->
-  </nav>
-  </div>
+    <!-- ハンバーガーボタン（SP用） -->
+    <div class="c-humburger u-sp" id="humburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- SP用ドロワーメニュー -->
+    <nav class="header__drawer u-sp" id="drawer">
+      <?php
+      wp_nav_menu(
+        array(
+          'menu_class'     => 'header__menu',
+          'theme_location' => 'drawer',
+          'container'      => false,
+        )
+      );
+      ?>
+    </nav>
   </header>

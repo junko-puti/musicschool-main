@@ -19,15 +19,6 @@
 
       <!-- お問い合わせフォーム -->
       <div class="contact-page__form contact-form">
-        <!-- <?php
-              if (have_posts()) :
-                while (have_posts()) : the_post();
-                  remove_filter('the_content', 'wpautop');
-                  the_content();
-                endwhile;
-              endif;
-              ?> -->
-        <!--↑↑↑４回ループしてしまう↑↑↑-->
         <?php
         echo apply_filters(
           'the_content',
@@ -38,5 +29,17 @@
     </div>
   </div>
 </main>
+
+
+<!-- ステータスが 'complete'（送信完了）になった時だけ実行 -->
+<script>
+  document.addEventListener('smf.submit', function(event) {
+    if (event.detail.status === 'complete') {
+      const redirectUrl = '<?php echo esc_url(home_url('/contact-send/')); ?>';
+      window.location.href = redirectUrl + '?smf_sent=true';
+    }
+  }, false);
+</script>
+
 
 <?php get_footer(); ?>

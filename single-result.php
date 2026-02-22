@@ -16,7 +16,15 @@
       ?>
           <article class="result-details__article result-article">
             <div class="result-article__img">
-              <span class="c-label c-label--sp-l c-label--pc-l">ポップス</span>
+              <span class="c-label c-label--sp-l c-label--pc-l">
+                <?php
+                  $terms = get_the_terms(get_the_ID(), 'genre');
+                  if (!empty($terms) && !is_wp_error($terms)) {
+                    echo $terms[0]->name;
+                  }
+                ?>
+              </span>
+              <!-- <span class="c-label c-label--sp-l c-label--pc-l">ポップス</span> -->
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('large'); ?>
               <?php else : ?>
@@ -81,56 +89,6 @@
       <!-- 関連記事 -->
       <?php get_template_part('template-parts/related-articles'); ?>
 
-      <!-- <section class="result-details__related result-related">
-        <h2 class="c-heading-deco">関連記事</h2>
-        <ul class="result-related__items">
-          <li class="result-related__item">
-            <a href="./result-details.html">
-              <div class="result-related__img">
-                <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
-                <picture>
-                  <source srcset="./images/result02.jpg" media="(min-width: 768px)">
-                  <img src="./images/result02-sp.jpg" alt="関連記事">
-                </picture>
-              </div>
-              <div class="result-related__body">
-                <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
-                <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
-              </div>
-            </a>
-          </li>
-          <li class="result-related__item">
-            <a href="./result-details.html">
-              <div class="result-related__img">
-                <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
-                <picture>
-                  <source srcset="./images/result03.jpg" media="(min-width: 768px)">
-                  <img src="./images/result03-sp.jpg" alt="関連記事">
-                </picture>
-              </div>
-              <div class="result-related__body">
-                <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
-                <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
-              </div>
-            </a>
-          </li>
-          <li class="result-related__item">
-            <a href="./result-details.html">
-              <div class="result-related__img">
-                <span class="c-label c-label--sp-s c-label--pc-l">ギター</span>
-                <picture>
-                  <source srcset="./images/result04.jpg" media="(min-width: 768px)">
-                  <img src="./images/result04-sp.jpg" alt="関連記事">
-                </picture>
-              </div>
-              <div class="result-related__body">
-                <h3 class="result-related__title">タイトルが入ります。タイトル<span class="u-pc">が入ります。タイトルが入ります。</span></h3>
-                <time class="result-related__date" datetime="2025-11-30">0000.00.00</time>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section> -->
     </div>
   </div>
 </main>

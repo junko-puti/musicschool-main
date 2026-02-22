@@ -3992,7 +3992,7 @@ contact-form
   width: 100%;
   height: 2.5rem;
   padding: 0.29375rem 1.25rem 0.14375rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 2.2;
   letter-spacing: 0;
   border: 0.5px solid #000000;
@@ -4151,7 +4151,7 @@ contact-form
 .smf-form input:focus-visible,
 .smf-form textarea:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.15);
 }
 
 .smf-checkbox-control__control:focus-visible + .smf-checkbox-control__label::before {
