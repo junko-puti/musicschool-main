@@ -1,0 +1,64 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.search-list{
+  padding-top: rem(36);
+  padding-bottom: rem(203);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(66);
+    padding-bottom: rem(210);
+  }
+}
+
+/**************
+search
+**************/
+.search-list__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-list__keyword{
+  font-size: rem(18);
+  line-height: calc(25 / 18);
+  font-weight: 500;
+}
+.search-list__keyword span{
+  font-weight: 700;
+}
+.search-list__counter{
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+  font-weight: 500;
+}
+// .sub-search__wrapper{
+//   margin-top: rem(42);
+//   row-gap: rem(39);
+//   @include pc{
+//     margin-top: rem(42);
+//     row-gap: rem(65);
+//   }
+// }
+
+.search-list .c-pager{
+  margin-top: rem(59);
+  @include pc{
+    margin-top: rem(65);
+  }
+}
+
+//エラーテキストのスタイル
+.p-search-result__no-result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.p-search-result__no-result p{
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}

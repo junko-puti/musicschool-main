@@ -1,0 +1,19 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-title{
+  font-size: rem(25);
+  font-weight: 700;
+  line-height: calc(40 / 25);
+  text-align: center;
+}
+.c-title--top-page{
+  @include pc{
+    font-size: rem(30);
+    line-height: calc(50 / 30);
+  }
+}
+.c-title--white{
+  color: #FFFFFF;
+}

@@ -1,0 +1,125 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.top-vision{
+  padding-top: rem(46);
+  padding-bottom: rem(34);
+  text-align: center;
+  @include pc {
+    padding-top: rem(66);
+    padding-bottom: rem(55);
+  }
+}
+/*message*/
+.top-vision__message{
+  position: relative;
+  @include pc {
+  }
+}
+.top-vision__title{
+  font-size: rem(25);
+  line-height: calc( 40 / 25 );
+  color: #CB0000;
+  @include pc {
+    font-size: rem(35);
+    line-height: calc( 50 / 35 );
+  }
+}
+.top-vision__text{
+  margin-top: rem(7);
+  text-align: left;
+  font-weight: 500;
+  @include pc {
+    margin-top: rem(17);
+    text-align: center;
+  }
+}
+.top-vision__semicircle{
+  margin-top: rem(20);
+  @include pc{
+    margin-top: rem(34);
+  }
+}
+
+/*step*/
+.top-vision__step{
+  position: relative;
+  padding-top: rem(32);
+  @include pc{
+    padding-top: rem(17.5);
+  }
+}
+.top-vision__step::before {
+  content: '';
+  position: absolute;
+  width: rem(34);
+  height: rem(19);
+  // width: rem(34);
+  // height: rem(195);
+  top: rem(3);
+  left: 50%;
+  transform: translateX(-49%);
+  background: url('../images/arrow-up.svg') no-repeat;
+  background-size: contain;
+  @include pc{
+    top: rem(-7);
+  }
+}
+.top-vision__step:after {
+  content: '';
+  position: absolute;
+  width: rem(3);
+  height: rem(189);
+  top: rem(5);
+  left: 50%;
+  transform: translateX(-50%);
+  // bottom: rem(25);
+  background-color: #CB0000;
+  @include pc{
+    top: rem(-3);
+  }
+}
+
+.top-vision-step__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(79.54);
+  margin-top: rem(18);
+  font-size: rem(20);
+  line-height: calc(50 / 20);
+}
+.top-vision-step__item:first-child {
+  margin-top: 0;
+}
+.top-vision-step__item:before {
+  position: absolute;
+  content: '';
+  width: rem(20);
+  height: rem(20);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #CB0000;
+}
+.top-vision-step__item:last-child:before {
+  top: 50%;/*padding分調整*/
+}
+.top-vision-step__en{
+  text-align: right;
+  color: #CB0000;
+  @include pc {
+    font-size: rem(25);
+    line-height: calc(50 / 25);
+  }
+}
+.top-vision-step__ja{
+  text-align: left;
+  font-weight: 500;
+  @include pc {
+    font-size: rem(23);
+    line-height: calc(50 / 23);
+  }
+
+}

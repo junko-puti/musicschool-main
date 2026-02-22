@@ -1,0 +1,166 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.top-voice{
+  padding-top: rem(46);
+  padding-bottom: rem(50);
+  text-align: center;
+  color: #FFFFFF;
+  background-color:#CB0000;
+  @include pc{
+    padding-top: rem(46);//微調整
+    padding-bottom: rem(80);
+  }
+}
+.top-voice__inner{
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include pc{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+/*****************
+スライダー
+*****************/
+.splide__track{
+  margin-top: rem(39);
+  @include pc{
+    margin-top: rem(34); //微調整
+  }
+}
+/*CSSでデフォルト矢印の見た目を完全に*/
+.splide__arrow {
+  padding: 0;
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
+}
+.splide__arrow svg {
+  display: none;
+}
+#voice .splide__arrow {
+  opacity: 1;
+}
+
+/* 左右矢印 */
+.splide__arrows {
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  z-index: 2;
+  @include pc{
+    top: 54%;
+    // top: 50%;
+  }
+}
+.custom-arrow {
+  width: rem(28);
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 左矢印：.splide__arrows の左端に揃える */
+.splide__arrow--prev {
+  position: absolute;
+  left: rem(20);
+  top: 50%; transform: translateY(-50%);
+  pointer-events: auto;
+  @include pc{
+    left: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    left: rem(10);
+  }
+}
+/* 右矢印：.splide__arrows の右端に揃える */
+.splide__arrow--next {
+  position: absolute;
+  right: rem(20);
+  top: 50%; transform: translateY(-50%);
+  pointer-events: auto;
+  @include pc{
+    right: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1000px) {
+    right: rem(10);
+  }
+}
+
+
+
+.custom-arrow img {
+  height: auto;
+}
+.custom-arrow img{
+  transition: opacity 0.3s ease;
+}
+.custom-arrow:hover img {
+  opacity: 0.7;
+}
+
+
+/*****************
+card
+*****************/
+.top-voice-list__img{
+  overflow: hidden;
+}
+.top-voice__list a .top-voice-list__img img{
+  transition: transform 0.3s ease;
+}
+.top-voice__list a:hover .top-voice-list__img img{
+  transform: scale(1.05);
+}
+.top-voice__list a .top-voice-list__text{
+  transition: opacity 0.3s ease;
+}
+.top-voice__list a:hover .top-voice-list__text{
+  opacity: 0.7;
+}
+
+.top-voice-list__img{
+  width: 100%;
+}
+.top-voice-list__img img {
+  aspect-ratio: 335 / 200;
+  object-fit: cover;
+  @include pc{
+    aspect-ratio: 27 / 19;
+  }
+}
+
+.top-voice-list__text{
+  margin-top: rem(27);
+  @include pc{
+    margin-top: rem(17);
+  }
+}
+.top-voice-list__name{
+  font-size: rem(22);
+  line-height: calc(33 / 22);
+}
+.top-voice-list__comment{
+  margin-top: rem(10);
+  text-align: left;
+  font-weight: 500;
+}
+

@@ -1,0 +1,195 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.header {
+  width: 100%;
+  height: rem(50);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  @include pc {
+    height: rem(80);
+  }
+}
+.header__inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo{
+  // width: rem(208);
+  height: 100%;
+  aspect-ratio: 208 / 31;
+  @include pc {
+    // width: rem(192);
+    aspect-ratio: 192 / 51;
+  }
+}
+// .header__logo h1{
+  //   height:100%;
+  // }
+.header__logo a{
+  display: flex;
+  align-items: center;
+  width: fit-content; /* 中身の幅に合わせる 8.2.21 */
+  height: 100%;
+  padding-top: rem(9.89);
+  padding-bottom: rem(8.82);
+  transition: opacity 0.3s ease;
+  @include pc {
+    padding-top: rem(14.37);
+    padding-bottom: rem(14.37);
+  }
+}
+.header__logo a:hover{
+  opacity: 0.5;
+}
+// .header__logo span{
+//   display: none;
+// }
+
+.logo__text{
+  display: flex;
+  flex-direction: row;
+  padding-left: rem(5);
+  @include pc{
+    flex-direction: column;
+    padding-left: rem(9);
+  }
+}
+.logo__line1{
+  font-size: rem(13);
+  line-height: calc(14 / 13);
+  @include pc{
+    margin-top:  rem(4);
+    font-size: rem(20);
+    line-height: calc(23 / 20);
+  }
+}
+.logo__line2{
+  font-size: rem(13);
+  line-height: calc(14 / 13);
+  @include pc{
+    margin-top: rem(1);
+    font-size: rem(15);
+    line-height: calc(23 / 15);
+  }
+}
+
+/*--sp用メニュー--*/
+.header__drawer {
+  position: fixed;
+  top: rem(50);
+  right: 0;
+  width: 80%;
+  z-index: 999;
+  max-width: 300px;
+  height: rem(174);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+  background-color: #CB0000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.header__drawer.is-open {
+  transform: translateX(0);
+}
+.header__drawer .header__menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.header__drawer .header__menu a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: rem(12.5) 0 rem(12.5) rem(20);;
+  font-size: rem(18);
+  line-height: calc(33 / 18);
+  transition: background-color 0.3s ease;
+}
+.header__drawer .header__menu a:hover{
+  background-color: #000000;
+}
+/*--PC用メニュー-*/
+.header__nav {
+  // @include pc {
+    display: flex;
+    flex-direction: row;
+    height: 100%;//8.2.21
+    column-gap: rem(33);
+    align-items: center;
+  // }
+}
+.header__nav .l-header__nav-ul {
+// .header__nav{//WP化に伴いクラス名変更
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: rem(33);
+  height: 100%;
+}
+// .header__nav .header__menu{
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+//   column-gap: rem(33);
+// }
+.header__nav .menu-item{
+// .header__menu li{
+  width: auto;
+  height: 100%;
+}
+.header__nav .menu-item a{
+  // .header__menu a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: rem(2.5);//微調整
+    font-size: rem(17);
+    line-height: calc(33 / 17);
+    transition: opacity 0.3s ease;
+    /*下線*/
+    position: relative;
+    text-decoration: none; /* 元の下線を消す */
+    // color: inherit;
+  }
+  
+  /*- 下線 -*/
+.header__nav .menu-item a::after{
+  // .header__menu a::after {
+    content: '';
+    position: absolute;
+    bottom: rem(20.5);
+    left: 0;
+    width: 0;
+    height: rem(1);
+    background-color: currentColor; /* 文字色と一致 */
+    transition: width 0.3s ease;
+  }
+  // /* PC〜タブレットサイズのみ有効（SPは除外） */
+  @media screen and (min-width: 768px) {
+    .header__nav .menu-item a:hover::after{
+    // .header__menu a:hover::after {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+  .header__nav .menu-item a::after{
+  // .header__menu a::after {
+    display: none;
+  }
+}
+
+.header__nav .l-header__nav-ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: rem(33);
+  height: 100%;
+}

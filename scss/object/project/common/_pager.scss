@@ -1,0 +1,90 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+//前後記事リンク
+.pager__items{
+  display: flex;
+  flex-direction: row;
+  column-gap: rem(22);
+  @include pc{
+    column-gap: rem(79);
+    justify-content: space-between;
+  }
+}
+.pager__items a{
+  transition: opacity 0.3s ease;
+}
+.pager__items a:hover{
+  opacity: 0.7;
+}
+.pager__items > * {
+  width: 50%;
+  @include pc{
+    width: rem(340);
+  }
+}
+.pager__prev,
+.pager__next{
+  text-align: center;
+  font-size: rem(17);
+  line-height: calc(30 / 17);
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+.pager__prev{
+  padding: rem(3.5) 0 rem(3.5) rem(20);//微調整
+  text-align: left;
+  @include pc{
+    padding: rem(3.5) 0 rem(3.5) rem(20);//微調整
+  }
+}
+.pager__next{
+  padding: rem(3.5) rem(20) rem(3.5) 0;//微調整
+  text-align: right;
+  @include pc{
+    padding: rem(3.5) rem(20) rem(3.5) 0;//微調整
+  }
+}
+.pager__item{
+  display: flex;
+  flex-direction: row;
+  margin-top: rem(16);
+  @include pc{
+    margin-top: rem(16);
+    column-gap: rem(15.5);
+  }
+}
+.pager__img{
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  flex: 0 0 rem(98); // 幅
+  @include pc{
+    display: block;
+  }
+}
+.pager__img img{
+  object-fit: cover;
+  aspect-ratio: auto;
+  @include pc{
+    aspect-ratio: 98 / 68;
+  }
+}
+.pager__title{
+  font-size: rem(16);
+  font-weight: 700;
+  @include pc{
+    line-height: calc(22.67 / 16);//微調整
+    // width: rem(147);
+  }
+}
+
+.pager__body p{
+  font-size: rem(16);
+  font-weight: 700;
+  @include pc{
+    line-height: calc(22.67 / 16);//微調整
+    // width: rem(147);
+  }
+}

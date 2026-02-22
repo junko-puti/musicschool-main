@@ -1,0 +1,60 @@
+@use '../../foundation/function' as *;
+@use '../../foundation/mixin' as *;
+
+
+.c-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: rem(30);
+  padding-left: rem(10);
+  padding-right: rem(10);
+  font-size: rem(15);
+  line-height: calc(25 / 15);
+  background-color: #CB0000;
+  color: #fff;
+}
+.c-label--sp-s{
+  min-width: rem(80);
+}
+.c-label--sp-m{
+  min-width: rem(90);
+}
+.c-label--sp-l{
+  min-width: rem(100);
+}
+
+@include pc{
+  .c-label--pc-s{
+      min-width: rem(80);
+  }
+  .c-label--pc-m{
+    min-width: rem(90);
+  }
+  .c-label--pc-l{
+    min-width: rem(100);
+  }
+}
+// .c-label--pc-s{
+//   @include pc{
+//     min-width: rem(80);
+//   }
+// }
+// .c-label--pc-m{
+//   @include pc{
+//   min-width: rem(90);
+//   }
+// }
+// .c-label--pc-l{
+//   @include pc{
+//   min-width: rem(100);
+//   }
+// }
+
+.c-label--none{//!important使用
+  display: none !important;
+}

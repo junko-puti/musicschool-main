@@ -1,0 +1,76 @@
+
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+
+.fv {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* ヘッダーより低く */
+}
+.fv img{
+  height: rem(300); // 表示したい高さ
+  object-fit: cover;
+  object-position: center center;
+  @include pc{
+    height: rem(200); // 表示したい高さ
+  }
+}
+.top-page .fv img{
+  height: auto;
+}//7.12.8残す
+.fv--result-list img{//卒業実績
+  object-position: right center;
+  @include pc{
+    object-position: center 68%;
+  }
+}
+.fv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(80, 80, 80, 0.4836); 
+  pointer-events: none;
+  mix-blend-mode: multiply;/*乗算モード*/
+}
+.top-page .fv::after {
+  background-color: rgba(80, 80, 80, 0.52); /* TOPページ専用 */
+}
+
+
+
+.fv__catch {
+  position: relative;
+  z-index: 2;
+}
+.fv__catch{
+  position: absolute;
+  width: 100%;
+  top: 51.5%;
+  left: 50%;
+  font-size: rem(25);
+  line-height: calc(60 / 25);
+  text-align: center;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  @include pc {
+    top: 52%;
+    left: 50%;
+    font-size: rem(25);
+    line-height: calc(60 / 25);
+  }
+}
+.top-page .fv__catch{
+  font-size: rem(30);
+  line-height: calc(50 / 30);
+  @include pc {
+    font-size: rem(40);
+    line-height: calc(60 / 40);
+  }
+  @media (min-width: 768px) and (max-width: 979px) {
+    font-size: rem(30);
+  }
+}
+

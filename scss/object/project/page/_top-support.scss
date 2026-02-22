@@ -1,0 +1,21 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.top-support{
+  padding-top: rem(49);
+  padding-bottom: rem(40);
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #CB0000;
+  @include pc {
+    padding-top: rem(68);
+    padding-bottom: rem(60);
+  }
+}
+.top-support__text{
+  margin-top: rem(14);
+  font-weight: 500;
+  @include pc {
+    margin-top: rem(30);
+  }
+}

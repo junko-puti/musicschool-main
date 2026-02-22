@@ -1,0 +1,23 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+.error-404{
+  padding-top: rem(47);
+  padding-bottom: rem(50);
+  color: #000000;
+  background-color: #FFFFFF;
+  @include pc {
+    padding-top: rem(67);//カンプは68px→contact-send.htmlと統一
+    padding-bottom: rem(90);
+  }
+}
+.error-404 .c-btn--primary{
+  margin: 0 auto;
+  margin-top: rem(39);
+  @include media(375px){
+    width: 100%;
+  }
+  @include pc{
+    margin-top: rem(40);
+  }
+}

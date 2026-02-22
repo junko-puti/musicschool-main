@@ -2,19 +2,6 @@
 @use 'mixin' as *;  // mixin.scss を使用
 @use './function' as *; // function.scss を使用
 
-//ソリッドコーディング
-// html {
-//     scroll-behavior: smooth;
-//     font-size: 62.5%;
-//     //768~920(inner)
-//     @media(min-width: 768px) and (max-width: 920px){
-//       font-size: calc(10 / 920 * 100vw);
-//     }
-//     @media(max-width:375px) {
-//       font-size: calc(10 /375 * 100vw);
-//     }
-// }
-
 
 //リキッドコーディング
 html {
@@ -32,32 +19,20 @@ html {
     font-size: calc(16 / 375 * 100vw);
   }
 }
-// * {
-//   outline: 1px solid rgb(210, 159, 238);
-// }
-// * {
-//   outline: 2px solid red;
-// }
-
-
-
-//ソリッドコーディング
-// html {
-//   scroll-behavior: smooth;
-//   font-size: 62.5%; /* 1rem = 10px に統一 */
-//   font-weight: 400;
-// }
-
 
 body {
-  // font-family: "Yu Gothic", sans-serif;
-  font-family: "游ゴシック", "Yu Gothic UI", "メイリオ", Meiryo UI, "MS Pゴシック", "MS ゴシック", sans-serif;
+  font-family: "Yu Gothic", YuGothic, "游ゴシック体", "Noto Sans JP", sans-serif;
   font-size: rem(16);
-  // font-weight: 400;
   font-weight: 700;
   line-height: 1.6;
+  letter-spacing: 0;
   color: #000000;
   position: relative;
+  padding-top: rem(50);
+  @include pc {
+    padding-top: rem(80);
+  }
+
 }
 
 [id] {
@@ -80,3 +55,8 @@ p{
   font-size: rem(18);
   line-height: calc(30 / 18);
 }
+
+
+// * {
+//   outline: 1px solid rgb(229, 207, 218);
+// }
