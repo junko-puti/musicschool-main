@@ -167,61 +167,22 @@ function remove_menus()
 add_action('admin_menu', 'remove_menus');
 
 
-// --------------------------------------------------
-// Snow Monkey Forms
-// 送信成功時に自作完了ページへリダイレクト【AI生成】
-// --------------------------------------------------
-add_action('wp_footer', function () {
-?>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-      const form = document.querySelector('form[id^="snow-monkey-form"]');
-      if (!form) return;
-
-      const observer = new MutationObserver(function() {
-
-        const completed = form.querySelector('.smf-complete-content');
-
-        if (completed) {
-
-          // 完了画面を見せない
-          completed.style.display = 'none';
-
-          // 送信フラグを保存（直アクセス対策）
-          sessionStorage.setItem('smf_sent', 'true');
-
-          // 自作完了ページへ遷移
-          window.location.replace('/contact-send/');
-        }
-      });
-
-      observer.observe(form, {
-        childList: true,
-        subtree: true
-      });
-
-    });
-  </script>
-<?php
-});
-
-// ------------------------------------------------------------
-//管理画面「外観＞メニュー」 を表示　WordPressでメニューを有効化する
-// ------------------------------------------------------------
-function register_my_menus()
-{
-  register_nav_menus(array(
-    'primary' => 'Primary Menu',
-    'footer'  => 'Footer Menu',
-    'drawer' => 'ドロワーメニュー',
-  ));
-}
-add_action('after_setup_theme', 'register_my_menus');
+    // ------------------------------------------------------------
+    //管理画面「外観＞メニュー」 を表示　WordPressでメニューを有効化する
+    // ------------------------------------------------------------
+    function register_my_menus()
+    {
+      register_nav_menus(array(
+        'primary' => 'Primary Menu',
+        'footer'  => 'Footer Menu',
+        'drawer' => 'ドロワーメニュー',
+      ));
+    }
+    add_action('after_setup_theme', 'register_my_menus');
 
 
 
-// -----------------------
-//開発中は管理バーを消し
-// -----------------------
-add_filter('show_admin_bar', '__return_false');
+    // -----------------------
+    //開発中は管理バーを消し
+    // -----------------------
+    add_filter('show_admin_bar', '__return_false');
