@@ -62,7 +62,7 @@
                 <?php endif; ?>
               </div>
               <div class="sidebar-recommend__body">
-                <p class="sidebar-recommend__title"><?php echo wp_trim_words(get_the_title(), 15, '...'); ?></p>
+                <p class="sidebar-recommend__title"><?php the_title(); ?></p>
               </div>
             </a>
           </li>

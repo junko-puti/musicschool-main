@@ -40,15 +40,15 @@
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail(); ?>
                     <?php else : ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                     <?php endif; ?>
                   </div>
                   <div class="blog-item__body">
-                    <h3 class="blog-item__title"><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h3>
+                    <h3 class="blog-item__title"><?php the_title(); ?></h3>
                     <time class="blog-item__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                    <p class="blog-item__text">
-                      <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
-                    </p>
+                    <div class="blog-item__text">
+                      <?php the_content(); ?>
+                    </div>
                   </div>
                 </a>
               </li>

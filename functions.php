@@ -91,6 +91,7 @@ add_action('init', function () {
       'label' => 'カテゴリー',
       'hierarchical' => true, // 階層あり（カテゴリー型）
       'public' => true,       //このタクソノミー（または投稿タイプ）を“公開”扱いにする
+      'show_in_rest' => true,      // ブロックエディタに表示されるようにする
       'show_admin_column' => true, // 管理画面の一覧に表示
       'show_ui' => true,           // 管理画面に UI（編集画面）を表示する
       'show_in_quick_edit' => true, // クイック編集に表示
@@ -176,13 +177,20 @@ function register_my_menus()
     'primary' => 'Primary Menu',
     'footer'  => 'Footer Menu',
     'drawer' => 'ドロワーメニュー',
-  ));
-}
-add_action('after_setup_theme', 'register_my_menus');
-
-
+    ));
+  }
+  add_action('after_setup_theme', 'register_my_menus');
+    
+    
+// -------------------------------------------------
+//WordPressが付ける「[…]」を完全に消して…だけを表示する
+// -------------------------------------------------
+add_filter('excerpt_more', function() {
+  return '…';
+});
 
 // -----------------------
 //開発中は管理バーを消し
 // -----------------------
 add_filter('show_admin_bar', '__return_false');
+  

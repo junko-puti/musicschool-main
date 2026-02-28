@@ -157,10 +157,25 @@ card
 .top-voice-list__name{
   font-size: rem(22);
   line-height: calc(33 / 22);
+  /* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* 1行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
 }
 .top-voice-list__comment{
   margin-top: rem(10);
+}
+.top-voice-list__comment p{
+  margin-top: 0;
   text-align: left;
   font-weight: 500;
+  /* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
 }
 

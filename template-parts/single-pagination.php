@@ -20,8 +20,7 @@
                 <!-- <img src="./images/blog-related.jpg" alt="前の記事"> -->
               </div>
               <div class="pager__body">
-                <p><?php echo wp_trim_words($prev_post->post_title, 25, '...'); ?></p>
-                <!-- <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3> -->
+                <p><?php echo $prev_post->post_title; ?></p>
               </div>
             </div>
           </a>
@@ -41,8 +40,7 @@
                 <!-- <img src="./images/blog-related.jpg" alt="次の記事"> -->
               </div>
               <div class="pager__body">
-                <p><?php echo wp_trim_words($next_post->post_title, 25, '...'); ?></p>
-                <!-- <h3 class="pager__title">タイトルが入ります。タイトルが入ります。タイトルが入</h3> -->
+                <p><?php echo $next_post->post_title; ?></p>
               </div>
             </div>
           </a>

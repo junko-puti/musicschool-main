@@ -138,9 +138,9 @@
                     </div>
                     <div class="top-voice-list__text">
                       <h3 class="top-voice-list__name"><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
-                      <p class="top-voice-list__comment">
-                        <?php echo wp_trim_words(get_the_content(), 42, '...'); ?>
-                      </p>
+                      <div class="top-voice-list__comment">
+                        <?php the_content(); ?>
+                      </div>
                     </div>
                   </a>
                 </li>
@@ -306,8 +306,7 @@
                     <?php endif; ?>
                   </div>
                   <div class="top-blog__body">
-                    <h3 class="u-pc"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
-                    <h3 class="u-sp"><?php echo wp_trim_words(get_the_title(), 35, '...'); ?></h3>
+                    <h3><?php the_title(); ?></h3>
                     <time class="top-blog__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                   </div>
                 </a>

@@ -73,9 +73,17 @@
   text-align: left;
   font-size: rem(20);
   line-height: calc(30 / 20);
+  // --- 行数制限のための追加 ---
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; //2行に固定
+  overflow: hidden;
+  // -------------------------
   @include pc{
     font-size: rem(20);
     line-height: calc(25 / 20);
+    -webkit-line-clamp: 1; //1行に固定
+
   }
 }
 .blog-item__date{
@@ -96,12 +104,22 @@
   font-weight: 500;
   text-align: left;
   line-height: calc(30 / 16);
+  // --- 行数制限のための追加 ---
+  display: -webkit-box;
+  -webkit-line-clamp: 5;//5行に固定
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  // -------------------------
   @include pc{
     margin-top: rem(11);
     font-size: rem(18);
     line-height: calc(30 / 18);
+    -webkit-line-clamp: 4;//4行に固定
   }
 }
+// .blog-item__text p{
+//   color: pink;
+// }
 
 /*--------------
 hover 
