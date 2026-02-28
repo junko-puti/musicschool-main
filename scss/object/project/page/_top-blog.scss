@@ -68,6 +68,12 @@
   font-size: rem(20);
   line-height: calc(30 / 20);
   text-align: left;
+  // --- 行数制限のための追加 ---
+  display: -webkit-box;
+  -webkit-line-clamp: 2;//2行に固定
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  // -------------------------
   @include pc{
     font-size: rem(20);
     line-height: calc(25 / 20);

@@ -75,7 +75,7 @@
                   <?php endif; ?>
                 </div>
                 <div class="blog-related__body">
-                  <h3 class="blog-related__title"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
+                  <h3 class="blog-related__title"><?php the_title(); ?></h3>
                   <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
               </a>

@@ -309,7 +309,12 @@ position: relative;
   font-size: rem(17);
   line-height: calc(28 / 17);
   font-weight: 700;
+  // --- 行数制限のための追加 ---
+  display: -webkit-box;
+  -webkit-line-clamp: 2;//2行に固定
+  -webkit-box-orient: vertical;
   overflow: hidden;
+  // -------------------------
   @include pc{
     margin-top: 0;
     font-size: rem(20);
@@ -427,6 +432,13 @@ card 共通
   font-size: rem(17);
   font-weight: 500;
   line-height: calc(28 / 17);
+  // --- 行数制限のための追加 ---
+  display: -webkit-box;
+  -webkit-line-clamp: 2;//2行に固定
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  // -------------------------
+
   @include pc{
     margin-top: 0;
   }

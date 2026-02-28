@@ -47,11 +47,12 @@
               </picture> -->
                   </div>
                   <div class="blog-item__body">
-                    <h2 class="blog-item__title"><?php echo wp_trim_words(get_the_title(), 26, '...'); ?></h2>
+                    
+                    <h2 class="blog-item__title"><?php the_title(); ?></h2>
                     <time class="blog-item__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                    <p class="blog-item__text">
-                      <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
-                    </p>
+                    <div class="blog-item__text">
+                      <?php the_excerpt(); ?>
+                    </div>
                   </div>
                 </a>
               </li>

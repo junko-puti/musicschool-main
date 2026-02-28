@@ -5,9 +5,5 @@
       <?php if (function_exists('bcn_display')) {
         bcn_display();
       } ?>
-      <!-- <ol>
-          <li><a href="./index.html">ホーム</a></li>
-          <li>ブログ</li>
-        </ol> -->
     </div>
   </nav>

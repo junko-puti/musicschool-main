@@ -29,22 +29,26 @@
       <div class="footer__sns">
         <ul class="footer__sns-menu footer__menu">
           <li>
-            <a href="#" class="footer__sns-icn">
+            <a href="<?php echo esc_url('https://x.com/'); ?>" class="footer__sns-icn" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="#" class="footer__sns-icn"> -->
               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-twitter.svg" alt="Twitter">
             </a>
           </li>
           <li>
-            <a href="#" class="footer__sns-icn">
+            <a href="<?php echo esc_url('https://www.facebook.com/'); ?>" class="footer__sns-icn" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="#" class="footer__sns-icn"> -->
               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.svg" alt="Facebook">
             </a>
           </li>
           <li>
-            <a href="#" class="footer__sns-icn">
+            <a href="<?php echo esc_url('https://www.youtube.com/'); ?>" class="footer__sns-icn" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="#" class="footer__sns-icn"> -->
               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-youtube.svg" alt="YouTube">
             </a>
           </li>
           <li>
-            <a href="#" class="footer__sns-icn">
+            <a href="<?php echo esc_url('https://www.instagram.com/'); ?>" class="footer__sns-icn" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="#" class="footer__sns-icn"> -->
               <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.svg" alt="Instagram">
             </a>
           </li>

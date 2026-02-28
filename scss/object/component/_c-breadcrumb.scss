@@ -11,16 +11,26 @@
 .c-breadcrumb .l-inner {
   display: flex;
   align-items: center;
-  padding-top: rem(4.8);
-  padding-bottom: rem(4.8); /* 上下4.8px。これで2行のときに合計59pxになる */
+  height: rem(36);
   column-gap: rem(20);
-  flex-wrap: wrap; /* スマホで折り返しを許可 */
+  /* スマホでの横スクロール設定（1行に強制） */
+  flex-wrap: nowrap; /* スマホで折り返しを禁止 */
+  overflow-x: auto; /* 横スクロールを許可 */
+  white-space: nowrap; /* テキストの折り返しを禁止 */
+  -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS） */
+  /*スクロールバーの表示を防止（必要に応じて）*/
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style:none; /* IE and Edge */
   @include pc {
     height: rem(50); /* PCは1行固定 */
-    padding-top: 0;
-    padding-bottom: 0; /* 上下4.8px。これで2行のときに合計59pxになる */
     flex-wrap: nowrap;
+    // overscroll-behavior-x: none; /* ブラウザ特有の「端っこの揺れ」を防止する */
   }
+}
+
+/* --- Chrome, Safari, Edge(新しい方)用のスクロールバー非表示 --- */
+.c-breadcrumb .l-inner::-webkit-scrollbar {
+  display: none;
 }
 
 /* 各項目の共通設定（aタグと現在のページ名） */
@@ -33,12 +43,12 @@
 .c-breadcrumb span[typeof="ListItem"] > span {
   display: inline-block;
   font-size: rem(16);
-  line-height: 1.55;      /* 1行を約24.8pxに。2行で49.6px */
+  line-height: rem(36);
   color: #000;
   text-decoration: none;
-  word-break: break-word;
+  white-space: nowrap; /* 折り返し禁止 */
   @include pc {
-    max-width: rem(550);     /* 項目が長くなりすぎないよう最大幅を指定（数値は任意） */
+    max-width: rem(530);     /* 項目が長くなりすぎないよう最大幅を指定（数値は任意） */
     line-height: rem(50);
     white-space: nowrap;     /* 折り返し禁止 */
     text-overflow: ellipsis; /* 三点リーダーを表示 */

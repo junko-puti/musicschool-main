@@ -689,18 +689,27 @@ p {
 .c-breadcrumb .l-inner {
   display: flex;
   align-items: center;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem; /* 上下4.8px。これで2行のときに合計59pxになる */
+  height: 2.25rem;
   column-gap: 1.25rem;
-  flex-wrap: wrap; /* スマホで折り返しを許可 */
+  /* スマホでの横スクロール設定（1行に強制） */
+  flex-wrap: nowrap; /* スマホで折り返しを禁止 */
+  overflow-x: auto; /* 横スクロールを許可 */
+  white-space: nowrap; /* テキストの折り返しを禁止 */
+  -webkit-overflow-scrolling: touch; /* スムーズなスクロールを有効にする（iOS） */
+  /*スクロールバーの表示を防止（必要に応じて）*/
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 @media (min-width: 768px) {
   .c-breadcrumb .l-inner {
     height: 3.125rem; /* PCは1行固定 */
-    padding-top: 0;
-    padding-bottom: 0; /* 上下4.8px。これで2行のときに合計59pxになる */
     flex-wrap: nowrap;
   }
+}
+
+/* --- Chrome, Safari, Edge(新しい方)用のスクロールバー非表示 --- */
+.c-breadcrumb .l-inner::-webkit-scrollbar {
+  display: none;
 }
 
 /* 各項目の共通設定（aタグと現在のページ名） */
@@ -713,16 +722,16 @@ p {
 .c-breadcrumb span[typeof=ListItem] > span {
   display: inline-block;
   font-size: 1rem;
-  line-height: 1.55; /* 1行を約24.8pxに。2行で49.6px */
+  line-height: 2.25rem;
   color: #000;
   text-decoration: none;
-  word-break: break-word;
+  white-space: nowrap; /* 折り返し禁止 */
 }
 @media (min-width: 768px) {
   .c-breadcrumb a,
   .c-breadcrumb .current-item,
   .c-breadcrumb span[typeof=ListItem] > span {
-    max-width: 34.375rem; /* 項目が長くなりすぎないよう最大幅を指定（数値は任意） */
+    max-width: 33.125rem; /* 項目が長くなりすぎないよう最大幅を指定（数値は任意） */
     line-height: 3.125rem;
     white-space: nowrap; /* 折り返し禁止 */
     text-overflow: ellipsis; /* 三点リーダーを表示 */
@@ -1633,6 +1642,12 @@ p {
 .pager__body p {
   font-size: 1rem;
   font-weight: 700;
+  /* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
 }
 @media (min-width: 768px) {
   .pager__body p {
@@ -2097,12 +2112,28 @@ card
 .top-voice-list__name {
   font-size: 1.375rem;
   line-height: 1.5;
+  /* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* 1行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
 }
 
 .top-voice-list__comment {
   margin-top: 0.625rem;
+}
+
+.top-voice-list__comment p {
+  margin-top: 0;
   text-align: left;
   font-weight: 500;
+  /* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
 }
 
 .top-flow {
@@ -2452,6 +2483,10 @@ card
   font-size: 1.25rem;
   line-height: 1.5;
   text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .top-blog__body h3 {
@@ -2914,11 +2949,16 @@ plan__detail
   text-align: left;
   font-size: 1.25rem;
   line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .blog-item__title {
     font-size: 1.25rem;
     line-height: 1.25;
+    -webkit-line-clamp: 1;
   }
 }
 
@@ -2943,12 +2983,17 @@ plan__detail
   font-weight: 500;
   text-align: left;
   line-height: 1.875;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .blog-item__text {
     margin-top: 0.6875rem;
     font-size: 1.125rem;
     line-height: 1.6666666667;
+    -webkit-line-clamp: 4;
   }
 }
 
@@ -3318,6 +3363,9 @@ hover
   font-size: 1.0625rem;
   line-height: 1.6470588235;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 @media (min-width: 768px) {
@@ -3463,6 +3511,10 @@ card 共通
   font-size: 1.0625rem;
   font-weight: 500;
   line-height: 1.6470588235;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .sidebar-recommend__title {
@@ -3630,6 +3682,10 @@ search
   font-size: 1.25rem;
   text-align: left;
   line-height: 1.25;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .result-item__title {
@@ -3728,6 +3784,7 @@ hover
     display: flex;
     flex-direction: row;
     column-gap: 2.5rem;
+    align-items: flex-start;
   }
 }
 

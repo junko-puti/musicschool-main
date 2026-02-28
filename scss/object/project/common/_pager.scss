@@ -83,8 +83,13 @@
 .pager__body p{
   font-size: rem(16);
   font-weight: 700;
+/* --- 行数制限のための記述 --- */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行に固定*/
+  overflow: hidden;
+  /* ------------------------- */
   @include pc{
     line-height: calc(22.67 / 16);//微調整
-    // width: rem(147);
   }
 }

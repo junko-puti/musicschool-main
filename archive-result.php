@@ -34,11 +34,11 @@
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
                   <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                   <?php endif; ?>
                 </div>
                 <div class="result-item__body">
-                  <h3 class="result-item__title"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
+                  <h3 class="result-item__title"><?php the_title(); ?></h3>
                   <time class="result-item__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
               </a>
