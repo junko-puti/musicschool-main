@@ -15,13 +15,9 @@
     <section class="blog__list blog-list">
       <div class="l-inner">
         <h2 class="c-title">ブログ一覧</h2>
-        <ul class="blog-list__items">
-          <?php
-          if (have_posts()):
-            while (have_posts()):
-              the_post();
-          ?>
-              <!--blog-->
+        <?php if (have_posts()): ?>
+          <ul class="blog-list__items">
+            <?php while (have_posts()):the_post(); ?>
               <li class="blog-list__item blog-item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="blog-item__img">
@@ -47,11 +43,15 @@
                   </div>
                 </a>
               </li>
-          <?php
-            endwhile;
-          endif;
-          ?>
-        </ul>
+            <?php endwhile; ?>
+          </ul>
+        <?php else : ?><!-- 8.3.7 -->
+          <div class="blog-list--no-post">
+          <!-- <div class="p-search-result__no-result"> -->
+            <p>投稿はありません。</p>
+            <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a>
+          </div>
+        <?php endif; ?>
         <!-- ページャー -->
         <div class="c-pager">
           <?php wp_pagenavi(); ?>
@@ -59,5 +59,7 @@
       </div>
     </section>
   </main>
+
+  <?php get_template_part('template-parts/follow-btns'); ?>
 
   <?php get_footer(); ?>

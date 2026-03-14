@@ -1,0 +1,12 @@
+@use '../foundation/function' as *;
+@use '../foundation/mixin' as *;
+
+
+.l-follow-btns-wrap {
+  position: sticky;
+  bottom: 0;
+  height: 0;//point
+  overflow: visible;
+  z-index: 100;
+  pointer-events: none;
+}

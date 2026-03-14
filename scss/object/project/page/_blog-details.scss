@@ -23,7 +23,12 @@
 .blog-article__img{
   position: relative;
   width: 100%;
+  margin-top: 0;//8.3.9
+  margin-bottom: rem(30);//8.3.9
   overflow: hidden;
+  @include pc{
+    margin-bottom: rem(46);//8.3.9
+  }
 }
 .blog-article__img img {
   aspect-ratio: 335/200;//8.2.21
@@ -32,30 +37,28 @@
     aspect-ratio: 600/350;//2.7
   }
 }
-.blog-article__body{
-  margin-top: rem(30);
-  @include pc{
-    margin-top: rem(46);
-  }
-}
 .blog-article__body h1,
 .blog-article__body h2,
 .blog-article__body h3{
-// .blog-article__title{
   text-align: left;
   font-weight: 700;
 }
-.blog-article__title--first{
+.blog-article__title--first{//h1
+  margin-top: rem(30);
+  margin-bottom: rem(6);
   font-size: rem(20);
   line-height: calc(30 / 20);
   @include pc{
-  font-size: rem(25);
+    margin-top: rem(46);
+    margin-bottom: rem(5);
+    font-size: rem(25);
     line-height: calc(40 / 25);
   }
 }
 .blog-article__body h2{
 // .blog-article__title--second{
   margin-top: rem(39);
+  margin-bottom: rem(15);
   font-size: rem(20);
   line-height: calc(30 / 20);
   @include pc{
@@ -68,11 +71,12 @@
   position: relative;
   padding-left: rem(9.5);
   margin-top: rem(50);
+  margin-bottom: rem(19);
   font-size: rem(20);
   line-height: calc(30 / 20);
-
   @include pc{
     margin-top: rem(43.5);
+    margin-bottom: rem(17);
     font-size: rem(20);
     line-height: calc(40 / 20);
   }
@@ -96,6 +100,7 @@
 .blog-article__date{
   display: block;
   margin-top: rem(6);
+  margin-bottom: rem(22);
   font-size: rem(17);
   line-height: calc(30 / 17);
   font-weight: 500;
@@ -117,24 +122,31 @@
 .blog-article__body p.is-first{
 // .blog-article__text--first{
   margin-top: rem(27);
+  margin-bottom: rem(39);
   @include pc{
     margin-top: rem(48);
+    margin-bottom: rem(33);
   }
 }
 .blog-article__body p.is-second{
 // .blog-article__text--second{
   margin-top: rem(15);
+  margin-bottom: rem(39);
+  @include pc{
+    margin-bottom: rem(17);
+  }
 }
 .blog-article p.is-third{
 // .blog-article__text--third{
 position: relative;
-  // padding: rem(14) rem(20) rem(14) rem(70);
-  padding: rem(14) rem(20) rem(14) rem(70);//8.2.21
+  padding: rem(14) rem(20) rem(14) rem(70);
   margin-top: rem(19.5);
+  margin-bottom: rem(28);
   background-color: #E8E8E8;
   @include pc{
     padding: rem(17) rem(30) rem(11) rem(67);
     margin-top: rem(17);
+    margin-bottom: rem(26);
   }
 }
 .blog-article__body p.is-third::before{
@@ -160,17 +172,20 @@ position: relative;
   border-left: none; 
 }
 .blog-article__body .sns-btn{
-  margin-top: rem(22);//  微調整
-  padding-bottom: 0;//8.2.18
+  margin-top: rem(22);
+  margin-bottom: rem(27);
+  padding-bottom: 0;
+  @include pc{
+    margin-bottom: rem(48);
+  }
 }
-// .blog-article__body .sns-btn li{
-// }
 .blog-article__body figure.is-second-img{
-// .blog-article__img--second{
   margin-top: rem(39);
+  margin-bottom: rem(27);
   width: rem(335);
   @include pc{
     margin-top: rem(17);
+    margin-bottom: rem(28);
   }
 }
 .blog-article__body figure.is-second-img img{
@@ -182,13 +197,12 @@ position: relative;
 // .blog-article__list{
   padding-bottom: rem(38.5);
   margin-top: rem(27);
+  margin-bottom: 0;
   font-size: rem(16);
   line-height: calc(30 / 16);
   font-weight: 500;
-  // border-bottom: #000000 rem(0.5) solid;
   @include pc{
-    padding-bottom: rem(38.5);//8.2.18
-    // padding-bottom: rem(40.5);
+    padding-bottom: rem(38.5);
     margin-top: rem(28);
     font-size: rem(18);
     line-height: calc(30 / 18);
@@ -203,14 +217,24 @@ position: relative;
   padding-left: 1em;     /* 全体を右にズラす */
   text-indent: -1em;     /* 1行目だけ左に戻す */
 }
-.blog-article a{
-// .blog-article__link{
+// .blog-article a{//8.3.9
+.blog-article__link{
   margin-top: rem(28);//8.2.21
+  margin-bottom: rem(45);
   @include pc{
     // margin-top: rem(24);
     margin-top: rem(26);//8.2.21
+    margin-bottom: rem(58);
     text-align: left;
   }
+}
+.blog-article__link{
+// .blog-article__body a{
+  font-size: rem(20);
+  font-weight: 700;
+  // line-height: calc(33 / 20);
+  line-height: 1.4;//8.2.21
+  color: #CB0000;
 }
 .blog-article__link a{
 // .blog-article__body a{

@@ -29,7 +29,8 @@
   background-color: #ffffff;
   border-radius: rem(10);
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  // transition: all 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease, opacity 0.3s ease;//8.3.7
 }
 
 // 各バーの初期位置（上下にずらす）

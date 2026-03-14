@@ -18,8 +18,8 @@
   @include media(375px){
     width: 100%;
   }
-
 }
+
 /**************
 contact-form
 **************/
@@ -277,21 +277,38 @@ contact-form
 }
 .smf-action .smf-button-control__control{//c-btn--primary
   width: rem(335);
-  height: rem(50);
-  padding-top: rem(9.5);
-  padding-bottom: rem(7.5);
+  // height: rem(50);
+  padding-top: rem(12);
+  padding-bottom: rem(16);
   padding-left: rem(20);
   margin: 0 auto;
   margin-top: 3.125rem;
   font-size: rem(20);
-  line-height: calc(26 / 20);
+  line-height: 1;
   @include pc {
     width: rem(250);
-    height: rem(50);
+    padding-top: rem(13);
+    padding-bottom: rem(10);
     font-size: rem(25);
-    line-height: calc(33 / 25);
   }
 }
+// .smf-action .smf-button-control__control{//c-btn--primary
+//   width: rem(335);
+//   height: rem(50);
+//   padding-top: rem(9.5);
+//   padding-bottom: rem(7.5);
+//   padding-left: rem(20);
+//   margin: 0 auto;
+//   margin-top: 3.125rem;
+//   font-size: rem(20);
+//   line-height: calc(26 / 20);
+//   @include pc {
+//     width: rem(250);
+//     height: rem(50);
+//     font-size: rem(25);
+//     line-height: calc(33 / 25);
+//   }
+// }
 .smf-action .smf-button-control__control:hover{//c-btn:hover
   color: #CB0000;
   background-color: #FFFFFF;
@@ -352,13 +369,14 @@ contact-form
 .smf-error-messages {
   border: none;
   margin-top: rem(6);
-  font-size: rem(16);
+  // font-size: rem(16);
+  font-size: rem(12);//8.3.7
   text-align: left;
   line-height: 1.5;
   color: #CB0000;
-  @include pc {
-    font-size: rem(18);
-  }
+  // @include pc {
+  //   font-size: rem(18);
+  // }
 }
 
 /* Snow Monkey Forms が「完了状態」のときだけフォーム全体を非表示にする */

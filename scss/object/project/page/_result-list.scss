@@ -94,3 +94,17 @@ hover
     margin-top: rem(71);
   }
 }
+
+//エラーテキストのスタイル
+.result-list--no-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.result-list--no-post p{
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}

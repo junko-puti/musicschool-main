@@ -194,3 +194,42 @@ add_filter('excerpt_more', function() {
 // -----------------------
 add_filter('show_admin_bar', '__return_false');
   
+
+
+
+
+
+// --------------------------------------------------
+// タイトルのカスタマイズ title
+// --------------------------------------------------
+function custom_document_title(string $title): string
+{
+    $site_name = 'きたむらミュージックスクール';
+
+    // 404
+    if (is_404()) {
+        return 'お探しのページはございません | ' . $site_name;
+    }
+
+    // 404 以外は元のタイトルを返す
+    return $title;
+}
+add_filter('pre_get_document_title', 'custom_document_title');
+
+// --------------------------------------------------
+// メタディスクリプションの出力 description
+// --------------------------------------------------
+function custom_meta_description(): void
+{
+    $description = '';
+
+    // 404
+    if (is_404()) {
+        $description = 'きたむらミュージックスクール公式ホームページの404ページです。';
+    }
+
+    if ($description !== '') {
+        echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+    }
+}
+add_action('wp_head', 'custom_meta_description', 1);

@@ -83,57 +83,55 @@ $('.top-faq-accordion__wrapper').click(function() {
 
 
 //スクロールトップボタン,お問い合わせボタンの変化
-//AI・検索コードを参考にカスタマイズ
-$(function(){
-  const btn = $('.js-btn');
-  const pagetop = $('.fixed-btn--pagetop');
-  const contact = $('.fixed-btn--f-contact');
+//stickey (AI参照)
 
-  $(window).on('scroll', function(){
-    const scrollTop = $(this).scrollTop();
-    //スクロール位置による表示切り替え
-    btn.toggleClass('active',scrollTop > 100);
+// const SHOW_THRESHOLD = 100;
+// const floatBtns = document.getElementById('floatBtns');
 
-    //フッター手前でストップ
-    const scrollHeight = $(document).height();
-    const scrollPosition = $(window).height() + scrollTop;
-    const footHeight = $("footer").outerHeight();
-    const isOverlap = scrollHeight - scrollPosition <= footHeight;
+// function onScroll() {
+//   if (window.scrollY >= SHOW_THRESHOLD) {
+//     floatBtns.classList.add('visible');
+//   } else {
+//     floatBtns.classList.remove('visible');
+//   }
+// }
 
-    // お問い合わせボタンの有無で offset を調整
-    const contactExists = contact.length > 0;
-    let offset = contactExists ? 79 : 19; // SP用（モバイルファースト）
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      offset = contactExists ? 91 : 31; // PC用
-    }
-    if (isOverlap) {
-      
-      pagetop.css({
-        position: 'absolute',
-        bottom: footHeight + offset + 'px'
-      });
-      contact.css({
-        position: 'absolute',
-        bottom: footHeight + 'px'
-      });
-    } else {
-      pagetop.css({
-        position: '',
-        bottom: offset + 'px'
-      });
-      contact.css({
-        position: '',
-        bottom: ''
-      });
-    }
+// window.addEventListener('scroll', onScroll, { passive: true });
+
+// document.querySelector('.c-pagetop').addEventListener('click', (e) => {
+//   e.preventDefault();
+//   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+// });
+const SHOW_THRESHOLD = 100;
+const floatBtns = document.getElementById('floatBtns');
+
+function onScroll() {
+  // floatBtns（お問い合わせボタン等）がページに存在しない場合は何もしない
+  if (!floatBtns) return;
+
+  if (window.scrollY >= SHOW_THRESHOLD) {
+    floatBtns.classList.add('visible');
+  } else {
+    floatBtns.classList.remove('visible');
+  }
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// --- ページトップボタンの処理 ---
+const pageTopBtn = document.querySelector('.c-pagetop');
+
+// ボタンがページ内に存在する場合のみ、クリックイベントを設定する
+if (pageTopBtn) {
+  pageTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-  // スムーススクロール
-  btn.on('click', function(){
-    $('body,html').animate({ scrollTop: 0 }, 500);
-  });
-
-});
-
+}
 
 
 

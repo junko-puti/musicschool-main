@@ -267,32 +267,35 @@
     <section class="top__blog top-blog">
       <div class="l-inner">
         <h2 class="c-title c-title--top-page">ブログ</h2>
-        <ul class="top-blog__items">
-          <?php
-          $args = array(
-            'posts_per_page' => 3,
-            'post_type' => 'blog',
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'meta_query' => array(
-              array(
-                'key'     => 'recommend', // SCFのフィールド名
-                'value'   => '1',         // チェックが入っていると1
-                'compare' => 'LIKE',         // 完全一致
-              ),
-            ),
-          );
-          $the_query = new WP_Query($args);
 
-          if ($the_query->have_posts()):
+        <!-- <ul class="top-blog__items">-->
+        <?php  
+        $args = array(
+          'posts_per_page' => 3,
+          'post_type' => 'blog',
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'meta_query' => array(
+            array(
+              'key'     => 'recommend', // SCFのフィールド名
+              'value'   => '1',         // チェックが入っていると1
+              'compare' => 'LIKE',         // 完全一致
+            ),
+          ),
+        );
+        $the_query = new WP_Query($args);
+        ?>
+        <?php if ($the_query->have_posts()):?>
+          <ul class="top-blog__items">
+            <?php
             while ($the_query->have_posts()): $the_query->the_post();
-          ?>
+            ?>
               <!-- blog -->
               <li class="top-blog__item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="top-blog__img">
                     <span class="c-label c-label--sp-m c-label--pc-s">
-                      <?php
+                    <?php
                       $terms = get_the_terms(get_the_ID(), 'blog_cate');
                       if (!empty($terms) && !is_wp_error($terms)) {
                         echo esc_html($terms[0]->name);
@@ -311,20 +314,26 @@
                   </div>
                 </a>
               </li>
-          <?php
-            endwhile;
-          endif;
-          wp_reset_postdata();
-          ?>
-        </ul>
-        <!-- <div class="top-blog__link c-link">
-          <a href="<?php echo esc_url(home_url('blog')); ?>">ブログ一覧へ</a>
-        </div> -->
+            <?php endwhile; ?>
+          </ul>
+          <!-- <div class="top-blog__link">
+            <a href="<?php echo esc_url(home_url('blog')); ?>" class="c-link c-link--blog">ブログ一覧へ</a>
+          </div> -->
+        <?php else : ?><!-- 8.3.7 -->
+          <div class="top-blog--no-post">
+            <p>おすすめ記事はありません。</p>
+            <!-- <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a> -->
+          </div>
+        <?php endif; ?>
+
+        <?php wp_reset_postdata(); ?>
         <div class="top-blog__link">
           <a href="<?php echo esc_url(home_url('blog')); ?>" class="c-link c-link--blog">ブログ一覧へ</a>
         </div>
       </div>
     </section>
   </main>
+
+  <?php get_template_part('template-parts/follow-btns'); ?>
 
   <?php get_footer(); ?>

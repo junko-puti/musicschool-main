@@ -30,6 +30,7 @@
   </div>
 </main>
 
+<?php get_template_part('template-parts/follow-btns'); ?>
 
 <!-- ステータスが 'complete'（送信完了）になった時だけ実行 -->
 <script>

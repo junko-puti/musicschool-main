@@ -5,8 +5,9 @@
 @use "layout/l-header";
 @use "layout/l-inner";
 @use "layout/l-two-column";
-@use "layout/l-fixed";
+@use "layout/l-follow-btns-wrapper";
 @use "layout/l-wrapper";
+// @use "layout/l-fixed";
 
 @use "object/component/c-humburger";
 @use "object/component/c-link";
@@ -24,7 +25,8 @@
 @use "object/project/common/header";
 @use "object/project/common/fv";
 @use "object/project/common/footer";
-@use "object/project/common/fixed-btn";
+@use "object/project/common/follow-btns";
+// @use "object/project/common/fixed-btn";
 @use "object/project/common/sns-btn";
 @use "object/project/common/pager";
 // @use "object/project/common/card-lists";
@@ -52,4 +54,3 @@
 @use "object/utility/u-pc";
 @use "object/utility/u-sp";
 @use "object/utility/u-pt5";
-@use "object/utility/u-visually-hidden";

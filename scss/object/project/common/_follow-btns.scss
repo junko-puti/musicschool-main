@@ -1,0 +1,79 @@
+@use '../../../foundation/function' as *;
+@use '../../../foundation/mixin' as *;
+
+// STICKY WRAPPER
+// 高さ0のブロック。フッター直前に配置し、
+// position:sticky bottom:0 で画面下に張り付く。
+// フッターが上から押してくると自然に一緒にスクロールする。
+
+.follow-btns {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  align-items: flex-end;
+  gap: rem(31);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  @include pc{
+    left: auto;
+    right: 0;
+    align-items: flex-end;
+    transform: translateY(12px);
+  }
+}
+.follow-btns.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  @include pc {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.follow-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: rem(10);
+  padding-right: rem(10);
+  // border: none;
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease,;
+}
+
+
+
+
+/* お問い合わせページのみ適用されるスタイル */
+.follow-btns.is-contact-page {
+  /* スマホ時の中央寄せをリセット */
+  left: auto;
+  right: rem(20); /* 右端からの距離 */
+  transform: translateX(0) translateY(12px);
+}
+/* 表示状態（visible）のとき */
+.follow-btns.is-contact-page.visible {
+  transform: translateX(0) translateY(0);
+}
+
+/* TOPへ戻るボタン単体の位置調整 */
+.follow-btns.is-contact-page .c-pagetop {
+  margin-bottom: 0; /* お問い合わせボタンがないので隙間をリセット */
+  bottom: rem(18);  /* 下から18pxの位置に固定 */
+  right: 0;
+  @include pc {
+    right: rem(80);
+    bottom: rem(30);
+  }
+}

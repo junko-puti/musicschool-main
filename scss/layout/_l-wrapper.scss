@@ -7,5 +7,5 @@
     flex-direction: column;
     justify-content: space-between;
     /* 画面の高さいっぱいを最小の高さとして確保 */
-    min-height: 100vh;
+    min-height: calc(100dvh - (rem(80) + rem(274)));
 }
