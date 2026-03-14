@@ -14,7 +14,7 @@
 .blog-list__items{/*<ul>*/
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
-  justify-items: start;       // flex-startに相当
+  // justify-items: start;       // flex-startに相当 8.3.7
   margin-top: rem(39);//1.28
   // margin-top: rem(42);
   row-gap: rem(39);
@@ -131,3 +131,16 @@ hover
   opacity: 0.7;
 }
 
+//エラーテキストのスタイル
+.blog-list--no-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.blog-list--no-post p{
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}

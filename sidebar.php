@@ -19,39 +19,32 @@
     <p class="c-heading-deco">ブログ内を検索</p>
     <div class="sidebar-search__container">
       <?php get_search_form(); ?>
-      <!-- <form action="./search.html" method="get" class="c-search-form">
-        <label for="search-input" class="c-search-form__label">
-          <input type="text" id="search-input" name="q" class="c-search-form__input" placeholder="">
-        </label>
-        <button type="submit" class="c-search-form__button" aria-label="検索">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/icon-search.svg" alt="検索" class="c-search-form__icon">
-        </button>
-      </form> -->
     </div>
   </div>
   <!-- おすすめの記事 -->
   <div class="sidebar__recommend sidebar-recommend sidebar__content">
     <p class="c-heading-deco">おすすめの記事</p>
-    <ul class="sidebar-recommend__items">
-      <?php
-      $args = array(
-        'posts_per_page' => 3,
-        'post_type' => 'blog',
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'meta_query' => array(
-          array(
-            'key'     => 'recommend', // SCFのフィールド名
-            'value'   => '1',         // チェックが入っていると1
-            'compare' => 'LIKE',         // 完全一致
-          ),
+    <?php
+    $args = array(
+      'posts_per_page' => 3,
+      'post_type' => 'blog',
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'meta_query' => array(
+        array(
+          'key'     => 'recommend', // SCFのフィールド名
+          'value'   => '1',         // チェックが入っていると1
+          'compare' => 'LIKE',         // 完全一致
         ),
-      );
-      $the_query = new WP_Query($args);
-
-      if ($the_query->have_posts()):
-        while ($the_query->have_posts()): $the_query->the_post();
-      ?>
+      ),
+    );
+    $the_query = new WP_Query($args);
+    ?>
+    <?php if ($the_query->have_posts()): ?>
+      <ul class="sidebar-recommend__items">
+        <?php 
+        while ($the_query->have_posts()): $the_query->the_post(); 
+        ?>
           <li class="sidebar-recommend__item">
             <a href="<?php the_permalink(); ?>">
               <div class="sidebar-recommend__img">
@@ -66,10 +59,15 @@
               </div>
             </a>
           </li>
-        <?php endwhile;
-        wp_reset_postdata(); ?>
-      <?php endif; ?>
-    </ul>
+        <?php endwhile; ?>
+      </ul>
+    <?php else : ?><!-- 8.3.7 -->
+      <div class="top-blog--no-post">
+        <p>おすすめ記事はありません。</p>
+        <!-- <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a> -->
+      </div>
+    <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
   </div>
 
   <!-- カテゴリー -->

@@ -99,3 +99,17 @@
     line-height: calc(25 / 20);
   }
 }
+//エラーテキストのスタイル
+.top-blog--no-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.top-blog--no-post p{
+  margin-top: rem(15);
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}

@@ -8,9 +8,11 @@
   width: 100%;
 }
 
-.c-breadcrumb .l-inner {
+.c-breadcrumb .c-breadcrumb-scroll {//8.3.9
+// .c-breadcrumb .l-inner {
   display: flex;
   align-items: center;
+  // margin-right: rem(20);//8.3.8
   height: rem(36);
   column-gap: rem(20);
   /* スマホでの横スクロール設定（1行に強制） */
@@ -74,3 +76,8 @@
   font-size: rem(16);
   height: 100%; /* 親の高さに合わせる */
 }
+
+
+
+
+

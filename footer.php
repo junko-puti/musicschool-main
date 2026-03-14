@@ -1,3 +1,4 @@
+  </div>
   <footer class="footer">
     <div class="l-inner">
       <nav class="footer__nav">
@@ -57,13 +58,6 @@
     </div>
   </footer>
 
-  <!-- 固定ボタン -->
-  <?php
-  // スラッグが 'contact-send' の場合
-  if (!is_404() && !is_page('contact-send')) {
-    get_template_part('template-parts/fix-area');
-  }
-  ?>
 
   <?php wp_footer(); ?>
   </body>

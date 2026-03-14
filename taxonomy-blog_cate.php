@@ -65,4 +65,6 @@
     </section>
   </main>
 
+  <?php get_template_part('template-parts/follow-btns'); ?>
+
   <?php get_footer(); ?>

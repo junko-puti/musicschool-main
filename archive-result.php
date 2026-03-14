@@ -15,10 +15,9 @@
   <section class="result__list result-list">
     <div class="l-inner">
       <h2 class="c-title">卒業実績一覧</h2>
-      <ul class="result-list__items">
-        <?php if (have_posts()): ?>
+      <?php if (have_posts()): ?>
+        <ul class="result-list__items">
           <?php while (have_posts()) : the_post(); ?>
-            <!--blog-->
             <li class="result-list__item result-item">
               <a href="<?php the_permalink(); ?>">
                 <div class="result-item__img">
@@ -29,7 +28,6 @@
                       echo $terms[0]->name;
                     }
                     ?>
-                    <!-- ポップス -->
                   </span>
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
@@ -44,8 +42,14 @@
               </a>
             </li>
           <?php endwhile; ?>
-        <?php endif; ?>
-      </ul>
+        </ul>
+      <?php else : ?><!-- 8.3.7 -->
+        <div class="result-list--no-post">
+        <!-- <div class="p-search-result__no-result"> -->
+          <p>投稿はありません。</p>
+          <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a>
+        </div>
+      <?php endif; ?>
       <!-- ページャー -->
       <div class="c-pager">
         <?php wp_pagenavi(); ?>
@@ -53,5 +57,7 @@
     </div>
   </section>
 </main>
+
+<?php get_template_part('template-parts/follow-btns'); ?>
 
 <?php get_footer(); ?>
