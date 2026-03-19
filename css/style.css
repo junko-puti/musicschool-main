@@ -4430,6 +4430,12 @@ contact-form
     font-size: 1.5625rem;
   }
 }
+@media (min-width: 768px) and (max-width: 919px) {
+  .smf-action .smf-button-control__control {
+    padding-top: 0.6875rem;
+    padding-bottom: 1.0625rem;
+  }
+}
 
 @media (hover: hover) {
   .smf-action .smf-button-control__control:hover {
