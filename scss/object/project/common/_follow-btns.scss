@@ -35,24 +35,19 @@
   }
 }
 
-
-
-
 .follow-btn {
   position: relative;
   display: flex;
-  justify-content: center;
+  // display: inline-flex;
   align-items: center;
-  padding-left: rem(10);
-  padding-right: rem(10);
+  justify-content: center;
+
+  padding: 0 rem(20);
   // border: none;
-  cursor: pointer;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease,;
 }
-
-
 
 
 /* お問い合わせページのみ適用されるスタイル */

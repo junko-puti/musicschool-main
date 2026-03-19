@@ -309,9 +309,15 @@ contact-form
 //     line-height: calc(33 / 25);
 //   }
 // }
-.smf-action .smf-button-control__control:hover{//c-btn:hover
-  color: #CB0000;
-  background-color: #FFFFFF;
+// .smf-action .smf-button-control__control:hover{
+//   color: #CB0000;
+//   background-color: #FFFFFF;
+// }
+@media (hover: hover) {//8.3.19
+  .smf-action .smf-button-control__control:hover{
+    color: #CB0000;
+    background-color: #FFFFFF;
+  }
 }
 
 

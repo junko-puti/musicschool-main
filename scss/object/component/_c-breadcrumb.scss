@@ -64,11 +64,11 @@
   display: inline-block;
   transition: opacity 0.3s;
 }
-
-.c-breadcrumb a:hover {
-  opacity: 0.7;
+@media (hover: hover) {//8.3.19
+  .c-breadcrumb a:hover {
+    opacity: 0.7;
+  }
 }
-
 /* 区切り文字 (>) の調整 */
 .c-breadcrumbs__sign {
   display: flex;

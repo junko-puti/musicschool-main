@@ -43,8 +43,13 @@
 .top-blog__item a{
   transition: opacity 0.3s ease;
 }
-.top-blog__item a:hover{
-  opacity: 0.7;
+// .top-blog__item a:hover{
+//   opacity: 0.7;
+// }
+@media (hover: hover) {//8.3.19
+  .top-blog__item a:hover{
+    opacity: 0.7;
+  }
 }
 .top-blog__img {
   position: relative;

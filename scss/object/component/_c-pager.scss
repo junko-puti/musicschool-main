@@ -33,13 +33,21 @@
 .c-pager .wp-pagenavi a {
   margin: 0;
 }
-.c-pager .wp-pagenavi .current:hover,
-.c-pager .wp-pagenavi a:hover {
+// .c-pager .wp-pagenavi .current:hover,
+// .c-pager .wp-pagenavi a:hover {
+//     opacity: 1;
+//     color: #fff;
+//     background: #000;
+//   }
+@media (hover: hover) {//8.3.19
+  .c-pager .wp-pagenavi .current:hover,
+  .c-pager .wp-pagenavi a:hover {
     opacity: 1;
     color: #fff;
     background: #000;
   }
-    
+}
+
 .c-pager .wp-pagenavi .current{
   color: #fff;
   background: #000;

@@ -44,12 +44,14 @@
     padding-bottom: rem(14.37);
   }
 }
-.header__logo a:hover{
-  opacity: 0.5;
-}
-// .header__logo span{
-//   display: none;
+// .header__logo a:hover{
+//   opacity: 0.5;
 // }
+@media (hover: hover) {//8.3.19
+  .header__logo a:hover{
+    opacity: 0.5;
+  }
+}
 
 .logo__text{
   display: flex;

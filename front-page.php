@@ -106,27 +106,32 @@
       </div>
     </section>
     <!-- voice 生徒さんたちの声 -->
-    <section class="top__voice top-voice splide" id="voice" aria-labelledby="voice__title">
-      <div class="top-voice__inner">
-        <!-- <div class="l-inner l-inner__top-voice"> -->
-        <h2 class="c-title c-title--top-page c-title--white" id="voice__title">生徒さんたちの声</h2>
-        <div class="splide__track">
-          <ul class="top-voice__lists splide__list">
 
-            <?php
-            $args = array(
-              'posts_per_page' => 6,
-              'post_type' => 'result',
-              'orderby' => 'date',
-              'order' => 'DESC'
-            );
-            $the_query = new WP_Query($args);
+<section class="top__voice top-voice" id="voice" aria-labelledby="voice__title">
+  <!-- <div class="top-voice__inner"> -->
+    <h2 class="c-title c-title--top-page c-title--white" id="voice__title">
+      生徒さんたちの声
+    </h2>
+    <?php
+    $args = array(
+      'posts_per_page' => 6,
+      'post_type' => 'result',
+      'orderby' => 'date',
+      'order' => 'DESC'
+    );
+    $the_query = new WP_Query($args);
+    ?>
+    <?php if ($the_query->have_posts()) : ?>
+      <div class="splide">
 
-            if ($the_query->have_posts()) :
+        <div class="top-voice__inner">
+
+
+          <div class="splide__track">
+            <ul class="top-voice__lists splide__list">
+              <?php 
               while ($the_query->have_posts()) : $the_query->the_post();
-            ?>
-
-                <!-- voice -->
+              ?>
                 <li class="top-voice__list top-voice-list splide__slide">
                   <a href="<?php the_permalink(); ?>">
                     <div class="top-voice-list__img">
@@ -144,14 +149,76 @@
                     </div>
                   </a>
                 </li>
-
-            <?php
-              endwhile;
-            endif;
-            wp_reset_postdata();
-            ?>
-          </ul>
+              <?php endwhile; ?>
+            </ul>
+            <?php wp_reset_postdata(); ?>
+          </div>
+          <!-- 矢印も中に入れる -->
+          <div class="splide__arrows">
+            <button type="button" class="splide__arrow splide__arrow--prev custom-arrow prev">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-l.svg" alt="前へ">
+            </button>
+            <button type="button" class="splide__arrow splide__arrow--next custom-arrow next">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-r.svg" alt="次へ">
+            </button>
+          </div>
         </div>
+      </div>
+    <?php else: ?>
+      <div class="top-voice--no-post">
+        <p>「生徒さんたちの声」の投稿はありません。</p>
+      </div>
+    <?php endif; ?>
+  <!-- </div> -->
+</section>
+
+
+    <!-- <section class="top__voice top-voice splide" id="voice" aria-labelledby="voice__title">
+      <div class="top-voice__inner">
+        <h2 class="c-title c-title--top-page c-title--white" id="voice__title">生徒さんたちの声</h2>
+        <div class="splide__track">
+          <?php
+          $args = array(
+            'posts_per_page' => 6,
+            'post_type' => 'result',
+            'orderby' => 'date',
+            'order' => 'DESC'
+          );
+          $the_query = new WP_Query($args);
+          ?>
+          <?php if ($the_query->have_posts()) :?>
+            <ul class="top-voice__lists splide__list">
+              <?php 
+              while ($the_query->have_posts()) : $the_query->the_post();
+              ?>
+                <li class="top-voice__list top-voice-list splide__slide">
+                  <a href="<?php the_permalink(); ?>">
+                    <div class="top-voice-list__img">
+                      <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail(); ?>
+                      <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
+                      <?php endif; ?>
+                    </div>
+                    <div class="top-voice-list__text">
+                      <h3 class="top-voice-list__name"><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
+                      <div class="top-voice-list__comment">
+                        <?php the_content(); ?>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              <?php endwhile; ?>
+            </ul>
+            <?php wp_reset_postdata(); ?>
+          <?php else: ?>
+          <div class="top-voice--no-post">
+            <p>生徒さんたちの声の投稿はありません。</p>
+          </div>
+          <?php endif; ?>
+        </div>
+
+
         <div class="splide__arrows">
           <button type="button" class="splide__arrow splide__arrow--prev custom-arrow prev">
             <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-l.svg" alt="前へ">
@@ -161,7 +228,7 @@
           </button>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- flow ご利用の流れ -->
     <section class="top__flow top-flow">
       <div class="l-inner">
@@ -316,17 +383,14 @@
               </li>
             <?php endwhile; ?>
           </ul>
-          <!-- <div class="top-blog__link">
-            <a href="<?php echo esc_url(home_url('blog')); ?>" class="c-link c-link--blog">ブログ一覧へ</a>
-          </div> -->
+          <?php wp_reset_postdata(); ?><!--8.3.18-->
+
         <?php else : ?><!-- 8.3.7 -->
           <div class="top-blog--no-post">
             <p>おすすめ記事はありません。</p>
-            <!-- <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a> -->
           </div>
         <?php endif; ?>
 
-        <?php wp_reset_postdata(); ?>
         <div class="top-blog__link">
           <a href="<?php echo esc_url(home_url('blog')); ?>" class="c-link c-link--blog">ブログ一覧へ</a>
         </div>

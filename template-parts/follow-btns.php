@@ -32,7 +32,7 @@
          class="follow-btn c-btn c-btn--f-contact" 
          data-label="お問い合わせ" 
          aria-label="お問い合わせ">
-        お問い合わせ
+        <span>お問い合わせ</span><!--8.3.19-->
       </a>
     <?php endif; ?>
 

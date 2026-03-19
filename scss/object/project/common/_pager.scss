@@ -14,8 +14,13 @@
 .pager__items a{
   transition: opacity 0.3s ease;
 }
-.pager__items a:hover{
-  opacity: 0.7;
+// .pager__items a:hover{
+//   opacity: 0.7;
+// }
+@media (hover: hover) {//8.3.19
+  .pager__items a:hover{
+    opacity: 0.7;
+  }
 }
 .pager__items > * {
   width: 50%;

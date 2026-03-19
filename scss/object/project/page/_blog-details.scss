@@ -195,21 +195,26 @@ position: relative;
 
 .blog-article__body ul{
 // .blog-article__list{
-  padding-bottom: rem(38.5);
+  // padding-bottom: rem(38.5);
   margin-top: rem(27);
-  margin-bottom: 0;
+  margin-bottom: rem(38.5);//8.3.18
   font-size: rem(16);
   line-height: calc(30 / 16);
   font-weight: 500;
   @include pc{
-    padding-bottom: rem(38.5);
+    // padding-bottom: rem(38.5);
     margin-top: rem(28);
     font-size: rem(18);
     line-height: calc(30 / 18);
   }
 }
-.wp-block-separator {//8.2.18 上書き
-    border-bottom: 0.5px solid;
+.wp-block-separator {
+  margin-top: rem(38.5);//8.3.18
+  margin-bottom: rem(50);//8.3.18
+  border-bottom: 0.5px solid;
+  @include pc{
+    margin-bottom: rem(43.5);
+  }
 }
 .blog-article__body .wp-block-list li{/*.wp-block-list li 本文リストだけ対象*/  
 // .blog-article__body li{
@@ -293,8 +298,13 @@ position: relative;
 .blog-related__item a{
   transition: opacity 0.3s ease;
 }
-.blog-related__item a:hover{
-  opacity: 0.7;
+// .blog-related__item a:hover{
+//   opacity: 0.7;
+// }
+@media (hover: hover) {//8.3.19
+  .blog-related__item a:hover{
+    opacity: 0.7;
+  }
 }
 
 .blog-related__img{
@@ -472,6 +482,20 @@ card 共通
   content: '';
 }
 
+//エラーテキストのスタイル
+.sidebar-recommend--no-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.sidebar-recommend--no-post p{
+  margin-top: rem(15);
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}
 
 
 
