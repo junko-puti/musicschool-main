@@ -51,7 +51,8 @@
   font-size: rem(15);
 }
 .c-btn--h-contact > span{//8.3.19テキストのずれ調整
-  transform: translateY(0.05em);
+  transform: translateY(0);
+  // transform: translateY(0.05em);
 }
 
 // .c-btn--h-contact{
@@ -75,7 +76,8 @@
   }
 }
 .c-btn--f-contact > span{//8.3.19テキストのずれ調整
-  transform: translateY(0.05em);
+  transform: translateY(0);
+  // transform: translateY(0.05em);
 }
 
 // .c-btn--f-contact{
@@ -114,7 +116,8 @@
   }
 }
 .c-btn--primary > span{//8.3.19テキストのずれ調整
-  transform: translateY(0.1em);
+  transform: translateY(0);
+  // transform: translateY(0.1em);
 }
 
 // .c-btn--primary{
