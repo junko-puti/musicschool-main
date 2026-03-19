@@ -14,7 +14,7 @@
   flex-direction: column;
   // align-items: center;
   align-items: flex-end;
-  gap: rem(31);
+  gap: rem(19);
   pointer-events: none;
   opacity: 0;
   transform: translateX(-50%) translateY(12px);
@@ -22,6 +22,7 @@
   @include pc{
     left: auto;
     right: 0;
+    gap: rem(31);
     align-items: flex-end;
     transform: translateY(12px);
   }

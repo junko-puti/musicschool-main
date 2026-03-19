@@ -9,8 +9,13 @@
 .sns-btn a{
   transition: opacity 0.3s ease;
 }
-.sns-btn a:hover{
-  opacity: 0.7; 
+// .sns-btn a:hover{
+//   opacity: 0.7; 
+// }
+@media (hover: hover) {//8.3.19
+  .sns-btn a:hover{
+    opacity: 0.7; 
+  }
 }
 .sns-btn__img img{
   width: rem(65);

@@ -277,10 +277,12 @@ contact-form
 }
 .smf-action .smf-button-control__control{//c-btn--primary
   width: rem(335);
-  // height: rem(50);
-  padding-top: rem(12);
+  height: rem(50);
+  // padding-top: rem(15);
+  // padding-bottom: rem(13);
+  padding-top: rem(12);//8.3.19
   padding-bottom: rem(16);
-  padding-left: rem(20);
+  // padding-left: rem(20);
   margin: 0 auto;
   margin-top: 3.125rem;
   font-size: rem(20);
