@@ -24,7 +24,7 @@ if (!isset($_GET['smf_sent'])) {
     <div class="contact-send">
       <div class="l-inner">
         <p class="c-status-message">お問い合わせいただきありがとうございました。<br>内容確認後、担当者よりメールにてご連絡いたします。</p>
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-btn c-btn--primary">ホームへ戻る</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-btn c-btn--primary"><span>ホームへ戻る</span></a>
         <!-- </form> -->
       </div>
     </div>

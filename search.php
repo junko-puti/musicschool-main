@@ -68,13 +68,13 @@
         <?php else : ?>
           <div class="p-search-result__no-result">
             <p>検索されたキーワードにマッチする<br class="u-sp">記事はありませんでした。</p>
-            <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a>
+            <a onclick="history.back()" class="c-btn c-btn--primary"><span>戻る</span></a>
           </div>
         <?php endif; ?>
       <?php else: ?>
         <div class="p-search-result__no-result">
           <p>検索キーワードが未入力です。</p>
-          <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a>
+          <a onclick="history.back()" class="c-btn c-btn--primary"><span>戻る</span></a>
         </div>
       <?php endif; ?>
     </div>

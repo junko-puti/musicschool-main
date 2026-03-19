@@ -81,9 +81,9 @@
               </a>
             </li>
 
-          <?php endwhile;
-          wp_reset_postdata(); ?>
+          <?php endwhile;?>
         </ul>
+        <?php wp_reset_postdata(); ?><!--8.3.18-->
       </section>
     <?php endif; ?>
 

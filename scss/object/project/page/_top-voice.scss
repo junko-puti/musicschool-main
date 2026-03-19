@@ -82,7 +82,9 @@
 .splide__arrow--prev {
   position: absolute;
   left: rem(20);
-  top: 50%; transform: translateY(-50%);
+  top: 50%; 
+  transform: translateY(-150%);
+  // transform: translateY(-50%);
   pointer-events: auto;
   @include pc{
     left: 0;
@@ -95,7 +97,9 @@
 .splide__arrow--next {
   position: absolute;
   right: rem(20);
-  top: 50%; transform: translateY(-50%);
+  top: 50%; transform: 
+  translateY(-150%);
+  // translateY(-50%);
   pointer-events: auto;
   @include pc{
     right: 0;
@@ -127,14 +131,24 @@ card
 .top-voice__list a .top-voice-list__img img{
   transition: transform 0.3s ease;
 }
-.top-voice__list a:hover .top-voice-list__img img{
-  transform: scale(1.05);
+// .top-voice__list a:hover .top-voice-list__img img{
+//   transform: scale(1.05);
+// }
+@media (hover: hover) {//8.3.19
+  .top-voice__list a:hover .top-voice-list__img img{
+    transform: scale(1.05);
+  }
 }
 .top-voice__list a .top-voice-list__text{
   transition: opacity 0.3s ease;
 }
-.top-voice__list a:hover .top-voice-list__text{
-  opacity: 0.7;
+// .top-voice__list a:hover .top-voice-list__text{
+//   opacity: 0.7;
+// }
+@media (hover: hover) {//8.3.19
+  .top-voice__list a:hover .top-voice-list__text{
+    opacity: 0.7;
+  }
 }
 
 .top-voice-list__img{
@@ -179,3 +193,17 @@ card
   /* ------------------------- */
 }
 
+//エラーテキストのスタイル
+.top-voice--no-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(30);
+}
+.top-voice--no-post p{
+  margin-top: rem(15);
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: calc(30 / 16);
+  text-align: center;
+}

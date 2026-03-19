@@ -127,8 +127,13 @@ hover
 .blog-item a{
   transition: opacity 0.3s ease;
 }
-.blog-item a:hover{
-  opacity: 0.7;
+// .blog-item a:hover{
+//   opacity: 0.7;
+// }
+@media (hover: hover) {//8.3.19
+  .blog-item a:hover{
+    opacity: 0.7;
+  }
 }
 
 //エラーテキストのスタイル

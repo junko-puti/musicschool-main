@@ -572,20 +572,19 @@ p {
   height: 0.03125rem;
 }
 
-.c-link:hover {
-  opacity: 0.5;
+@media (hover: hover) {
+  .c-link:hover {
+    opacity: 0.5;
+  }
+  .c-link:hover::after {
+    opacity: 0.5;
+  }
 }
-
-.c-link:hover::after {
-  opacity: 0.5;
-}
-
 .c-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  justify-content: center;
+  padding: 0 1.25rem;
   font-weight: 700;
   line-height: 1;
   color: #FFFFFF;
@@ -596,11 +595,6 @@ p {
   cursor: pointer;
 }
 
-.c-btn {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 @media (hover: hover) {
   .c-btn:hover {
     color: #CB0000;
@@ -609,24 +603,28 @@ p {
 }
 .c-btn--h-contact {
   min-width: 9.375rem;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  height: 2.8125rem;
   font-size: 0.9375rem;
+}
+
+.c-btn--h-contact > span {
+  transform: translateY(0.05em);
 }
 
 .c-btn--f-contact {
   width: 20.9375rem;
-  padding-top: 1.1875rem;
-  padding-bottom: 1.1875rem;
+  height: 3.75rem;
   font-size: 1.25rem;
   letter-spacing: 0.15em;
 }
 @media (min-width: 768px) {
   .c-btn--f-contact {
     width: 18.75rem;
-    padding-top: 1.3125rem;
-    padding-bottom: 1.0625rem;
   }
+}
+
+.c-btn--f-contact > span {
+  transform: translateY(0.05em);
 }
 
 /*.activeクラス付与で表示する*/
@@ -637,17 +635,18 @@ p {
 
 .c-btn--primary {
   width: 20.9375rem;
-  padding-top: 0.8125rem;
-  padding-bottom: 0.9375rem;
+  height: 3.125rem;
   font-size: 1.25rem;
 }
 @media (min-width: 768px) {
   .c-btn--primary {
     width: 15.625rem;
-    padding-top: 0.8125rem;
-    padding-bottom: 0.625rem;
     font-size: 1.5625rem;
   }
+}
+
+.c-btn--primary > span {
+  transform: translateY(0.1em);
 }
 
 .c-pagetop {
@@ -676,6 +675,7 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transform: translateY(-2px);
 }
 
 /*.activeクラス付与で表示する*/
@@ -683,10 +683,11 @@ p {
   pointer-events: auto;
 }
 
-.c-pagetop.active:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .c-pagetop.active:hover {
+    opacity: 0.7;
+  }
 }
-
 .c-breadcrumb {
   font-weight: 500;
   background: #E8E8E8;
@@ -753,10 +754,11 @@ p {
   transition: opacity 0.3s;
 }
 
-.c-breadcrumb a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .c-breadcrumb a:hover {
+    opacity: 0.7;
+  }
 }
-
 /* 区切り文字 (>) の調整 */
 .c-breadcrumbs__sign {
   display: flex;
@@ -805,13 +807,14 @@ p {
   margin: 0;
 }
 
-.c-pager .wp-pagenavi .current:hover,
-.c-pager .wp-pagenavi a:hover {
-  opacity: 1;
-  color: #fff;
-  background: #000;
+@media (hover: hover) {
+  .c-pager .wp-pagenavi .current:hover,
+  .c-pager .wp-pagenavi a:hover {
+    opacity: 1;
+    color: #fff;
+    background: #000;
+  }
 }
-
 .c-pager .wp-pagenavi .current {
   color: #fff;
   background: #000;
@@ -919,21 +922,23 @@ p {
   transition: opacity 0.3s ease;
 }
 
-.c-search-form__icon:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .c-search-form__icon:hover {
+    opacity: 0.7;
+  }
 }
-
 .c-search-form__input {
   transition: background-color 0.3s ease, border-color 0.3s ease;
   background-color: #E8E8E8;
   border: 2px solid transparent;
 }
 
-.c-search-form__input:hover {
-  background-color: #f5f5f5;
-  border-color: #999;
+@media (hover: hover) {
+  .c-search-form__input:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+  }
 }
-
 .c-search-form__input:focus {
   outline: none;
   border: 2px solid #000000;
@@ -994,8 +999,8 @@ p {
   z-index: 10;
   padding-left: 0.625rem;
   padding-right: 0.625rem;
-  padding-top: 0.46875rem;
-  padding-bottom: 0.46875rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4375rem;
   font-size: 0.9375rem;
   line-height: 1;
   box-sizing: border-box;
@@ -1101,10 +1106,11 @@ p {
   }
 }
 
-.header__logo a:hover {
-  opacity: 0.5;
+@media (hover: hover) {
+  .header__logo a:hover {
+    opacity: 0.5;
+  }
 }
-
 .logo__text {
   display: flex;
   flex-direction: row;
@@ -1379,10 +1385,11 @@ p {
   transition: opacity 0.3s;
 }
 
-.footer__nav .menu-item:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .footer__nav .menu-item:hover {
+    opacity: 0.7;
+  }
 }
-
 .footer__logo-img {
   width: 2rem;
   margin-top: 1.1875rem;
@@ -1482,11 +1489,9 @@ p {
 .follow-btn {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  cursor: pointer;
+  justify-content: center;
+  padding: 0 1.25rem;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -1564,10 +1569,11 @@ p {
   transition: opacity 0.3s ease;
 }
 
-.pager__items a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .pager__items a:hover {
+    opacity: 0.7;
+  }
 }
-
 .pager__items > * {
   width: 50%;
 }
@@ -2030,7 +2036,7 @@ p {
   position: absolute;
   left: 1.25rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-150%);
   pointer-events: auto;
 }
 @media (min-width: 768px) {
@@ -2049,7 +2055,7 @@ p {
   position: absolute;
   right: 1.25rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-150%);
   pointer-events: auto;
 }
 @media (min-width: 768px) {
@@ -2086,18 +2092,20 @@ card
   transition: transform 0.3s ease;
 }
 
-.top-voice__list a:hover .top-voice-list__img img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .top-voice__list a:hover .top-voice-list__img img {
+    transform: scale(1.05);
+  }
 }
-
 .top-voice__list a .top-voice-list__text {
   transition: opacity 0.3s ease;
 }
 
-.top-voice__list a:hover .top-voice-list__text {
-  opacity: 0.7;
+@media (hover: hover) {
+  .top-voice__list a:hover .top-voice-list__text {
+    opacity: 0.7;
+  }
 }
-
 .top-voice-list__img {
   width: 100%;
 }
@@ -2146,6 +2154,21 @@ card
   -webkit-line-clamp: 3; /* 3行に固定*/
   overflow: hidden;
   /* ------------------------- */
+}
+
+.top-voice--no-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.875rem;
+}
+
+.top-voice--no-post p {
+  margin-top: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.875;
+  text-align: center;
 }
 
 .top-flow {
@@ -2471,10 +2494,11 @@ card
   transition: opacity 0.3s ease;
 }
 
-.top-blog__item a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .top-blog__item a:hover {
+    opacity: 0.7;
+  }
 }
-
 .top-blog__img {
   position: relative;
 }
@@ -3035,10 +3059,11 @@ hover
   transition: opacity 0.3s ease;
 }
 
-.blog-item a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .blog-item a:hover {
+    opacity: 0.7;
+  }
 }
-
 .blog-list--no-post {
   display: flex;
   flex-direction: column;
@@ -3283,16 +3308,14 @@ hover
 }
 
 .blog-article__body ul {
-  padding-bottom: 2.40625rem;
   margin-top: 1.6875rem;
-  margin-bottom: 0;
+  margin-bottom: 2.40625rem;
   font-size: 1rem;
   line-height: 1.875;
   font-weight: 500;
 }
 @media (min-width: 768px) {
   .blog-article__body ul {
-    padding-bottom: 2.40625rem;
     margin-top: 1.75rem;
     font-size: 1.125rem;
     line-height: 1.6666666667;
@@ -3300,7 +3323,14 @@ hover
 }
 
 .wp-block-separator {
+  margin-top: 2.40625rem;
+  margin-bottom: 3.125rem;
   border-bottom: 0.5px solid;
+}
+@media (min-width: 768px) {
+  .wp-block-separator {
+    margin-bottom: 2.71875rem;
+  }
 }
 
 .blog-article__body .wp-block-list li { /*.wp-block-list li 本文リストだけ対象*/
@@ -3391,10 +3421,11 @@ hover
   transition: opacity 0.3s ease;
 }
 
-.blog-related__item a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .blog-related__item a:hover {
+    opacity: 0.7;
+  }
 }
-
 .blog-related__img {
   position: relative;
   width: 100%;
@@ -3605,6 +3636,21 @@ card 共通
   content: "";
 }
 
+.sidebar-recommend--no-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.875rem;
+}
+
+.sidebar-recommend--no-post p {
+  margin-top: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.875;
+  text-align: center;
+}
+
 /*カテゴリー*/
 .sidebar__category {
   font-size: 1.0625rem;
@@ -3793,10 +3839,11 @@ hover
   transition: opacity 0.3s ease;
 }
 
-.result-item a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .result-item a:hover {
+    opacity: 0.7;
+  }
 }
-
 /*--------------
 ページャー 
 ---------------*/
@@ -4010,10 +4057,11 @@ hover
   transition: opacity 0.3s ease;
 }
 
-.result-related__item a:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .result-related__item a:hover {
+    opacity: 0.7;
+  }
 }
-
 .result-related__img {
   position: relative;
   width: 100%;
@@ -4381,11 +4429,12 @@ contact-form
   }
 }
 
-.smf-action .smf-button-control__control:hover {
-  color: #CB0000;
-  background-color: #FFFFFF;
+@media (hover: hover) {
+  .smf-action .smf-button-control__control:hover {
+    color: #CB0000;
+    background-color: #FFFFFF;
+  }
 }
-
 .smf-form--simple-table .smf-item {
   display: block !important;
 }

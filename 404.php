@@ -13,7 +13,7 @@
     <div class="error-404">
       <div class="l-inner">
         <p class="c-status-message">申し訳ございませんが、お探しのページが見つかりませんでした。<br>お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-btn c-btn--primary">ホームへ戻る</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-btn c-btn--primary"><span>ホームへ戻る</span></a>
       </div>
     </div>
   </main>

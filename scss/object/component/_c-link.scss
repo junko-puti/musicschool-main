@@ -30,11 +30,19 @@ position: relative;
   height: rem(0.5);
 }
 
-.c-link:hover {
-    opacity: 0.5;
-}
-.c-link:hover::after {
-    opacity: 0.5;
+// .c-link:hover {
+//     opacity: 0.5;
+// }
+// .c-link:hover::after {
+//     opacity: 0.5;
+// }
+@media (hover: hover) {//8.3.19
+  .c-link:hover {
+      opacity: 0.5;
+  }
+  .c-link:hover::after {
+      opacity: 0.5;
+  }
 }
 
 
