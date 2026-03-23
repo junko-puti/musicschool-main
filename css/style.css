@@ -1463,7 +1463,7 @@ p {
   gap: 1.1875rem;
   pointer-events: none;
   opacity: 0;
-  transform: translateX(-50%) translateY(12px);
+  transform: translateX(-50%);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 @media (min-width: 768px) {
@@ -1472,7 +1472,7 @@ p {
     right: 0;
     gap: 1.9375rem;
     align-items: flex-end;
-    transform: translateY(12px);
+    transform: translateX(0);
   }
 }
 
@@ -1503,12 +1503,12 @@ p {
   /* スマホ時の中央寄せをリセット */
   left: auto;
   right: 1.25rem; /* 右端からの距離 */
-  transform: translateX(0) translateY(12px);
+  transform: translateX(0);
 }
 
 /* 表示状態（visible）のとき */
 .follow-btns.is-contact-page.visible {
-  transform: translateX(0) translateY(0);
+  transform: translateX(0);
 }
 
 /* TOPへ戻るボタン単体の位置調整 */
@@ -3050,7 +3050,7 @@ plan__detail
     margin-top: 0.6875rem;
     font-size: 1.125rem;
     line-height: 1.6666666667;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
   }
 }
 
