@@ -82,27 +82,6 @@ $('.top-faq-accordion__wrapper').click(function() {
 
 
 
-//スクロールトップボタン,お問い合わせボタンの変化
-//stickey (AI参照)
-
-// const SHOW_THRESHOLD = 100;
-// const floatBtns = document.getElementById('floatBtns');
-
-// function onScroll() {
-//   if (window.scrollY >= SHOW_THRESHOLD) {
-//     floatBtns.classList.add('visible');
-//   } else {
-//     floatBtns.classList.remove('visible');
-//   }
-// }
-
-// window.addEventListener('scroll', onScroll, { passive: true });
-
-// document.querySelector('.c-pagetop').addEventListener('click', (e) => {
-//   e.preventDefault();
-//   window.scrollTo({ top: 0, behavior: 'smooth' });
-
-// });
 const SHOW_THRESHOLD = 100;
 const floatBtns = document.getElementById('floatBtns');
 

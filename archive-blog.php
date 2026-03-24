@@ -45,9 +45,8 @@
               </li>
             <?php endwhile; ?>
           </ul>
-        <?php else : ?><!-- 8.3.7 -->
+        <?php else : ?>
           <div class="blog-list--no-post">
-          <!-- <div class="p-search-result__no-result"> -->
             <p>投稿はありません。</p>
             <a onclick="history.back()" class="c-btn c-btn--primary">戻る</a>
           </div>

@@ -1515,7 +1515,7 @@ p {
 .follow-btns.is-contact-page .c-pagetop {
   margin-bottom: 0; /* お問い合わせボタンがないので隙間をリセット */
   bottom: 1.125rem; /* 下から18pxの位置に固定 */
-  right: 0;
+  right: 4.25rem;
 }
 @media (min-width: 768px) {
   .follow-btns.is-contact-page .c-pagetop {
@@ -2940,7 +2940,7 @@ plan__detail
 @media (min-width: 768px) {
   .blog-list__items {
     margin-top: 2.5rem;
-    row-gap: 4.0625rem;
+    row-gap: 4.25rem;
   }
 }
 

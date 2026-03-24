@@ -12,8 +12,6 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
-  // opacity: 0;/*デフォルトで非表示にする*/
-  // pointer-events: none; // 非表示時にクリックできないように
   @include pc {
     right: rem(116);
   }
@@ -36,37 +34,10 @@
   // opacity: 1;
   pointer-events: auto;
 }
-// .c-pagetop.active:hover{
-//   opacity: 0.7;
-// }
 @media (hover: hover) {//8.3.19
   .c-pagetop.active:hover{
     opacity: 0.7;
   }
 }
 
-
-// お問い合わせページ専用の調整
-// .c-pagetop.is-contact-page {
-//   margin-bottom: rem(30); 
-// }
-
-// 既存の.follow-btnsの調整
-// .follow-btns {
-//   // ...既存のコード...
-  
-//   // もしお問い合わせページで「ボタンが1つだけ」になるなら、
-//   // gap（隙間）の影響を消すために以下のように書くこともできます
-//   &.is-contact-page {
-//     gap: 0;
-//   }
-// }
-// //既存の.follow-btnsの調整
-// .follow-btns.is-contact-page {
-//     gap: 0;
-// } 
-  // ...既存のコード...
-  
-  // もしお問い合わせページで「ボタンが1つだけ」になるなら、
-  // gap（隙間）の影響を消すために以下のように書くこともできます
 

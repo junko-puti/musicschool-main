@@ -17,8 +17,6 @@
   gap: rem(19);
   pointer-events: none;
   opacity: 0;
-  // transform: translateX(-50%) translateY(12px);
-  // transform: translateX(-50%) translateY(0);
   transform: translateX(-50%);
   transition: transform 0.3s ease, opacity 0.3s ease;
   @include pc{
@@ -26,8 +24,6 @@
     right: 0;
     gap: rem(31);
     align-items: flex-end;
-    // transform: translateY(12px);
-    // transform: translateY(0);
     transform: translateX(0);
   }
 }
@@ -60,12 +56,10 @@
   /* スマホ時の中央寄せをリセット */
   left: auto;
   right: rem(20); /* 右端からの距離 */
-  // transform: translateX(0) translateY(12px);
   transform: translateX(0);
 }
 /* 表示状態（visible）のとき */
 .follow-btns.is-contact-page.visible {
-  // transform: translateX(0) translateY(0);
   transform: translateX(0);
 }
 
@@ -73,7 +67,7 @@
 .follow-btns.is-contact-page .c-pagetop {
   margin-bottom: 0; /* お問い合わせボタンがないので隙間をリセット */
   bottom: rem(18);  /* 下から18pxの位置に固定 */
-  right: 0;
+  right: rem(68);
   @include pc {
     right: rem(80);
     bottom: rem(30);

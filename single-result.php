@@ -24,16 +24,11 @@
                   }
                 ?>
               </span>
-              <!-- <span class="c-label c-label--sp-l c-label--pc-l">ポップス</span> -->
               <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('large'); ?>
               <?php else : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
               <?php endif; ?>
-              <!-- <picture>
-            <source srcset="./images/result01.jpg" media="(min-width: 768px)">
-            <img src="./images/result01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-          </picture> -->
             </div>
             <div class="result-article__body">
               <h1 class="result-article__title"><?php the_title(); ?></h1>
@@ -68,9 +63,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <!-- <p class="result-article__text">
-                  <?php the_content(); ?>
-                </p> -->
                 <div class="result-article__text">
                   <?php the_content(); ?>
                 </div>

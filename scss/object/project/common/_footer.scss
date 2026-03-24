@@ -34,16 +34,11 @@
   }
 }
 .footer__nav .menu-item{
-// .footer__menu a{
   font-size: rem(17);
   line-height: calc(33 / 17);
-  // font-weight: 600;
   transition: opacity 0.3s;
 }
-// .footer__nav .menu-item:hover{
-//   opacity: 0.7;
-// }
-@media (hover: hover) {//8.3.19
+@media (hover: hover) {
   .footer__nav .menu-item:hover{
     opacity: 0.7;
   }

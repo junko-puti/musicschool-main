@@ -26,7 +26,6 @@
   @include pc {
     height: rem(50); /* PCは1行固定 */
     flex-wrap: nowrap;
-    // overscroll-behavior-x: none; /* ブラウザ特有の「端っこの揺れ」を防止する */
   }
 }
 

@@ -278,11 +278,8 @@ contact-form
 .smf-action .smf-button-control__control{//c-btn--primary
   width: rem(335);
   height: rem(50);
-  // padding-top: rem(15);
-  // padding-bottom: rem(13);
   padding-top: rem(12);//8.3.19
   padding-bottom: rem(16);
-  // padding-left: rem(20);
   margin: 0 auto;
   margin-top: 3.125rem;
   font-size: rem(20);
@@ -301,27 +298,6 @@ contact-form
      padding-bottom: rem(17);
    }
 }
-// .smf-action .smf-button-control__control{//c-btn--primary
-//   width: rem(335);
-//   height: rem(50);
-//   padding-top: rem(9.5);
-//   padding-bottom: rem(7.5);
-//   padding-left: rem(20);
-//   margin: 0 auto;
-//   margin-top: 3.125rem;
-//   font-size: rem(20);
-//   line-height: calc(26 / 20);
-//   @include pc {
-//     width: rem(250);
-//     height: rem(50);
-//     font-size: rem(25);
-//     line-height: calc(33 / 25);
-//   }
-// }
-// .smf-action .smf-button-control__control:hover{
-//   color: #CB0000;
-//   background-color: #FFFFFF;
-// }
 @media (hover: hover) {//8.3.19
   .smf-action .smf-button-control__control:hover{
     color: #CB0000;
@@ -342,17 +318,12 @@ contact-form
 
 .smf-form--simple-table .smf-item__col--label,
 .smf-form--simple-table .smf-item__col--controls {
-  // width: 100% !important;
-  // display: block !important;
-  // max-width: 100%;
-  // width: 100% !important;
   max-width: 100%;
   display: block;
   width: auto !important;
 }
 /* simple-table のラベル列の幅を解除 */
 .smf-form--simple-table .smf-item__col--label {
-  // width: auto !important;
   flex: 0 0 auto !important;
   display: flex;
   flex-direction: row;
@@ -389,9 +360,6 @@ contact-form
   text-align: left;
   line-height: 1.5;
   color: #CB0000;
-  // @include pc {
-  //   font-size: rem(18);
-  // }
 }
 
 /* Snow Monkey Forms が「完了状態」のときだけフォーム全体を非表示にする */

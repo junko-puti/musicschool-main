@@ -14,15 +14,11 @@
 .blog-list__items{/*<ul>*/
   display: grid;
   grid-template-columns: 1fr; // デフォルトは1列
-  // justify-items: start;       // flex-startに相当 8.3.7
   margin-top: rem(39);//1.28
-  // margin-top: rem(42);
   row-gap: rem(39);
   @include pc{
     margin-top: rem(40);//8.2.21
-    // margin-top: rem(39);
-    row-gap: rem(65);
-    // row-gap: rem(68);
+    row-gap: rem(68);
   }
 }
 .blog-list__items--search{/*<ul>8.2.21*/
@@ -117,9 +113,6 @@
     -webkit-line-clamp: 3;//3行に固定
   }
 }
-// .blog-item__text p{
-//   color: pink;
-// }
 
 /*--------------
 hover 
@@ -127,9 +120,6 @@ hover
 .blog-item a{
   transition: opacity 0.3s ease;
 }
-// .blog-item a:hover{
-//   opacity: 0.7;
-// }
 @media (hover: hover) {//8.3.19
   .blog-item a:hover{
     opacity: 0.7;

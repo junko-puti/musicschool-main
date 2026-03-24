@@ -46,7 +46,6 @@
                     ?>
                     <li>
                       <a href="<?php echo esc_url('https://www.facebook.com/share.php?u=' . $url); ?>" target="_blank" rel="noopener noreferrer">
-                        <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F"> -->
                         <div class="sns-btn__img">
                           <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/images/btn-facebook.svg" media="(min-width: 768px)">
@@ -57,7 +56,6 @@
                     </li>
                     <li>
                       <a href="<?php echo esc_url('https://twitter.com/intent/tweet?url=' . $url . '&text=' . $title); ?>" target="_blank" rel="noopener noreferrer">
-                        <!-- <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2F&text=%E3%83%88%E3%83%83%E3%83%97%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%B8%E3%81%A9%E3%81%86%E3%81%9E"> -->
                         <div class="sns-btn__img">
                           <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/images/btn-twitter.svg" media="(min-width: 768px)">
@@ -68,7 +66,6 @@
                     </li>
                     <li>
                       <a href="<?php echo esc_url('http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>" target="_blank" rel="noopener noreferrer">
-                        <!-- <a href="https://b.hatena.ne.jp/entry/https%3A%2F%2Fexample.com%2F"> -->
                         <div class="sns-btn__img">
                           <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/images/btn-hatena.svg" media="(min-width: 768px)">
@@ -79,7 +76,6 @@
                     </li>
                     <li>
                       <a href="<?php echo esc_url('https://social-plugins.line.me/lineit/share?url=' . $url); ?>" target="_blank" rel="noopener noreferrer">
-                        <!-- <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fexample.com%2F"> -->
                         <div class="sns-btn__img">
                           <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/images/btn-line.svg" media="(min-width: 768px)">
@@ -90,7 +86,6 @@
                     </li>
                     <li>
                       <a href="<?php echo esc_url('https://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>" target="_blank" rel="noopener noreferrer">
-                        <!-- <a href="https://getpocket.com/edit?url=https%3A%2F%2Fexample.com%2F"> -->
                         <div class="sns-btn__img">
                           <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/images/btn-pocket.svg" media="(min-width: 768px)">

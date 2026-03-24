@@ -41,13 +41,8 @@
                     <?php else : ?>
                       <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                     <?php endif; ?>
-                    <!-- <picture>
-                <source srcset="./images/blog001.jpg" media="(min-width: 768px)">
-                <img src="./images/blog01-sp.jpg" alt="アルペジオが劇的に向上する3つの習慣">
-              </picture> -->
                   </div>
                   <div class="blog-item__body">
-                    
                     <h2 class="blog-item__title"><?php the_title(); ?></h2>
                     <time class="blog-item__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     <div class="blog-item__text">
