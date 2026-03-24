@@ -20,17 +20,12 @@
 }
 
 .header__logo{
-  // width: rem(208);
   height: 100%;
   aspect-ratio: 208 / 31;
   @include pc {
-    // width: rem(192);
     aspect-ratio: 192 / 51;
   }
 }
-// .header__logo h1{
-  //   height:100%;
-  // }
 .header__logo a{
   display: flex;
   align-items: center;
@@ -44,9 +39,6 @@
     padding-bottom: rem(14.37);
   }
 }
-// .header__logo a:hover{
-//   opacity: 0.5;
-// }
 @media (hover: hover) {//8.3.19
   .header__logo a:hover{
     opacity: 0.5;
@@ -120,35 +112,24 @@
 }
 /*--PC用メニュー-*/
 .header__nav {
-  // @include pc {
     display: flex;
     flex-direction: row;
     height: 100%;//8.2.21
     column-gap: rem(33);
     align-items: center;
-  // }
 }
 .header__nav .l-header__nav-ul {
-// .header__nav{//WP化に伴いクラス名変更
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: rem(33);
   height: 100%;
 }
-// .header__nav .header__menu{
-//   display: flex;
-//   align-items: center;
-//   height: 100%;
-//   column-gap: rem(33);
-// }
 .header__nav .menu-item{
-// .header__menu li{
   width: auto;
   height: 100%;
 }
 .header__nav .menu-item a{
-  // .header__menu a{
     display: flex;
     align-items: center;
     height: 100%;
@@ -164,7 +145,6 @@
   
   /*- 下線 -*/
 .header__nav .menu-item a::after{
-  // .header__menu a::after {
     content: '';
     position: absolute;
     bottom: rem(20.5);
@@ -177,13 +157,11 @@
   // /* PC〜タブレットサイズのみ有効（SPは除外） */
   @media screen and (min-width: 768px) {
     .header__nav .menu-item a:hover::after{
-    // .header__menu a:hover::after {
       width: 100%;
     }
   }
   @media screen and (max-width: 767px) {
   .header__nav .menu-item a::after{
-  // .header__menu a::after {
     display: none;
   }
 }

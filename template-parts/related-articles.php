@@ -66,10 +66,6 @@
 
                   <?php if (has_post_thumbnail()): ?>
                     <?php the_post_thumbnail(); ?>
-                    <!-- <picture>
-                              <source srcset="<?php echo get_template_directory_uri(); ?>/images/blog-related.jpg" media="(min-width: 768px)">
-                              <img src="<?php echo get_template_directory_uri(); ?>/images/blog-related-sp.jpg" alt="関連記事">
-                            </picture> -->
                   <?php else: ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                   <?php endif; ?>

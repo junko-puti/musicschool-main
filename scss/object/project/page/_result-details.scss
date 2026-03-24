@@ -61,12 +61,6 @@
   font-weight: 500;
 }
 
-// .result-article__body{
-//   margin-top: rem(30);
-//   @include pc{
-//     margin-top: rem(50);
-//   }
-// }
 .result-article__title{
   margin-top: rem(30);
   margin-bottom: rem(6);
@@ -160,9 +154,6 @@
 .result-related__item a{
   transition: opacity 0.3s ease;
 }
-// .result-related__item a:hover{
-//   opacity: 0.7;
-// }
 @media (hover: hover) {//8.3.19
   .result-related__item a:hover{
     opacity: 0.7;

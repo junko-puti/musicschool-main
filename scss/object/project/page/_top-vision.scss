@@ -54,8 +54,6 @@
   position: absolute;
   width: rem(34);
   height: rem(19);
-  // width: rem(34);
-  // height: rem(195);
   top: rem(3);
   left: 50%;
   transform: translateX(-49%);
@@ -73,7 +71,6 @@
   top: rem(5);
   left: 50%;
   transform: translateX(-50%);
-  // bottom: rem(25);
   background-color: #CB0000;
   @include pc{
     top: rem(-3);

@@ -298,10 +298,7 @@ position: relative;
 .blog-related__item a{
   transition: opacity 0.3s ease;
 }
-// .blog-related__item a:hover{
-//   opacity: 0.7;
-// }
-@media (hover: hover) {//8.3.19
+@media (hover: hover) {
   .blog-related__item a:hover{
     opacity: 0.7;
   }

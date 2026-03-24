@@ -57,7 +57,7 @@
         ?>
         <a href="<?php echo esc_url(home_url('/contact/')); ?>"
           class="c-btn c-btn--h-contact">
-          <span>お問い合わせ</span><!--8.3.19-->
+          <span>お問い合わせ</span>
         </a>
       </nav>
     </div>

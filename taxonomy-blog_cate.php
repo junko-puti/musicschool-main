@@ -19,7 +19,6 @@
         $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
         ?>
         <h2 class="c-title"><?php echo esc_html($term_name); ?></h2>
-        <!-- <h2 class="c-title">ブログ一覧</h2> -->
         <ul class="blog-list__items">
           <?php
           if (have_posts()):

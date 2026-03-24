@@ -7,11 +7,8 @@ position: relative;
   display: inline-block;
   font-size: rem(18);
   font-weight: 500;
-  // line-height: calc(30 / 18);
   line-height: 1.4;//8.2.21
-  // text-decoration: underline;
   text-decoration: none;
-  // text-underline-offset: 0.2em;
   transition: opacity 0.3s;
 }
 
@@ -30,12 +27,6 @@ position: relative;
   height: rem(0.5);
 }
 
-// .c-link:hover {
-//     opacity: 0.5;
-// }
-// .c-link:hover::after {
-//     opacity: 0.5;
-// }
 @media (hover: hover) {//8.3.19
   .c-link:hover {
       opacity: 0.5;

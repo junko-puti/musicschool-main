@@ -61,10 +61,9 @@
           </li>
         <?php endwhile; ?>
       </ul>
-      <?php wp_reset_postdata(); ?><!--8.3.18-->
-    <?php else : ?><!-- 8.3.7 -->
+      <?php wp_reset_postdata(); ?>
+    <?php else : ?>
       <div class="sidebar__recommend--no-post">
-      <!-- <div class="top-blog--no-post"> -->
         <p>おすすめ記事はありません。</p>
       </div>
     <?php endif; ?>

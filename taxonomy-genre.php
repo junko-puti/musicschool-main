@@ -19,7 +19,6 @@
       $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
       ?>
       <h2 class="c-title"><?php echo esc_html($term_name); ?></h2>
-      <!-- <h2 class="c-title">卒業実績一覧</h2> -->
       <ul class="result-list__items">
         <?php if (have_posts()): ?>
           <?php while (have_posts()) : the_post(); ?>

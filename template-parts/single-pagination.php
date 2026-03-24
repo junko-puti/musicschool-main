@@ -17,7 +17,6 @@
                 <?php else: ?>
                   <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                 <?php endif; ?>
-                <!-- <img src="./images/blog-related.jpg" alt="前の記事"> -->
               </div>
               <div class="pager__body">
                 <p><?php echo $prev_post->post_title; ?></p>
@@ -37,7 +36,6 @@
                 <?php else: ?>
                   <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
                 <?php endif; ?>
-                <!-- <img src="./images/blog-related.jpg" alt="次の記事"> -->
               </div>
               <div class="pager__body">
                 <p><?php echo $next_post->post_title; ?></p>
