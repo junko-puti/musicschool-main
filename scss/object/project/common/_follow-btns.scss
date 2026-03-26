@@ -67,7 +67,7 @@
 .follow-btns.is-contact-page .c-pagetop {
   margin-bottom: 0; /* お問い合わせボタンがないので隙間をリセット */
   bottom: rem(18);  /* 下から18pxの位置に固定 */
-  right: rem(68);
+  right: rem(10);
   @include pc {
     right: rem(80);
     bottom: rem(30);

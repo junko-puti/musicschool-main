@@ -221,15 +221,32 @@ add_filter('pre_get_document_title', 'custom_document_title');
 // --------------------------------------------------
 function custom_meta_description(): void
 {
-    $description = '';
-
-    // 404
-    if (is_404()) {
-        $description = 'きたむらミュージックスクール公式ホームページの404ページです。';
+  $description = '';
+  
+  // 404
+  if (is_404()) {
+    $description = 'きたむらミュージックスクール公式ホームページの404ページです。';
     }
-
+    
     if ($description !== '') {
-        echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+      echo '<meta name="description" content="' . esc_attr($description) . '">' . "\n";
+      }
+      }
+      add_action('wp_head', 'custom_meta_description', 1);
+      
+      
+      
+// -----------------------------------------------------
+// お問い合わせページ（contact）だけで reCAPTCHA を読み込む
+//ハンドル名:google-recaptcha
+// -----------------------------------------------------
+add_action( 'wp_enqueue_scripts', function() {
+
+    if ( is_page( 'contact' ) ) {
+        return;
     }
-}
-add_action('wp_head', 'custom_meta_description', 1);
+
+    wp_dequeue_script( 'google-recaptcha' );
+    wp_deregister_script( 'google-recaptcha' );
+
+}, 100 );
